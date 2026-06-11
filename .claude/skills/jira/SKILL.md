@@ -1,23 +1,23 @@
 ---
 name: jira
-description: Comprehensive management of Atlassian Jira and Confluence resources, enforcing project scope (Telegramonic, Key: TEL), platform prefixes, labeling standards, and issue templates.
+description: Comprehensive management of Atlassian Jira and Confluence resources, enforcing project scope (AudioMesh, Key: AUD), platform prefixes, labeling standards, and issue templates.
 trigger: /jira
 ---
 
 # Jira & Confluence Management Ruleset
 
-This ruleset defines the standard patterns for interacting with Atlassian resources. **All operations MUST target the Telegramonic environment.**
+This ruleset defines the standard patterns for interacting with Atlassian resources. **All operations MUST target the AudioMesh environment.**
 
 ## 1. Target Environment
 
-- **Jira Project Name:** `Telegramonic`
-- **Jira Project Key:** `TEL`
-- **Confluence Space Key:** `TEL` (Telegramonic - verify if renamed)
+- **Jira Project Name:** `AudioMesh`
+- **Jira Project Key:** `AUD`
+- **Confluence Space Key:** `AUD` (AudioMesh)
 - **Cloud Instance:** `ar1603.atlassian.net`
 
 > [!IMPORTANT]
-> Every Jira issue created or modified MUST use `projectKey: "TEL"`.
-> Every Confluence page created or searched MUST use `spaceId: "TEL"` or `spaceKey: "TEL"`.
+> Every Jira issue created or modified MUST use `projectKey: "AUD"`.
+> Every Confluence page created or searched MUST use `spaceId: "AUD"` or `spaceKey: "AUD"`.
 
 ## 2. Naming Conventions
 
@@ -26,15 +26,18 @@ This ruleset defines the standard patterns for interacting with Atlassian resour
   - `[Web]` for feature-related stories/tasks.
   - `[Core]` for shared or infrastructure-related tasks.
   - `[Design]` for UI/UX and styling tasks.
-- **Example:** `[Web] Implement login form validation`
+  - `[Desktop]` for Electron desktop-specific tasks.
+  - `[Mobile]` for Tauri mobile-specific tasks.
+- **Example:** `[Web] Implement node pairing screen`
 
-## 3. Active Epics (Project: TEL)
+## 3. Active Epics (Project: AUD)
 
-- **TEL-1**: `[Core] Infrastructure & Modernization`
-- **TEL-2**: `[Web] Web app feature`
-- **TEL-3**: `[Design] Visual Excellence`
-- **TEL-4**: `[Core] Localization & Accessibility`
-- **TEL-12**: `[Desktop] Desktop Core Experience & Platform Distribution`
+- **AUD-1**: `[Core] Infrastructure & Modernization`
+- **AUD-2**: `[Web] Web App Features`
+- **AUD-3**: `[Design] Visual Excellence`
+- **AUD-4**: `[Localization] Localization & Accessibility`
+- **AUD-5**: `[Desktop] Desktop Core Experience & Platform Distribution`
+- **AUD-6**: `[Mobile] Mobile Core Experience & Platform Distribution`
 
 ## 4. Issue Types & Templates
 
@@ -87,9 +90,9 @@ Use for high-level project goals or features.
 
 ## 5. Labeling
 
-> [!IMPORTANT] > **Every ticket MUST have at least one platform-specific label (`Web`, `Design`, `Packages`, `Core`, or `Desktop`).**
+> [!IMPORTANT] > **Every ticket MUST have at least one platform-specific label (`Web`, `Design`, `Packages`, `Core`, `Desktop`, or `Mobile`).**
 
-- Apply platform-specific labels (`Web`, `Design`, `Packages`, `Core`, `Desktop`) to every issue for easy filtering.
+- Apply platform-specific labels (`Web`, `Design`, `Packages`, `Core`, `Desktop`, `Mobile`) to every issue for easy filtering.
 - Link all stories and tasks to their corresponding **Epic**.
 
 ## 6. Workflow & Statuses
@@ -102,7 +105,7 @@ Standard project workflow statuses to target:
 ## 7. Field Requirements
 
 - **Priority:** Must have a value. Do not attempt to set to null or clear via API as it is a required system field.
-- **Description:** MUST use the templates defined in section 3. Provide a clear summary of work and explicit acceptance criteria.
+- **Description:** MUST use the templates defined in section 4. Provide a clear summary of work and explicit acceptance criteria.
 
 ## 8. Link Formatting (Strict Rule)
 

@@ -6,16 +6,16 @@ trigger: /pr
 
 # Pull Request Management Skill
 
-This ruleset defines the standard patterns for creating and managing Pull Requests in this repository. **All Pull Requests MUST be created in the telegramonic-tools repository.**
+This ruleset defines the standard patterns for creating and managing Pull Requests in this repository. **All Pull Requests MUST be created in the AudioMesh/audiomesh repository.**
 
 ## 1. Target Repository
 
-- **Owner:** `onemanfighter`
-- **Repository:** `telegramonic-tools`
+- **Owner:** `AudioMesh`
+- **Repository:** `audiomesh`
 - **Default Base Branch:** `main`
 
 > [!IMPORTANT]
-> Every Pull Request created MUST use `owner: "onemanfighter"` and `repo: "telegramonic-tools"`.
+> Every Pull Request created MUST use `owner: "AudioMesh"` and `repo: "audiomesh"`.
 
 ## 2. Pull Request Types
 
@@ -81,19 +81,19 @@ All feature and fix branches MUST follow this naming pattern (consistent with `C
 `{username}/{ticket-number}/{short-description}`
 
 **Example:**
-`amitraikwar/TEL-20/update-jira-skills`
+`amitraikwar/AUD-20/update-jira-skills`
 
 ## 4. GitHub MCP Server Integration
 
 When creating a PR using the `github-mcp-server` tool, ensure:
 
-1. The `owner` and `repo` are set to `onemanfighter` and `telegramonic-tools`.
+1. The `owner` and `repo` are set to `AudioMesh` and `audiomesh`.
 2. The `title` strictly follows the format above.
 3. The `body` (description) strictly follows the corresponding template.
 4. The `head` branch strictly follows the naming convention: `{username}/{ticket-number}/{short-description}`.
 5. The `base` branch is `main`.
 6. Always set the PR **Assignee** to `ar022` and add `ar1603` as a **Reviewer**.
-7. Apply platform-specific **Labels** (`Web`, `Core`, or `Desktop`) to the PR.
+7. Apply platform-specific **Labels** (`Web`, `Core`, `Desktop`, or `Mobile`) to the PR.
 
 ## 5. Best Practices
 
