@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+/apps/server/target
+/apps/mobile/src-tauri/target
+
+# testing
+apps/web/coverage
+apps/desktop/coverage
+shared/common/coverage
+apps/mobile/coverage
+shared/client-common/coverage
+
+# production
+apps/web/build
+apps/desktop/build
+apps/desktop/dist
+shared/common/build
+apps/mobile/build
+apps/mobile/dist
+shared/client-common/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# yarn v2/v3+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# Telegram credentials & sessions
+telegram.credentials
+telegram.session
+*.credentials
+*.session
+
+# Android keystore & release configuration
+*.jks
+keystore.properties
+
