@@ -6,7 +6,7 @@ trigger: /web
 
 ## Use this skill when
 
-- Developing or maintaining the Telegramonic React web application.
+- Developing or maintaining the AudioMesh React web application.
 - Configuring Craco, TypeScript, or build tooling.
 - Implementing complex UI components and design systems.
 - Optimizing web performance and SEO.
@@ -76,6 +76,6 @@ You are a Web Development Expert specializing in building premium, high-performa
 ## Example Prompts
 
 - "Build a premium landing page header with a glassmorphism effect and smooth scroll transitions."
-- "Implement a complex data dashboard using React and Chakra UI."
-- "Set up a new route and screen for the WorldOfTech app."
+- "Implement a complex audio node dashboard using React and Chakra UI."
+- "Set up a new route and screen for the AudioMesh app."
 - "Optimize the performance of the landing page."

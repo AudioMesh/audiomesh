@@ -26,7 +26,7 @@ All feature and fix branches MUST follow this naming pattern:
 `amitraikwar/{ticket-number}/{short-description}`
 
 **Example:**
-`amitraikwar/TEL-18/update-branding`
+`amitraikwar/AUD-18/update-branding`
 
 ## Commit Message Format
 
@@ -51,7 +51,7 @@ To provide a high-quality commit message in one go:
 
 ```bash
 # Pattern: printf "tag_index\nscope\ntitle\nDetailed body explanation with bullet points.\n\n" | make commit
-printf "3\TEL-19\nadd branding and skills\n- Implement Telegramonic branding across core components.\n- Add custom SVG icons for the new design system.\n- Update global styles to use the vibrant Telegramonic color palette.\n- Adhere to requirements specified in TEL-19 for visual excellence.\n\n" | make commit
+printf "3\AUD-19\nadd branding and skills\n- Implement AudioMesh branding across core components.\n- Add custom SVG icons for the new design system.\n- Update global styles to use the vibrant AudioMesh color palette.\n- Adhere to requirements specified in AUD-19 for visual excellence.\n\n" | make commit
 ```
 
 ### Initial Commit (Interactive)
@@ -60,7 +60,7 @@ printf "3\TEL-19\nadd branding and skills\n- Implement Telegramonic branding acr
 git add src/components/NewFeature.tsx
 make commit
 # Select type: feat, fix, etc.
-# Enter ticket number as scope (e.g. TEL-19)
+# Enter ticket number as scope (e.g. AUD-19)
 # Enter brief description
 ```
 

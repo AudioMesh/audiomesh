@@ -1,15 +1,15 @@
 # CLAUDE.md
 
-This file provides a high-level entry point for Claude-based tools working in the **Telegramonic** repository.
+This file provides a high-level entry point for Claude-based tools working in the **AudioMesh** repository.
 
 ## Overview
 
-This is a **React Web Application** (using Craco for configuration) and **Axum Rust Server** representing the Telegramonic cloud storage solution.
+This is a **React Web Application** (using Craco for configuration) and **Axum Rust Server** representing the AudioMesh audio-networking platform.
 
 - **Web Framework**: React 18.3+
 - **Styling**: Chakra UI (Inter typography, brand colors) and Tailwind CSS
 - **State Management**: Zustand, React Query
-- **Backend**: Axum with Tokio runtime and Grammers MTProto client
+- **Backend**: Axum with Tokio runtime (mock audio-sync services)
 
 ## 📘 Primary Documentation
 
@@ -33,7 +33,7 @@ yarn web:start                 # Start web local development server
 yarn web:dev                   # Start web local development server (alias)
 yarn web:build                 # Create production build for web
 yarn web:test                  # Run Jest tests for web
-yarn workspace telegramonic-web run lint:fix # Run ESLint and fix web issues
+yarn workspace audiomesh-web run lint:fix # Run ESLint and fix web issues
 
 # Common UI & Logic Workspace
 yarn common:test               # Run Jest tests specifically for common workspace
@@ -58,12 +58,12 @@ make commit                    # Conventional commit helper
 
 Advanced agent instructions are modularized in the `.claude/skills/` directory.
 
-- [Commit Workflow](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/commit/SKILL.md)
-- [Jira Management](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/jira/SKILL.md)
-- [Pull Request Skill](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/pr/SKILL.md)
-- [Frontend Design](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/frontend-design/SKILL.md)
-- [Web Development](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/web/SKILL.md)
-- [README Guidelines](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/readme/SKILL.md)
+- [Commit Workflow](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/commit/SKILL.md)
+- [Jira Management](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/jira/SKILL.md)
+- [Pull Request Skill](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/pr/SKILL.md)
+- [Frontend Design](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/frontend-design/SKILL.md)
+- [Web Development](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/web/SKILL.md)
+- [README Guidelines](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/readme/SKILL.md)
 
 ## 🌐 Localization Guidelines
 
@@ -79,7 +79,7 @@ Always add or update the unit tests (and their snapshots) to align with the requ
 
 # AGENT
 
-This section serves as the primary source of truth for AI agents working on the **Telegramonic** project. It provides architectural context, directory structures, and established development patterns.
+This section serves as the primary source of truth for AI agents working on the **AudioMesh** project. It provides architectural context, directory structures, and established development patterns.
 
 ## 1. Project Overview
 
@@ -95,7 +95,6 @@ This section serves as the primary source of truth for AI agents working on the 
 | **Language**         | [TypeScript 5.x](https://www.typescriptlang.org/) & [Rust](https://www.rust-lang.org/) |
 | **Testing**          | Jest + React Testing Library (v16+) + Cypress                                          |
 | **Backend (Server)** | [Axum v0.7](https://github.com/tokio-rs/axum) (Tokio Runtime)                          |
-| **Telegram MTProto** | [Grammers v0.7](https://github.com/Lonami/grammers)                                    |
 | **Package Manager**  | [Yarn 4 (Berry)](https://yarnpkg.com/)                                                 |
 | **Aesthetic**        | Utilitarian Minimalism / Terminal-Luxury                                               |
 | **Brand Colors**     | Charcoal (#15111e) & Violet (#8b5cf6)                                                  |
@@ -108,11 +107,9 @@ This section serves as the primary source of truth for AI agents working on the 
 - **Typography**: Geist (Sans-serif) for primary UI, Geist Mono for technical data and code.
 - **Components**: Crisp border-based separation and interactive micro-animations.
 
-### Resource Taxonomy
+### Product Purpose
 
-The platform organizes resources into 13 primary verticals:
-
-1. **AI & ML** | 2. **Privacy & Adblocking** | 3. **Streaming & Media** | 4. **Gaming & Emulation** | 5. **Education** | 6. **OS Specific (Linux/macOS/Mobile)** | 7. **Miscellaneous**.
+AudioMesh transforms nearby smartphones, tablets, and computers into a synchronized, unified speaker system using Wi-Fi and Bluetooth protocols. The platform organizes devices into audio mesh nodes with real-time latency compensation and volume management.
 
 ## 3. Directory Structure
 
@@ -176,10 +173,10 @@ The platform organizes resources into 13 primary verticals:
 
 ### Rust Backend (Axum)
 
-- **Architecture**: Modular setup divided into HTTP `handlers/`, business logic `services/` (mock and Grammers MTProto clients), and environment `config.rs`.
+- **Architecture**: Modular setup divided into HTTP `handlers/`, business logic `services/` (mock audio-sync services), and environment `config.rs`.
 - **Handlers**: Write Axum handlers that return JSON payloads (`Json<T>`) or explicit statuses.
-- **Testing**: Write unit/integration tests and run using `cargo test` (or `yarn server:test` at root). Use `services/mock.rs` to mock Telegram connections.
-- **README Maintenance**: Any change made to files inside `apps/server/` (new endpoints, changed payloads, new dependencies, new environment variables, new files, behaviour changes) **MUST** also update [`apps/server/README.md`](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/apps/server/README.md) to keep it accurate, following the rules in the [readme skill](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/readme/SKILL.md). This includes but is not limited to: adding/removing routes in `handlers/mod.rs`, changing request/response types in handlers, changing `TelegramService` trait methods, adding new Cargo dependencies, and modifying `config.rs`.
+- **Testing**: Write unit/integration tests and run using `cargo test` (or `yarn server:test` at root). Use `services/mock.rs` to mock audio mesh connections.
+- **README Maintenance**: Any change made to files inside `apps/server/` (new endpoints, changed payloads, new dependencies, new environment variables, new files, behaviour changes) **MUST** also update [`apps/server/README.md`](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/server/README.md) to keep it accurate, following the rules in the [readme skill](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/readme/SKILL.md). This includes but is not limited to: adding/removing routes in `handlers/mod.rs`, changing request/response types in handlers, changing `AudioService` trait methods, adding new Cargo dependencies, and modifying `config.rs`.
 
 ### Desktop Application (Electron)
 
@@ -188,23 +185,22 @@ The platform organizes resources into 13 primary verticals:
 - **Diagnostics**: Polling status indicator queries the local diagnostics server (`127.0.0.1:8080`) every 5 seconds. Runs silently in the background.
 - **Theme Defaulting**: Defaults automatically to system theme settings (`prefers-color-scheme`) using Chakra UI / NextThemes, with no theme-override controls in UI.
 - **Packaging (electron-builder)**: Uses `apps/desktop/electron-builder.json` to generate builds. Ensure DMG layout remains clean and system files (`.background.tiff`, `.VolumeIcon.icns`) are not declared inside `dmg.contents` to prevent rendering them to users.
-- **Native File Downloads**: Bypasses Chromium's standard download manager by using an IPC handler `download-file-directly` in `apps/desktop/main.js`. It utilizes `dialog.showSaveDialog` to prompt the user, streams the download from the local Axum server directly to disk via Node.js `fs.createWriteStream`, and cleans up any partial/failed files.
 
 ## 5. Testing & Verification
 
 - **Unit/Integration**: `yarn web:test`
   - Snapshots are located in `__snapshots__` directories adjacent to tests.
   - RTL `renderHook` is natively imported from `@testing-library/react`.
-- **E2E**: `yarn workspace telegramonic-web cy:open`
+- **E2E**: `yarn workspace audiomesh-web cy:open`
 - **Build**: `yarn web:build` (Always verify build compatibility after dependency updates).
 
 ## 6. Agent Workflow
 
 1.  **Understand**: Review this file and `.claude/CLAUDE.md`.
-2.  **Verify**: Always run `yarn workspace telegramonic-web lint` and `yarn web:test` before declaring a task complete.
-3.  **Documentation**: Always check if a README update is required for any modified components. If so, update the corresponding `README.md` following the guidelines in the [readme skill](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/skills/readme/SKILL.md).
-4.  **Governance**: Follow Conventional Commits and link all changes to the **Telegramonic** Jira project using `prefix/TEL-XXX` branch naming.
+2.  **Verify**: Always run `yarn workspace audiomesh-web lint` and `yarn web:test` before declaring a task complete.
+3.  **Documentation**: Always check if a README update is required for any modified components. If so, update the corresponding `README.md` following the guidelines in the [readme skill](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/skills/readme/SKILL.md).
+4.  **Governance**: Follow Conventional Commits and link all changes to the **AudioMesh** Jira project using `prefix/AUD-XXX` branch naming.
 
 ---
 
-© 2026 Telegramonic | Confidential and Proprietary
+© 2026 AudioMesh | Confidential and Proprietary

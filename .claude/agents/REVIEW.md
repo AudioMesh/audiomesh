@@ -5,7 +5,7 @@ description: Single unified Agent responsible for dynamically reviewing and test
 
 # Unified PR Review & Merge Agent
 
-This agent ruleset defines the responsibilities and workflows for the AI Agent assigned to review and merge Pull Requests in the Telegramonic project.
+This agent ruleset defines the responsibilities and workflows for the AI Agent assigned to review and merge Pull Requests in the **AudioMesh** project.
 
 ## 1. Trigger Conditions
 

@@ -6,7 +6,7 @@ trigger: /readme
 
 # README Standard Writing Guidelines
 
-This skill defines the standards for creating, updating, and formatting README files across the Telegramonic repository. Maintaining clean, technically accurate, and easily readable documentation ensures developers and agents can quickly understand the system's architecture, dependencies, and entry points.
+This skill defines the standards for creating, updating, and formatting README files across the AudioMesh repository. Maintaining clean, technically accurate, and easily readable documentation ensures developers and agents can quickly understand the system's architecture, dependencies, and entry points.
 
 ---
 
@@ -26,7 +26,7 @@ Every major module or service README (such as `server/README.md` and `desktop/RE
 
 ### 1. Title & High-level Pitch
 
-- Must start with a clear H1 representing the module name: `# Telegramonic [Module] (folder/)`
+- Must start with a clear H1 representing the module name: `# AudioMesh [Module] (folder/)`
 - A single concise paragraph summarizing what the component does, the core technologies used, and its role in the overall application.
 
 ### 2. Architectural Diagram
@@ -73,9 +73,9 @@ Every major module or service README (such as `server/README.md` and `desktop/RE
 - Detailed request & response blocks using formatted JSON or type signatures.
 - Highlight serialization considerations (such as string-serialized `i64` variables to avoid JS precision loss).
 
-### 9. Flow Guides (Auth, Upload, etc.)
+### 9. Flow Guides (Auth, Audio Sync, etc.)
 
-- Flowcharts or ASCII sequence flows illustrating multi-step operations (e.g., 2FA authentication flow, chunked file upload lifecycle).
+- Flowcharts or ASCII sequence flows illustrating multi-step operations (e.g., node pairing flow, audio stream handoff lifecycle).
 
 ### 10. State Management & Persistence
 
@@ -94,9 +94,9 @@ Every major module or service README (such as `server/README.md` and `desktop/RE
 
 ### Markdown Best Practices
 
-- **Alerts**: Use GitHub-style warnings and notes to highlight critical information (e.g., session files being gitignored, simulated space capacities):
+- **Alerts**: Use GitHub-style warnings and notes to highlight critical information:
   > [!IMPORTANT]
-  > API credentials must be submitted dynamically during the login flow; do not hardcode them.
+  > Node name must be set before joining a mesh session; do not hardcode device identifiers.
 - **Code Fences**: Always specify the language name for syntax highlighting (e.g., `rust`, `bash`, `env`, `json`, `mermaid`).
 - **Tables**: Align header columns cleanly for readability. E.g., `|:---|:---|` for left-aligned columns.
 
@@ -120,4 +120,4 @@ Whenever a source code modification introduces changes to:
 3. Dependencies and tech stack versions.
 4. CLI options or environment variables.
 
-You **MUST** immediately update the corresponding module README. This requirement is enforced by the rule defined in [.claude/CLAUDE.md](file:///Users/mr.robot/z-stash/telegramonic/telegramonic/.claude/CLAUDE.md).
+You **MUST** immediately update the corresponding module README. This requirement is enforced by the rule defined in [.claude/CLAUDE.md](file:///Users/mr.robot/z-stash/AudioMesh/audiomesh/.claude/CLAUDE.md).
