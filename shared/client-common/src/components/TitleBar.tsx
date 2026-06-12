@@ -241,12 +241,12 @@ const TitleBar = () => {
             )}
           </HStack>
 
-          {/* Telegram Status */}
+          {/* Mesh Server Status */}
           <HStack
             gap={1.5}
             cursor="pointer"
             onClick={() => refetch()}
-            title="Click to recheck Telegram Connection Latency"
+            title="Click to recheck Mesh Server Connection Latency"
             alignItems="center"
           >
             <Box
@@ -284,9 +284,9 @@ const TitleBar = () => {
                 lineHeight="1"
               >
                 {status === 'connected' && latency !== null
-                  ? `TG Connected: ${latency}ms`
+                  ? `Server Connected: ${latency}ms`
                   : status === 'error'
-                    ? 'TG Disconnected'
+                    ? 'Server Disconnected'
                     : 'Check Status'}
               </Text>
             )}

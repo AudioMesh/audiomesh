@@ -1,36 +1,32 @@
-#[path = "auth.test.rs"]
-mod auth_test;
-
-#[path = "files.test.rs"]
-mod files_test;
-
-#[path = "users.test.rs"]
-mod users_test;
-
-mod mock_service;
+#[path = "mesh.test.rs"]
+mod mesh_test;
 
 // Common test helper imports
+use crate::config::AppConfig;
 use crate::handlers::create_router;
 use axum::{
     body::{Body, Bytes},
     http::{Request, StatusCode},
     Router,
 };
-use mock_service::MockTelegramService;
 use serde_json::Value;
-use std::sync::Arc;
 use tower::ServiceExt; // for oneshot
+
+/// Default test configuration with permissive limits.
+fn test_config() -> AppConfig {
+    AppConfig {
+        host: "127.0.0.1".to_string(),
+        port: 50065,
+        max_rooms: 100,
+        max_nodes_per_room: 50,
+        sfu_buffer_size: 256,
+        max_children_per_node: 3,
+    }
+}
 
 // Helper function to create the test router
 fn setup_app() -> Router {
-    let service = Arc::new(MockTelegramService::new());
-    create_router(service)
-}
-
-// Helper function to create the test router in logged in state
-fn setup_app_logged_in() -> Router {
-    let service = Arc::new(MockTelegramService::new_logged_in());
-    create_router(service)
+    create_router(&test_config())
 }
 
 // Helper to send a general request to the router
@@ -61,6 +57,13 @@ async fn post_json(app: Router, uri: &str, payload: Value) -> (StatusCode, Value
 // Helper to send a GET request
 async fn get_json(app: Router, uri: &str) -> (StatusCode, Value) {
     let (status, bytes) = send_request(app, "GET", uri, Body::empty()).await;
+    let json_val: Value = serde_json::from_slice(&bytes).unwrap_or(Value::Null);
+    (status, json_val)
+}
+
+// Helper to send a DELETE request
+async fn delete_json(app: Router, uri: &str) -> (StatusCode, Value) {
+    let (status, bytes) = send_request(app, "DELETE", uri, Body::empty()).await;
     let json_val: Value = serde_json::from_slice(&bytes).unwrap_or(Value::Null);
     (status, json_val)
 }

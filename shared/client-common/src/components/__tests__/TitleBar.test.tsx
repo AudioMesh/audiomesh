@@ -25,8 +25,8 @@ describe('TitleBar', () => {
     // Check brand text
     expect(screen.getByText('AudioMesh')).toBeInTheDocument();
 
-    // Check TG connection status
-    expect(screen.getByText('TG Connected: 45ms')).toBeInTheDocument();
+    // Check Server connection status
+    expect(screen.getByText('Server Connected: 45ms')).toBeInTheDocument();
 
     // Check Internet connection status
     expect(screen.getByText(/Internet: (Online|Offline)/)).toBeInTheDocument();

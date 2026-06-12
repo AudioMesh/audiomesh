@@ -4,23 +4,14 @@ import {
   createHashRouter,
   createRoutesFromChildren,
 } from 'react-router-dom';
-import { LazyLoginPage, LazyDashboardPage } from './lazyScreens/publicScreens';
+import { LazyDashboardPage } from './lazyScreens/publicScreens';
 
-export const getAppRouter = (isUserLogin: boolean) => {
+export const getAppRouter = () => {
   return createHashRouter(
     createRoutesFromChildren(
       <>
-        {isUserLogin ? (
-          <>
-            <Route path="/" element={<LazyDashboardPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </>
-        ) : (
-          <>
-            <Route path="/" element={<LazyLoginPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </>
-        )}
+        <Route path="/" element={<LazyDashboardPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </>,
     ),
   );

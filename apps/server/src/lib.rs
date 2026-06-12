@@ -2,18 +2,17 @@ pub mod config;
 pub mod handlers;
 pub mod services;
 
+use config::AppConfig;
 use handlers::create_router;
-use services::{telegram::RealTelegramService, TelegramService};
 use std::net::SocketAddr;
-use std::sync::Arc;
 
 pub async fn run_server(addr: SocketAddr) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    // Initialize Telegram Client service (Real mode only)
-    tracing::info!("Starting server in REAL mode (connecting to Telegram MTProto API)");
-    let service: Arc<dyn TelegramService> = Arc::new(RealTelegramService::new());
+    // Load configuration
+    let config = AppConfig::from_env();
+    tracing::info!("Loaded server configuration: {:?}", config);
 
-    // Create Axum Router
-    let app = create_router(service);
+    // Create Axum Router with mesh services
+    let app = create_router(&config);
 
     tracing::info!("AudioMesh Rust backend server listening on {}", addr);
 

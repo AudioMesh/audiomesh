@@ -1,10 +1,8 @@
 import { RouterProvider as RouterProviderReactDom } from 'react-router-dom';
 import { getAppRouter } from '@routes';
-import { appStore, selectIsAuthenticated } from '@appStore';
 
 const RouterProvider = () => {
-  const isAuthenticated = appStore(selectIsAuthenticated);
-  return <RouterProviderReactDom router={getAppRouter(isAuthenticated)} />;
+  return <RouterProviderReactDom router={getAppRouter()} />;
 };
 
 export default RouterProvider;

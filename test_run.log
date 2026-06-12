@@ -1,0 +1,1306 @@
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/mr.robot/z-stash/AudioMesh/audiomesh/apps/desktop/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+PASS ../../shared/common/src/assets/__tests__/Icon.test.tsx
+  Icon Wrapper
+    ✓ renders Logo icon correctly (11 ms)
+    ✓ renders CloudIcon correctly (2 ms)
+    ✓ renders BoltIcon correctly (2 ms)
+    ✓ renders PinIcon correctly (1 ms)
+    ✓ renders CodeIcon correctly (1 ms)
+    ✓ renders PresentationIcon correctly (1 ms)
+    ✓ renders CsvIcon correctly (1 ms)
+    ✓ renders AudioIcon correctly
+    ✓ returns null for unknown icon type (2 ms)
+
+PASS ../../shared/common/src/components/theme/components/__tests__/ThemeIcon.test.tsx
+  ThemeSelector
+    ✓ renders correctly with system as default (41 ms)
+    ✓ has system, light and dark options (13 ms)
+    ✓ calls setTheme with selected value on change (27 ms)
+    ✓ calls setTheme with light on change to light (19 ms)
+
+PASS ../../shared/common/src/components/TitleBox/__tests__/TitleBoxContainer.test.tsx
+  TitleBoxContainer
+    ✓ should set the document title (56 ms)
+
+PASS ../../shared/common/src/components/modal/__tests__/Modal.test.tsx
+  Modal
+    ✓ should render correctly (117 ms)
+    ✓ should render correctly with different modalID (14 ms)
+
+PASS ../../shared/common/src/assets/__tests__/Logo.test.tsx
+  Logo
+    ✓ renders correctly with default size (4 ms)
+    ✓ renders correctly with custom size (34 ms)
+    ✓ passes through extra SVG props (1 ms)
+
+PASS ../../shared/client-common/src/providers/lazy/__tests__/LazyProvider.test.tsx
+  LazyProvider
+    ✓ should render correctly (61 ms)
+
+PASS ../../shared/client-common/src/store/ui/slice/Modal/__tests__/Modal.slice.test.ts
+  Modal slice
+    ✓ should return modal selector state and actions (3 ms)
+    ✓ should return modal state with initial value (30 ms)
+    ✓ should return modal state on modal data set using openModal (2 ms)
+    ✓ should reset and close modal state on modal data set using closeModal (1 ms)
+
+PASS ../../shared/common/src/components/MdPreview/__tests__/MdPreview.test.tsx
+  MdPreview
+    ✓ should render empty MdPreview (98 ms)
+    ✓ should render MdPreview with content (12 ms)
+    ✓ should add target="_blank" and noopener noreferrer to links on render (9 ms)
+    ✓ should render mermaid diagram when language-mermaid block is provided (28 ms)
+
+FAIL ../../shared/client-common/src/components/__tests__/TitleBar.test.tsx
+  TitleBar
+    ✕ renders TitleBar successfully with Internet and TG indicators (69 ms)
+
+  ● TitleBar › renders TitleBar successfully with Internet and TG indicators
+
+    TestingLibraryElementError: Unable to find an element with the text: TG Connected: 45ms. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"chakra-stack css-18g8bu3"[39m
+          [33mstyle[39m=[32m"user-select: none;"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"chakra-stack css-1x0y7ph"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chakra-stack css-1x0y7ph"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"css-1o363pe"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"audiomesh-icon "[39m
+                  [33mheight[39m=[32m"100%"[39m
+                  [33mversion[39m=[32m"1"[39m
+                  [33mviewBox[39m=[32m"0 0 2048 2048"[39m
+                  [33mwidth[39m=[32m"100%"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"[39m
+                    [33mfill[39m=[32m"currentColor"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"[39m
+                    [33mfill[39m=[32m"currentColor"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"css-904k7f"[39m
+              [36m>[39m
+                [0mAudioMesh[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"css-9a7vyu"[39m
+          [36m/>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"chakra-stack css-vyigcq"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chakra-stack css-7msw3u"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"chakra-stack css-zxdjkc"[39m
+                [33mtitle[39m=[32m"Click to recheck Internet Connection"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"css-1g0ss7"[39m
+                  [33mstyle[39m=[32m"box-shadow: 0 0 6px var(--chakra-colors-error-400);"[39m
+                [36m/>[39m
+                [36m<p[39m
+                  [33mclass[39m=[32m"css-qk46cx"[39m
+                [36m>[39m
+                  [0mInternet: Offline[0m
+                [36m</p>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"chakra-stack css-zxdjkc"[39m
+                [33mtitle[39m=[32m"Click to recheck Mesh Server Connection Latency"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"pulse-anim css-1bvbud6"[39m
+                  [33mstyle[39m=[32m"box-shadow: 0 0 6px var(--chakra-colors-success-400);"[39m
+                [36m/>[39m
+                [36m<p[39m
+                  [33mclass[39m=[32m"css-qk46cx"[39m
+                [36m>[39m
+                  [0mServer Connected: 45ms[0m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chakra-stack css-6cpqb8"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Minimize Window"[39m
+                [33mclass[39m=[32m"css-13gewnj"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mheight[39m=[32m"1"[39m
+                  [33mviewBox[39m=[32m"0 0 10 1"[39m
+                  [33mwidth[39m=[32m"10"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mfill[39m=[32m"currentColor"[39m
+                    [33mheight[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"10"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Close Window"[39m
+                [33mclass[39m=[32m"css-1cicnam"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mheight[39m=[32m"10"[39m
+                  [33mviewBox[39m=[32m"0 0 10 10"[39m
+                  [33mwidth[39m=[32m"10"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M1 1 L9 9 M9 1 L1 9"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"1.2"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      27 |
+      28 |     // Check TG connection status
+    > 29 |     expect(screen.getByText('TG Connected: 45ms')).toBeInTheDocument();
+         |                   ^
+      30 |
+      31 |     // Check Internet connection status
+      32 |     expect(screen.getByText(/Internet: (Online|Offline)/)).toBeInTheDocument();
+
+      at Object.getElementError (../../node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../../node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../../node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../../node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at Object.<anonymous> (../../shared/client-common/src/components/__tests__/TitleBar.test.tsx:29:19)
+
+PASS ../../shared/client-common/src/routes/__tests__/useIsLandingPage.test.tsx
+  useIsLandingPage
+    ✓ should return true for landing page "/" (1 ms)
+    ✓ should return true for static screens like "/about-us" (1 ms)
+    ✓ should return false for other routes like "/dashboard" (7 ms)
+
+  console.error
+    Warning: A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+
+      at printWarning (../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfSuspenseResolutionNotWrappedWithActDEV (../../node_modules/react-dom/cjs/react-dom.development.js:27643:7)
+      at pingSuspendedRoot (../../node_modules/react-dom/cjs/react-dom.development.js:27228:3)
+
+  console.error
+    Error: Uncaught [Error: No QueryClient set, use QueryClientProvider to set one]
+        at reportException (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+        at innerInvokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+        at invokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+        at HTMLUnknownElementImpl._dispatch (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+        at HTMLUnknownElementImpl.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+        at HTMLUnknownElement.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+        at Object.invokeGuardedCallbackDev (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+        at invokeGuardedCallback (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+        at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+        at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+        at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+        at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+        at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+        at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+        at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+        at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+        at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+        at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+        at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+        at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+        at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+        at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12) {
+      detail: Error: No QueryClient set, use QueryClientProvider to set one
+          at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+          at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+          at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+          at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+          at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+          at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+          at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+          at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+          at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+          at HTMLUnknownElement.callCallback (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+          at invokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+          at HTMLUnknownElementImpl._dispatch (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+          at HTMLUnknownElement.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+          at Object.invokeGuardedCallbackDev (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+          at invokeGuardedCallback (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+          at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+          at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+          at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+          at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+          at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+          at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+          at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+          at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+          at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+          at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+          at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+          at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+          at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:104:5)
+          at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+          at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+          at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+          at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+          at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+          at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+          at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+          at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+          at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12),
+      type: 'unhandled exception'
+    }
+
+      18 |
+      19 |   it('should render router provider correctly', async () => {
+    > 20 |     const { container } = render(
+         |                                 ^
+      21 |       <ChakraProvider value={system}>
+      22 |         <RouterProvider />
+      23 |       </ChakraProvider>,
+
+      at VirtualConsole.<anonymous> (../../node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at reportException (../../node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+      at invokeEventListeners (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+      at HTMLUnknownElementImpl._dispatch (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+      at HTMLUnknownElementImpl.dispatchEvent (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+      at HTMLUnknownElement.dispatchEvent (../../node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+      at Object.invokeGuardedCallbackDev (../../node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (../../node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at beginWork$1 (../../node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+      at performUnitOfWork (../../node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+
+PASS ../../shared/client-common/src/providers/modal/__tests__/ModalProvider.test.tsx
+  ModalProvider
+    ✓ should render correctly (118 ms)
+    ✓ should render correctly with children (30 ms)
+
+PASS ../../shared/common/src/components/MdPreview/__tests__/utils.test.ts
+  MdPreview utils
+    fetchMdContent
+      ✓ should fetch content and call responseHandler (16 ms)
+      ✓ should log error if fetch fails (2 ms)
+    getMdFileDataInString
+      ✓ should not call responseHandler if path is empty
+
+  console.error
+    Error handled by React Router default ErrorBoundary: Error: No QueryClient set, use QueryClientProvider to set one
+        at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+        at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+        at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+        at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+        at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+        at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+        at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+        at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+        at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+        at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+        at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+        at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+        at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+        at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+        at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+        at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+        at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+        at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+        at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+        at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+        at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+        at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+        at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12)
+
+      18 |
+      19 |   it('should render router provider correctly', async () => {
+    > 20 |     const { container } = render(
+         |                                 ^
+      21 |       <ChakraProvider value={system}>
+      22 |         <RouterProvider />
+      23 |       </ChakraProvider>,
+
+      at DefaultErrorComponent (../../node_modules/react-router/dist/development/chunk-SRID2YZ2.js:7330:13)
+      at renderWithHooks (../../node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (../../node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (../../node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (../../node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (../../node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+
+PASS ../../shared/client-common/src/store/ui/selectors/Modal/__tests__/Modal.selector.test.ts
+  Modal selector
+    ✓ should return modal selector state and actions (33 ms)
+    ✓ should return modal state with initial value (2 ms)
+    ✓ should return modal state on modal data set using openModal (5 ms)
+    ✓ should reset and close modal state on modal data set using closeModal (1 ms)
+
+  console.error
+    Error: Uncaught [Error: No QueryClient set, use QueryClientProvider to set one]
+        at reportException (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+        at innerInvokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+        at invokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+        at HTMLUnknownElementImpl._dispatch (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+        at HTMLUnknownElementImpl.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+        at HTMLUnknownElement.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+        at Object.invokeGuardedCallbackDev (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+        at invokeGuardedCallback (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+        at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+        at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+        at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+        at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+        at recoverFromConcurrentError (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+        at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+        at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+        at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+        at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+        at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+        at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+        at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+        at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+        at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+        at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12) {
+      detail: Error: No QueryClient set, use QueryClientProvider to set one
+          at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+          at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+          at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+          at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+          at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+          at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+          at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+          at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+          at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+          at HTMLUnknownElement.callCallback (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+          at invokeEventListeners (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+          at HTMLUnknownElementImpl._dispatch (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+          at HTMLUnknownElement.dispatchEvent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+          at Object.invokeGuardedCallbackDev (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+          at invokeGuardedCallback (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+          at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+          at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+          at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+          at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+          at recoverFromConcurrentError (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+          at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+          at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+          at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+          at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+          at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+          at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+          at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+          at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+          at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:104:5)
+          at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+          at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+          at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+          at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+          at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+          at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+          at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+          at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+          at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12),
+      type: 'unhandled exception'
+    }
+
+      18 |
+      19 |   it('should render router provider correctly', async () => {
+    > 20 |     const { container } = render(
+         |                                 ^
+      21 |       <ChakraProvider value={system}>
+      22 |         <RouterProvider />
+      23 |       </ChakraProvider>,
+
+      at VirtualConsole.<anonymous> (../../node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at reportException (../../node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+      at invokeEventListeners (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+      at HTMLUnknownElementImpl._dispatch (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+      at HTMLUnknownElementImpl.dispatchEvent (../../node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+      at HTMLUnknownElement.dispatchEvent (../../node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+      at Object.invokeGuardedCallbackDev (../../node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (../../node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at beginWork$1 (../../node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+      at performUnitOfWork (../../node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at recoverFromConcurrentError (../../node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+
+  console.error
+    Error handled by React Router default ErrorBoundary: Error: No QueryClient set, use QueryClientProvider to set one
+        at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+        at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+        at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+        at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+        at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+        at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+        at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+        at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+        at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+        at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+        at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+        at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+        at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+        at recoverFromConcurrentError (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+        at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+        at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+        at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+        at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+        at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+        at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+        at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+        at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+        at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+        at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12)
+
+      18 |
+      19 |   it('should render router provider correctly', async () => {
+    > 20 |     const { container } = render(
+         |                                 ^
+      21 |       <ChakraProvider value={system}>
+      22 |         <RouterProvider />
+      23 |       </ChakraProvider>,
+
+      at DefaultErrorComponent (../../node_modules/react-router/dist/development/chunk-SRID2YZ2.js:7330:13)
+      at renderWithHooks (../../node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (../../node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (../../node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (../../node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (../../node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at recoverFromConcurrentError (../../node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+
+  console.error
+    The above error occurred in the <Dashboard> component:
+    
+        at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:36:47)
+        at Suspense
+        at LazyProvider (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/lazy/LazyProvider.tsx:6:25)
+        at LazyDashboardPage
+        at RenderedRoute (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-router/dist/development/chunk-SRID2YZ2.js:7431:26)
+        at RenderErrorBoundary (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-router/dist/development/chunk-SRID2YZ2.js:7341:5)
+        at DataRoutes2 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-router/dist/development/chunk-SRID2YZ2.js:9721:3)
+        at Router (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-router/dist/development/chunk-SRID2YZ2.js:9821:13)
+        at RouterProvider (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-router/dist/development/chunk-SRID2YZ2.js:9488:3)
+        at RouterProvider2
+        at RouterProvider
+        at ChakraProvider (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@chakra-ui/react/dist/cjs/styled-system/provider.cjs:15:18)
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, RenderErrorBoundary.
+
+      18 |
+      19 |   it('should render router provider correctly', async () => {
+    > 20 |     const { container } = render(
+         |                                 ^
+      21 |       <ChakraProvider value={system}>
+      22 |         <RouterProvider />
+      23 |       </ChakraProvider>,
+
+      at logCapturedError (../../node_modules/react-dom/cjs/react-dom.development.js:18704:23)
+      at RenderErrorBoundary.callback (../../node_modules/react-dom/cjs/react-dom.development.js:18772:7)
+      at callCallback (../../node_modules/react-dom/cjs/react-dom.development.js:15036:12)
+      at commitUpdateQueue (../../node_modules/react-dom/cjs/react-dom.development.js:15057:9)
+      at commitLayoutEffectOnFiber (../../node_modules/react-dom/cjs/react-dom.development.js:23403:13)
+      at commitLayoutMountEffects_complete (../../node_modules/react-dom/cjs/react-dom.development.js:24727:9)
+      at commitLayoutEffects_begin (../../node_modules/react-dom/cjs/react-dom.development.js:24713:7)
+      at commitLayoutEffects (../../node_modules/react-dom/cjs/react-dom.development.js:24651:3)
+      at commitRootImpl (../../node_modules/react-dom/cjs/react-dom.development.js:26862:5)
+      at commitRoot (../../node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at finishConcurrentRender (../../node_modules/react-dom/cjs/react-dom.development.js:25931:9)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+
+  console.error
+    React Router caught the following error during render Error: No QueryClient set, use QueryClientProvider to set one
+        at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+        at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+        at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+        at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+        at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+        at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+        at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+        at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+        at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+        at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+        at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+        at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+        at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+        at recoverFromConcurrentError (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+        at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+        at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+        at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+        at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+        at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+        at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+        at Object.<anonymous> (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+        at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+        at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+        at processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+        at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+        at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+        at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+        at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+        at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+        at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+        at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12)
+
+      18 |
+      19 |   it('should render router provider correctly', async () => {
+    > 20 |     const { container } = render(
+         |                                 ^
+      21 |       <ChakraProvider value={system}>
+      22 |         <RouterProvider />
+      23 |       </ChakraProvider>,
+
+      at RenderErrorBoundary.componentDidCatch (../../node_modules/react-router/dist/development/chunk-SRID2YZ2.js:7369:15)
+      at RenderErrorBoundary.callback (../../node_modules/react-dom/cjs/react-dom.development.js:18785:12)
+      at callCallback (../../node_modules/react-dom/cjs/react-dom.development.js:15036:12)
+      at commitUpdateQueue (../../node_modules/react-dom/cjs/react-dom.development.js:15057:9)
+      at commitLayoutEffectOnFiber (../../node_modules/react-dom/cjs/react-dom.development.js:23403:13)
+      at commitLayoutMountEffects_complete (../../node_modules/react-dom/cjs/react-dom.development.js:24727:9)
+      at commitLayoutEffects_begin (../../node_modules/react-dom/cjs/react-dom.development.js:24713:7)
+      at commitLayoutEffects (../../node_modules/react-dom/cjs/react-dom.development.js:24651:3)
+      at commitRootImpl (../../node_modules/react-dom/cjs/react-dom.development.js:26862:5)
+      at commitRoot (../../node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at finishConcurrentRender (../../node_modules/react-dom/cjs/react-dom.development.js:25931:9)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+
+FAIL ../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx
+  RouterProvider
+    ✓ should render router provider correctly (165 ms)
+    ✕ should render router provider correctly (89 ms)
+
+  ● RouterProvider › should render router provider correctly
+
+    expect(received).toMatchSnapshot()
+
+    Snapshot name: `RouterProvider should render router provider correctly 2`
+
+    - Snapshot  - 67
+    + Received  + 61
+
+      <div>
+    -   <div
+    -     class="css-z6xxr1"
+    +   <h2>
+    +     Unexpected Application Error!
+    +   </h2>
+    +   <h3
+    +     style="font-style: italic;"
+        >
+    -     <div
+    -       class="chakra-stack css-qngkry"
+    -     >
+    -       <div
+    -         class="chakra-stack css-dky9e1"
+    -       >
+    -         <div
+    -           class="css-1uu8sdj"
+    +     No QueryClient set, use QueryClientProvider to set one
+    +   </h3>
+    +   <pre
+    +     style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+        >
+    -           <svg
+    -             class="audiomesh-icon "
+    -             height="100%"
+    -             version="1"
+    -             viewBox="0 0 2048 2048"
+    -             width="100%"
+    -             xmlns="http://www.w3.org/2000/svg"
+    -           >
+    -             <path
+    -               d="M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"
+    -               fill="currentColor"
+    -             />
+    -             <path
+    -               d="M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"
+    -               fill="currentColor"
+    -             />
+    -           </svg>
+    -         </div>
+    -         <h2
+    -           class="chakra-heading css-1poqom1"
+    -         >
+    -           Join AudioMesh
+    -         </h2>
+    -         <p
+    -           class="css-18vq2pb"
+    -         >
+    -           Turn this device into a synchronized speaker node in the mesh network.
+    +     Error: No QueryClient set, use QueryClientProvider to set one
+    +     at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+    +     at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+    +     at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+    +     at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+    +     at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+    +     at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+    +     at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+    +     at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+    +     at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+    +     at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+    +     at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+    +     at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+    +     at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+    +     at recoverFromConcurrentError (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+    +     at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+    +     at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+    +     at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+    +     at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+    +     at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+    +     at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+    +     at Object.&lt;anonymous&gt; (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+    +     at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+    +     at new Promise (&lt;anonymous&gt;)
+    +     at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+    +     at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+    +     at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    +     at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+    +     at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+    +     at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+    +     at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+    +     at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    +     at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    +     at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+    +     at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+    +     at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12)
+    +   </pre>
+    +   <p>
+    +     💿 Hey developer 👋
+        </p>
+    -       </div>
+    -       <div
+    -         class="css-1e0xztd"
+    -       >
+    -         <form>
+    -           <div
+    -             class="chakra-stack css-16p0ebk"
+    -           >
+    -             <div
+    -               class="chakra-stack css-1gzt2am"
+    +   <p>
+    +     You can provide a way better UX than this when your app throws errors by providing your own 
+    +     <code
+    +       style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+          >
+    -               <p
+    -                 class="css-1g62803"
+    +       ErrorBoundary
+    +     </code>
+    +      or
+    +      
+    +     <code
+    +       style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+          >
+    -                 Device / Node Name
+    +       errorElement
+    +     </code>
+    +      prop on your route.
+        </p>
+    -               <input
+    -                 class="chakra-input css-47xuv0"
+    -                 placeholder="Enter node name (e.g., iPhone 15, MacBook Pro)"
+    -                 value=""
+    -               />
+    -             </div>
+    -             <button
+    -               class="chakra-button css-tv2d7t"
+    -               type="submit"
+    -             >
+    -               Join Mesh
+    -             </button>
+    -           </div>
+    -         </form>
+    -       </div>
+    -     </div>
+    -   </div>
+      </div>
+
+      24 |     );
+      25 |
+    > 26 |     expect(container).toMatchSnapshot();
+         |                       ^
+      27 |   });
+      28 | });
+      29 |
+
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:26:23)
+
+ › 1 snapshot failed.
+PASS ../../shared/client-common/src/screens/dashboard/__tests__/Dashboard.test.tsx
+  Dashboard
+    ✓ should render Dashboard screen successfully (142 ms)
+
+PASS ../../shared/client-common/src/store/app/selectors/__tests__/App.selector.test.ts
+  App selectors
+    ✓ selectIsAuthenticated should return true when credentials are set
+    ✓ selectIsAuthenticated should return false when credentials are empty
+    ✓ selectApiCredentials should extract values and handlers
+
+PASS ../../shared/client-common/src/providers/localization/__tests__/LocalizationProvider.test.tsx
+  LocalizationProvider
+    ✓ should render correctly (5 ms)
+
+PASS ../../shared/common/src/components/theme/hooks/__tests__/seIsDarkMode.test.tsx
+  UseIsDarkMode
+    ✓ should return true when dark mode is active (1 ms)
+
+PASS ../../shared/client-common/src/providers/theme/__tests__/ThemeProvider.test.tsx
+  ThemeProvider
+    ✓ should render children successfully (11 ms)
+
+PASS ../../shared/common/src/components/modal/Modals/Search/__tests__/SearchModal.test.tsx
+  Search modal
+    ✓ Should render correctly (16 ms)
+
+  console.error
+    Warning: Functions are not valid as a React child. This may happen if you return a Component instead of <Component /> from render. Or maybe you meant to call this function rather than return it.
+        at HelmetProvider
+        at LocalizationProvider (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/localization/LocalizationProvider.tsx:4:33)
+        at QueryClientProvider (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:30:3)
+        at App
+
+      4 | describe('App', () => {
+      5 |   it('should render without crashing', () => {
+    > 6 |     const { container } = render(<App />);
+        |                                 ^
+      7 |     expect(container).toBeInTheDocument();
+      8 |   });
+      9 | });
+
+      at printWarning (../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnOnFunctionType (../../node_modules/react-dom/cjs/react-dom.development.js:13136:5)
+      at reconcileChildFibers (../../node_modules/react-dom/cjs/react-dom.development.js:14073:9)
+      at reconcileChildren (../../node_modules/react-dom/cjs/react-dom.development.js:19186:28)
+      at mountIndeterminateComponent (../../node_modules/react-dom/cjs/react-dom.development.js:20186:5)
+      at beginWork (../../node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (../../node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (../../node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (../../node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (../../node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../node_modules/react/cjs/react.development.js:2582:11)
+      at ../../node_modules/@testing-library/react/dist/act-compat.js:46:25
+      at renderRoot (../../node_modules/@testing-library/react/dist/pure.js:189:26)
+      at render (../../node_modules/@testing-library/react/dist/pure.js:291:10)
+      at Object.<anonymous> (../../shared/client-common/src/__tests__/App.test.tsx:6:33)
+
+PASS ../../shared/client-common/src/__tests__/App.test.tsx
+  App
+    ✓ should render without crashing (25 ms)
+
+PASS ../../shared/common/src/components/Loading/__tests__/LoadingComponent.test.tsx
+  Loading Component
+    ✓ should render correctly (20 ms)
+
+Summary of all failing tests
+FAIL ../../shared/client-common/src/components/__tests__/TitleBar.test.tsx
+  ● TitleBar › renders TitleBar successfully with Internet and TG indicators
+
+    TestingLibraryElementError: Unable to find an element with the text: TG Connected: 45ms. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"chakra-stack css-18g8bu3"[39m
+          [33mstyle[39m=[32m"user-select: none;"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"chakra-stack css-1x0y7ph"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chakra-stack css-1x0y7ph"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"css-1o363pe"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"audiomesh-icon "[39m
+                  [33mheight[39m=[32m"100%"[39m
+                  [33mversion[39m=[32m"1"[39m
+                  [33mviewBox[39m=[32m"0 0 2048 2048"[39m
+                  [33mwidth[39m=[32m"100%"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"[39m
+                    [33mfill[39m=[32m"currentColor"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"[39m
+                    [33mfill[39m=[32m"currentColor"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"css-904k7f"[39m
+              [36m>[39m
+                [0mAudioMesh[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"css-9a7vyu"[39m
+          [36m/>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"chakra-stack css-vyigcq"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chakra-stack css-7msw3u"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"chakra-stack css-zxdjkc"[39m
+                [33mtitle[39m=[32m"Click to recheck Internet Connection"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"css-1g0ss7"[39m
+                  [33mstyle[39m=[32m"box-shadow: 0 0 6px var(--chakra-colors-error-400);"[39m
+                [36m/>[39m
+                [36m<p[39m
+                  [33mclass[39m=[32m"css-qk46cx"[39m
+                [36m>[39m
+                  [0mInternet: Offline[0m
+                [36m</p>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"chakra-stack css-zxdjkc"[39m
+                [33mtitle[39m=[32m"Click to recheck Mesh Server Connection Latency"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"pulse-anim css-1bvbud6"[39m
+                  [33mstyle[39m=[32m"box-shadow: 0 0 6px var(--chakra-colors-success-400);"[39m
+                [36m/>[39m
+                [36m<p[39m
+                  [33mclass[39m=[32m"css-qk46cx"[39m
+                [36m>[39m
+                  [0mServer Connected: 45ms[0m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chakra-stack css-6cpqb8"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Minimize Window"[39m
+                [33mclass[39m=[32m"css-13gewnj"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mheight[39m=[32m"1"[39m
+                  [33mviewBox[39m=[32m"0 0 10 1"[39m
+                  [33mwidth[39m=[32m"10"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mfill[39m=[32m"currentColor"[39m
+                    [33mheight[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"10"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Close Window"[39m
+                [33mclass[39m=[32m"css-1cicnam"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mheight[39m=[32m"10"[39m
+                  [33mviewBox[39m=[32m"0 0 10 10"[39m
+                  [33mwidth[39m=[32m"10"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M1 1 L9 9 M9 1 L1 9"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"1.2"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      27 |
+      28 |     // Check TG connection status
+    > 29 |     expect(screen.getByText('TG Connected: 45ms')).toBeInTheDocument();
+         |                   ^
+      30 |
+      31 |     // Check Internet connection status
+      32 |     expect(screen.getByText(/Internet: (Online|Offline)/)).toBeInTheDocument();
+
+      at Object.getElementError (../../node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../../node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../../node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../../node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at Object.<anonymous> (../../shared/client-common/src/components/__tests__/TitleBar.test.tsx:29:19)
+
+FAIL ../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx
+  ● RouterProvider › should render router provider correctly
+
+    expect(received).toMatchSnapshot()
+
+    Snapshot name: `RouterProvider should render router provider correctly 2`
+
+    - Snapshot  - 67
+    + Received  + 61
+
+      <div>
+    -   <div
+    -     class="css-z6xxr1"
+    +   <h2>
+    +     Unexpected Application Error!
+    +   </h2>
+    +   <h3
+    +     style="font-style: italic;"
+        >
+    -     <div
+    -       class="chakra-stack css-qngkry"
+    -     >
+    -       <div
+    -         class="chakra-stack css-dky9e1"
+    -       >
+    -         <div
+    -           class="css-1uu8sdj"
+    +     No QueryClient set, use QueryClientProvider to set one
+    +   </h3>
+    +   <pre
+    +     style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+        >
+    -           <svg
+    -             class="audiomesh-icon "
+    -             height="100%"
+    -             version="1"
+    -             viewBox="0 0 2048 2048"
+    -             width="100%"
+    -             xmlns="http://www.w3.org/2000/svg"
+    -           >
+    -             <path
+    -               d="M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"
+    -               fill="currentColor"
+    -             />
+    -             <path
+    -               d="M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"
+    -               fill="currentColor"
+    -             />
+    -           </svg>
+    -         </div>
+    -         <h2
+    -           class="chakra-heading css-1poqom1"
+    -         >
+    -           Join AudioMesh
+    -         </h2>
+    -         <p
+    -           class="css-18vq2pb"
+    -         >
+    -           Turn this device into a synchronized speaker node in the mesh network.
+    +     Error: No QueryClient set, use QueryClientProvider to set one
+    +     at useQueryClient (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx:18:11)
+    +     at useBaseQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useBaseQuery.ts:54:18)
+    +     at useQuery (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@tanstack/react-query/src/useQuery.ts:46:10)
+    +     at useRooms (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/services/hooks.ts:42:18)
+    +     at Dashboard (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/screens/dashboard/Dashboard.tsx:141:64)
+    +     at renderWithHooks (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+    +     at updateFunctionComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+    +     at mountLazyComponent (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:19988:17)
+    +     at beginWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:21632:16)
+    +     at beginWork$1 (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+    +     at performUnitOfWork (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+    +     at workLoopSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+    +     at renderRootSync (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+    +     at recoverFromConcurrentError (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+    +     at performConcurrentWorkOnRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+    +     at flushActQueue (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2667:24)
+    +     at act (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/react/cjs/react.development.js:2582:11)
+    +     at /Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/act-compat.js:46:25
+    +     at renderRoot (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:189:26)
+    +     at render (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/@testing-library/react/dist/pure.js:291:10)
+    +     at Object.&lt;anonymous&gt; (/Users/mr.robot/z-stash/AudioMesh/audiomesh/shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:20:33)
+    +     at Promise.then.completed (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:298:28)
+    +     at new Promise (&lt;anonymous&gt;)
+    +     at callAsyncCircusFn (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/utils.js:231:10)
+    +     at _callCircusTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:316:40)
+    +     at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    +     at _runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:252:3)
+    +     at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:126:9)
+    +     at _runTestsForDescribeBlock (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:121:9)
+    +     at run (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/run.js:71:3)
+    +     at runAndTransformResultsToJestFormat (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    +     at jestAdapter (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    +     at runTestInternal (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:367:16)
+    +     at runTest (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/runTest.js:444:34)
+    +     at Object.worker (/Users/mr.robot/z-stash/AudioMesh/audiomesh/node_modules/jest-runner/build/testWorker.js:106:12)
+    +   </pre>
+    +   <p>
+    +     �� Hey developer ��
+        </p>
+    -       </div>
+    -       <div
+    -         class="css-1e0xztd"
+    -       >
+    -         <form>
+    -           <div
+    -             class="chakra-stack css-16p0ebk"
+    -           >
+    -             <div
+    -               class="chakra-stack css-1gzt2am"
+    +   <p>
+    +     You can provide a way better UX than this when your app throws errors by providing your own 
+    +     <code
+    +       style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+          >
+    -               <p
+    -                 class="css-1g62803"
+    +       ErrorBoundary
+    +     </code>
+    +      or
+    +      
+    +     <code
+    +       style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+          >
+    -                 Device / Node Name
+    +       errorElement
+    +     </code>
+    +      prop on your route.
+        </p>
+    -               <input
+    -                 class="chakra-input css-47xuv0"
+    -                 placeholder="Enter node name (e.g., iPhone 15, MacBook Pro)"
+    -                 value=""
+    -               />
+    -             </div>
+    -             <button
+    -               class="chakra-button css-tv2d7t"
+    -               type="submit"
+    -             >
+    -               Join Mesh
+    -             </button>
+    -           </div>
+    -         </form>
+    -       </div>
+    -     </div>
+    -   </div>
+      </div>
+
+      24 |     );
+      25 |
+    > 26 |     expect(container).toMatchSnapshot();
+         |                       ^
+      27 |   });
+      28 | });
+      29 |
+
+      at Object.<anonymous> (../../shared/client-common/src/providers/router/__tests__/RouterProvider.test.tsx:26:23)
+
+
+Snapshot Summary
+ › 1 snapshot failed from 1 test suite. Inspect your code changes or re-run jest with `-u` to update them.
+
+Test Suites: 2 failed, 20 passed, 22 total
+Tests:       2 failed, 51 passed, 53 total
+Snapshots:   1 failed, 16 passed, 17 total
+Time:        2.329 s
+Ran all test suites.
