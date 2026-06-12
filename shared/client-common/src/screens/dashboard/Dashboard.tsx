@@ -79,6 +79,7 @@ const Dashboard = () => {
   const isAudioEnabledRef = useRef(false);
   const anchorLocalTimeMsRef = useRef<number>(0);
   const anchorAudioTimeRef = useRef<number>(0);
+  const clockOffsetUsRef = useRef<number | null>(null);
 
   // Audio parameters
   const SAMPLE_RATE = 11025;
@@ -101,7 +102,7 @@ const Dashboard = () => {
     const view = new DataView(buffer);
 
     // Calculate synchronized NTP timestamp
-    const offset = clockOffsetUs || 0;
+    const offset = clockOffsetUsRef.current || 0;
     const ntpTimeUs = Date.now() * 1000 + offset;
     view.setBigUint64(0, BigInt(ntpTimeUs), false);
 
@@ -165,7 +166,7 @@ const Dashboard = () => {
     const view = new DataView(buffer);
 
     // Calculate synchronized NTP timestamp
-    const offset = clockOffsetUs || 0;
+    const offset = clockOffsetUsRef.current || 0;
     const ntpTimeUs = Date.now() * 1000 + offset;
     view.setBigUint64(0, BigInt(ntpTimeUs), false);
 
@@ -206,7 +207,13 @@ const Dashboard = () => {
       isAudioEnabledRef.current = true;
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
       if (AudioContextClass) {
-        audioCtxRef.current = new AudioContextClass();
+        const ctx = new AudioContextClass();
+        audioCtxRef.current = ctx;
+        if (ctx.state === 'suspended') {
+          ctx.resume().catch((err) => {
+            console.error('Failed to resume AudioContext inside user gesture click handler:', err);
+          });
+        }
       }
     }
   };
@@ -313,6 +320,7 @@ const Dashboard = () => {
     };
     conn.onTimeSyncUpdated = (stats) => {
       setClockOffsetUs(stats.offsetUs);
+      clockOffsetUsRef.current = stats.offsetUs;
       setSyncRttMs(stats.rttMs);
     };
     conn.connectTimeSync(2000);
@@ -350,7 +358,7 @@ const Dashboard = () => {
           source.connect(ctx.destination);
 
           // Convert NTP microsecond timestamp to client local clock millisecond timeline
-          const offsetMs = (clockOffsetUs || 0) / 1000;
+          const offsetMs = (clockOffsetUsRef.current || 0) / 1000;
           const targetLocalTimeMs = Number(ntpTimeUs) / 1000 - offsetMs;
 
           // Initialize NTP playout anchor
@@ -407,13 +415,23 @@ const Dashboard = () => {
         alert('System loopback audio capture is only supported in the Desktop application.');
         return;
       }
+
+      // Initialize AudioContext synchronously to preserve user gesture context
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+      const loopbackCtx = new AudioContextClass();
+      loopbackCtxRef.current = loopbackCtx;
+
       try {
         const sources = await window.electronAPI.getDesktopSources();
         const sourceId = selectedLoopbackSourceId || sources[0]?.id;
         if (!sourceId) {
           alert('No screen/window source selected.');
+          loopbackCtx.close();
+          loopbackCtxRef.current = null;
           return;
         }
+
+        console.log('Requesting loopback capture for source:', sourceId);
 
         // Request screen/window audio+video stream
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -431,21 +449,47 @@ const Dashboard = () => {
           } as any
         });
 
+        console.log('Successfully acquired desktop stream:', stream);
+        const audioTracks = stream.getAudioTracks();
+        console.log('Audio tracks available:', audioTracks);
+        if (audioTracks.length === 0) {
+          console.warn('Warning: No audio tracks found in the captured desktop stream.');
+        }
+
         // Stop the video track to save CPU
-        stream.getVideoTracks().forEach(track => track.stop());
+        stream.getVideoTracks().forEach(track => {
+          console.log('Stopping video track to save CPU:', track.label);
+          track.stop();
+        });
         loopbackStreamRef.current = stream;
 
-        const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-        const loopbackCtx = new AudioContextClass();
-        loopbackCtxRef.current = loopbackCtx;
+        // Ensure the context is running
+        if (loopbackCtx.state === 'suspended') {
+          console.log('Loopback AudioContext is suspended, resuming...');
+          await loopbackCtx.resume();
+          console.log('Loopback AudioContext state after resume:', loopbackCtx.state);
+        }
 
         const sourceNode = loopbackCtx.createMediaStreamSource(stream);
         const processorNode = loopbackCtx.createScriptProcessor(2048, 1, 1);
         loopbackProcessorRef.current = processorNode;
 
+        let processCount = 0;
         processorNode.onaudioprocess = (e) => {
           const inputData = e.inputBuffer.getChannelData(0);
           const inputRate = loopbackCtx.sampleRate;
+
+          if (processCount % 200 === 0) {
+            let hasActiveAudio = false;
+            for (let i = 0; i < inputData.length; i++) {
+              if (Math.abs(inputData[i]) > 0.0001) {
+                hasActiveAudio = true;
+                break;
+              }
+            }
+            console.log(`onaudioprocess active. Samples count: ${inputData.length}, Queue depth: ${loopbackFifoRef.current.length}, Has audio signal: ${hasActiveAudio}`);
+          }
+          processCount++;
           
           // Downsample block to 11025 Hz
           const downsampled = resampleBuffer(inputData, inputRate, SAMPLE_RATE);
@@ -467,6 +511,8 @@ const Dashboard = () => {
       } catch (err: any) {
         console.error('Failed to capture loopback audio:', err);
         alert(`Failed to capture system audio: ${err.message}`);
+        loopbackCtx.close();
+        loopbackCtxRef.current = null;
         return;
       }
     }
@@ -532,6 +578,9 @@ const Dashboard = () => {
       audioCtxRef.current = null;
     }
     nextPlayTimeRef.current = 0;
+    clockOffsetUsRef.current = null;
+    anchorLocalTimeMsRef.current = 0;
+    anchorAudioTimeRef.current = 0;
   };
 
   // Cleanup on unmount
