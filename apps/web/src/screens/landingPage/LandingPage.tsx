@@ -295,9 +295,7 @@ export const LandingPage = () => {
 
   return (
     <TitleBoxContainer
-      title={
-        t('LandingPage.heroTitlePrefix') + ' ' + t('LandingPage.heroTitleSpan')
-      }
+      title={`AudioMesh`}
       icon="app"
       display="flex"
       flexDir="column"
