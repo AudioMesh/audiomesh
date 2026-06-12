@@ -63,9 +63,93 @@ const Dashboard = () => {
   const [sfuReceivedCount, setSfuReceivedCount] = useState(0);
   const [sfuSentCount, setSfuSentCount] = useState(0);
   const [isStreamingFakeAudio, setIsStreamingFakeAudio] = useState(false);
+  const [isAudioEnabled, setIsAudioEnabled] = useState(false);
 
   const connectionRef = useRef<MeshConnection | null>(null);
   const streamIntervalRef = useRef<any>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const nextPlayTimeRef = useRef<number>(0);
+  const isAudioEnabledRef = useRef(false);
+
+  // Audio parameters
+  const SAMPLE_RATE = 11025;
+  const SAMPLES_PER_FRAME = 220; // 20ms at 11025Hz
+
+  // Keep a ref for generator state
+  const audioPhaseRef = useRef<number>(0);
+  const frameCountRef = useRef<number>(0);
+
+  const MELODY = [
+    659.25, 622.25, 659.25, 622.25, 659.25, 493.88, 587.33, 523.25, 440.00, 0,
+    261.63, 329.63, 440.00, 493.88, 0,
+    329.63, 415.30, 493.88, 523.25, 0
+  ];
+
+  // Generate a synthesized melody frame (20ms) as raw float32 PCM samples
+  const generateMusicFrame = (): ArrayBuffer => {
+    // 8 bytes for timestamp + 220 * 4 bytes for float32 PCM samples = 888 bytes
+    const buffer = new ArrayBuffer(8 + SAMPLES_PER_FRAME * 4);
+    const view = new DataView(buffer);
+
+    // Calculate synchronized NTP timestamp
+    const offset = clockOffsetUs || 0;
+    const ntpTimeUs = Date.now() * 1000 + offset;
+    view.setBigUint64(0, BigInt(ntpTimeUs), false);
+
+    // Determine current note frequency
+    const noteDurationFrames = 12; // 240ms per note
+    const currentFrame = frameCountRef.current;
+    const noteIdx = Math.floor(currentFrame / noteDurationFrames) % MELODY.length;
+    const freq = MELODY[noteIdx];
+
+    let phase = audioPhaseRef.current;
+    const floatView = new Float32Array(buffer, 8, SAMPLES_PER_FRAME);
+
+    // Envelope calculation: simple linear decay over the note duration
+    const totalSamplesInNote = noteDurationFrames * SAMPLES_PER_FRAME;
+    const frameInNote = currentFrame % noteDurationFrames;
+    const startSampleInNote = frameInNote * SAMPLES_PER_FRAME;
+
+    for (let i = 0; i < SAMPLES_PER_FRAME; i++) {
+      if (freq === 0) {
+        floatView[i] = 0;
+      } else {
+        const sampleIdx = startSampleInNote + i;
+        const envelope = Math.max(0, 1 - sampleIdx / totalSamplesInNote);
+        // Soft triangle wave provides a warm sound
+        const t = (phase / (2 * Math.PI)) % 1.0;
+        const triangle = 2.0 * Math.abs(2.0 * (t - Math.floor(t + 0.5))) - 1.0;
+        
+        floatView[i] = triangle * 0.12 * envelope;
+        phase += (2 * Math.PI * freq) / SAMPLE_RATE;
+      }
+    }
+
+    audioPhaseRef.current = phase % (2 * Math.PI);
+    frameCountRef.current += 1;
+
+    return buffer;
+  };
+
+  // Toggle speaker audio playback context
+  const toggleAudioPlayback = () => {
+    if (isAudioEnabledRef.current) {
+      setIsAudioEnabled(false);
+      isAudioEnabledRef.current = false;
+      if (audioCtxRef.current) {
+        audioCtxRef.current.close();
+        audioCtxRef.current = null;
+      }
+      nextPlayTimeRef.current = 0;
+    } else {
+      setIsAudioEnabled(true);
+      isAudioEnabledRef.current = true;
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+      if (AudioContextClass) {
+        audioCtxRef.current = new AudioContextClass();
+      }
+    }
+  };
 
   // Server health checker
   useEffect(() => {
@@ -169,6 +253,37 @@ const Dashboard = () => {
     };
     conn.onSfuAudioFrame = (data) => {
       setSfuReceivedCount((c) => c + 1);
+
+      if (isAudioEnabledRef.current && audioCtxRef.current) {
+        const ctx = audioCtxRef.current;
+        if (ctx.state === 'suspended') {
+          ctx.resume();
+        }
+
+        // Data format: [8-byte timestamp][PCM float32 samples]
+        // Frame size is 888 bytes (8 + 220 * 4)
+        if (data.byteLength >= 8 + SAMPLES_PER_FRAME * 4) {
+          const floatSamples = new Float32Array(data, 8, SAMPLES_PER_FRAME);
+
+          const audioBuffer = ctx.createBuffer(1, SAMPLES_PER_FRAME, SAMPLE_RATE);
+          audioBuffer.copyToChannel(floatSamples, 0);
+
+          const source = ctx.createBufferSource();
+          source.buffer = audioBuffer;
+          source.connect(ctx.destination);
+
+          // Web Audio API scheduling queue
+          const now = ctx.currentTime;
+          let playTime = nextPlayTimeRef.current;
+
+          if (playTime < now + 0.05) {
+            playTime = now + 0.05; // safe lookahead buffer
+          }
+
+          source.start(playTime);
+          nextPlayTimeRef.current = playTime + audioBuffer.duration;
+        }
+      }
     };
     conn.connectSfu('client');
   };
@@ -194,16 +309,12 @@ const Dashboard = () => {
     if (!connectionRef.current || sfuRole !== 'host') return;
     setIsStreamingFakeAudio(true);
 
+    // Reset synthesizer state refs
+    audioPhaseRef.current = 0;
+    frameCountRef.current = 0;
+
     streamIntervalRef.current = setInterval(() => {
-      // 100 bytes: 8 bytes for microsecond timestamp, 92 bytes of mock payload
-      const buffer = new ArrayBuffer(100);
-      const view = new DataView(buffer);
-      
-      const offset = clockOffsetUs || 0;
-      const ntpTimeUs = Date.now() * 1000 + offset;
-      
-      // Store 64-bit microsecond timestamp in network byte order
-      view.setBigUint64(0, BigInt(ntpTimeUs), false);
+      const buffer = generateMusicFrame();
       
       const sent = connectionRef.current?.sendSfuAudioFrame(buffer);
       if (sent) {
@@ -237,6 +348,15 @@ const Dashboard = () => {
     setSfuStatus('disconnected');
     setSfuReceivedCount(0);
     setSfuSentCount(0);
+
+    // Mute/close speaker playback on disconnect
+    setIsAudioEnabled(false);
+    isAudioEnabledRef.current = false;
+    if (audioCtxRef.current) {
+      audioCtxRef.current.close();
+      audioCtxRef.current = null;
+    }
+    nextPlayTimeRef.current = 0;
   };
 
   // Cleanup on unmount
@@ -581,11 +701,28 @@ const Dashboard = () => {
                 </HStack>
 
                 {sfuRole === 'client' ? (
-                  <VStack align="stretch" gap={1}>
-                    <Text fontSize="2xs" color="fg.muted">Binary Audio Frames Received:</Text>
-                    <HStack gap={3}>
-                      <Heading size="md" fontWeight="extrabold" color="teal">{sfuReceivedCount}</Heading>
-                      <Text fontSize="3xs" color="fg.muted">frames (live relay via WebSocket)</Text>
+                  <VStack align="stretch" gap={3}>
+                    <HStack justify="space-between">
+                      <VStack align="start" gap={1}>
+                        <Text fontSize="2xs" color="fg.muted">Binary Audio Frames Received:</Text>
+                        <HStack gap={3}>
+                          <Heading size="md" fontWeight="extrabold" color="teal">{sfuReceivedCount}</Heading>
+                          <Text fontSize="3xs" color="fg.muted">frames (live relay)</Text>
+                        </HStack>
+                      </VStack>
+                      <Button
+                        size="xs"
+                        colorScheme={isAudioEnabled ? 'red' : 'green'}
+                        onClick={toggleAudioPlayback}
+                      >
+                        {isAudioEnabled ? 'Mute Speaker' : 'Unmute Speaker'}
+                      </Button>
+                    </HStack>
+                    <HStack justify="space-between">
+                      <Text fontSize="3xs" color="fg.muted">Audio Output Status:</Text>
+                      <Badge colorScheme={isAudioEnabled ? 'green' : 'gray'}>
+                        {isAudioEnabled ? 'ACTIVE (PLAYING)' : 'MUTED'}
+                      </Badge>
                     </HStack>
                   </VStack>
                 ) : (
@@ -600,11 +737,11 @@ const Dashboard = () => {
                         colorScheme={isStreamingFakeAudio ? 'red' : 'green'}
                         onClick={isStreamingFakeAudio ? stopStreamingFakeAudio : startStreamingFakeAudio}
                       >
-                        {isStreamingFakeAudio ? 'Stop Streaming' : 'Start Streaming Fake Audio'}
+                        {isStreamingFakeAudio ? 'Stop Streaming' : 'Start Streaming Music'}
                       </Button>
                     </HStack>
                     <Text fontSize="3xs" color="fg.muted" fontStyle="italic">
-                      * When streaming is active, the client sends 50 fake audio payloads per second, containing 64-bit microsecond timestamps synchronized with the NTP clock offset.
+                      * When streaming is active, the host synthesizes a real-time retro melody as raw PCM float32 samples (11.025 kHz) and relays them over the SFU WebSocket channel to all connected client speaker channels.
                     </Text>
                   </VStack>
                 )}
