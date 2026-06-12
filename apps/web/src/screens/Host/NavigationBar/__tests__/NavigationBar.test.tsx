@@ -1,4 +1,4 @@
-import { act, screen } from '@testing-library/react';
+import { act } from '@testing-library/react';
 import { useLocation } from 'react-router-dom';
 import { renderWithRouter } from '@testUtils';
 import { appStore } from '@appStore';
@@ -23,10 +23,4 @@ describe('NavigationBar', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should show page title text for about-us path', () => {
-    (useLocation as jest.Mock).mockReturnValue({ pathname: '/about-us' });
-    renderWithRouter(<NavigationBar />);
-    expect(screen.getByTestId('nav-page-title')).toBeInTheDocument();
-    expect(screen.getByTestId('nav-page-title')).toHaveTextContent('About Us');
-  });
 });

@@ -7,123 +7,311 @@ exports[`LandingPage should render correctly for guest user 1`] = `
   >
     <div>
       <title>
-        AudioMesh | Synchronized Multi-Device Sound Mesh
+        Harmonize Your Devices, Amplify Your Sound.
       </title>
     </div>
-    <style>
-      
-        /* --- Mesh animations --- */
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-8px); }
-        }
-        .mesh-card-float { animation: float 6s ease-in-out infinite; }
-
-        @keyframes wave {
-          0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
-          100% { transform: translate(-50%, -50%) scale(2.8); opacity: 0; }
-        }
-        .wave-ring {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          border: 2px solid var(--chakra-colors-primary);
-          border-radius: 50%;
-          pointer-events: none;
-          z-index: 1;
-          width: 90px;
-          height: 90px;
-        }
-        .wave-ring-1 { animation: wave 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
-        .wave-ring-2 { animation: wave 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 1.3s; }
-        .wave-ring-3 { animation: wave 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 2.6s; }
-
-        @keyframes pulse-icon {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.15); }
-        }
-        .pulse-host-icon { animation: pulse-icon 2s ease-in-out infinite; }
-
-        @keyframes eq-bounce-1 {
-          0%, 100% { height: 6px; }
-          50% { height: 22px; }
-        }
-        @keyframes eq-bounce-2 {
-          0%, 100% { height: 16px; }
-          50% { height: 4px; }
-        }
-        @keyframes eq-bounce-3 {
-          0%, 100% { height: 10px; }
-          50% { height: 24px; }
-        }
-        .eq-bar {
-          width: 4px;
-          background-color: var(--chakra-colors-primary);
-          border-top-left-radius: 2px;
-          border-top-right-radius: 2px;
-        }
-        .eq-bar-1 { animation: eq-bounce-1 0.8s ease-in-out infinite; }
-        .eq-bar-2 { animation: eq-bounce-2 1.1s ease-in-out infinite; }
-        .eq-bar-3 { animation: eq-bounce-3 0.9s ease-in-out infinite; }
-
-        @keyframes stroke-dash {
-          to { stroke-dashoffset: -20; }
-        }
-        .mesh-line {
-          stroke: var(--chakra-colors-primary);
-          stroke-width: 1.5;
-          stroke-dasharray: 4 4;
-          opacity: 0.55;
-          animation: stroke-dash 2s linear infinite;
-        }
-        .mesh-line-1 { stroke-dashoffset: 0; }
-        .mesh-line-2 { stroke-dashoffset: 0; }
-        .mesh-line-3 { stroke-dashoffset: 0; }
-      
-    </style>
     <div
-      class="chakra-stack css-1nu4llu"
+      class="chakra-stack css-kuif0o"
     >
+      <div />
+      <div />
       <div
         class="chakra-stack css-1rncypo"
       >
         <div
-          class="chakra-stack css-ic8uy2"
+          class="chakra-stack css-14cgfu1"
         >
-          <span
-            class="chakra-badge css-1xhavzz"
+          <div
+            class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 "
+            style="width: auto; height: auto; border-radius: 20px; --glass-frost: 0.06; --glass-saturation: 2; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
           >
-            📶 Dual-Protocol Synchronization
-          </span>
+            <svg
+              class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <filter
+                  color-interpolation-filters="sRGB"
+                  height="100%"
+                  id="glass-filter--r0-"
+                  width="100%"
+                  x="0%"
+                  y="0%"
+                >
+                  <feimage
+                    height="100%"
+                    href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r0-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r0-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23red-grad--r0-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23blue-grad--r0-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2220%22%20fill%3D%22hsl(0%200%25%20100%25%20%2F%200)%22%20style%3D%22filter%3Ablur(10px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                    preserveAspectRatio="none"
+                    result="map"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <fedisplacementmap
+                    id="redchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispRed"
+                    scale="20"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispRed"
+                    result="red"
+                    type="matrix"
+                    values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="greenchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispGreen"
+                    scale="20"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispGreen"
+                    result="green"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="bluechannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispBlue"
+                    scale="20"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispBlue"
+                    result="blue"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                  />
+                  <feblend
+                    in="red"
+                    in2="green"
+                    mode="screen"
+                    result="rg"
+                  />
+                  <feblend
+                    in="rg"
+                    in2="blue"
+                    mode="screen"
+                    result="output"
+                  />
+                  <fegaussianblur
+                    in="output"
+                    stdDeviation="3"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <div
+              class="w-full h-full rounded-[inherit] relative z-10"
+            >
+              <div
+                class="css-cy7e04"
+              >
+                📶 Next-Gen Audio Mesh Protocol
+              </div>
+            </div>
+          </div>
           <h2
-            class="chakra-heading css-1txzm46"
+            class="chakra-heading css-1jaebv0"
           >
             Harmonize Your Devices,
             <br />
             <span
-              class="css-x1gurf"
+              class="css-1baulvz"
             >
               Amplify Your Sound.
             </span>
           </h2>
           <p
-            class="css-jya90p"
+            class="css-1m27a7v"
           >
             AudioMesh seamlessly bridges nearby smartphones, tablets, and computers over Wi-Fi and Bluetooth networks, transforming them into a unified, perfectly synchronized speaker array. Enjoy immersive sound without expensive hardware.
           </p>
           <div
+            class="css-1fxfcl3"
+          >
+            <div
+              class="chakra-stack css-1lcqy4c"
+            >
+              <p
+                class="css-12sgbgz"
+              >
+                ACTIVE NODES
+              </p>
+              <h2
+                class="chakra-heading css-c68xsb"
+              >
+                3 / 5
+              </h2>
+            </div>
+            <div
+              class="chakra-stack css-1ld3hu1"
+            >
+              <p
+                class="css-12sgbgz"
+              >
+                SYNC ACCURACY
+              </p>
+              <h2
+                class="chakra-heading css-1uurgx5"
+              >
+                99.99%
+              </h2>
+            </div>
+          </div>
+          <div
             class="chakra-stack css-19cg7hp"
           >
             <a
-              class="chakra-button css-128j574"
               data-discover="true"
               href="/product"
-              type="button"
+              style="text-decoration: none;"
             >
-              Download App
+              <div
+                class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 "
+                style="width: auto; height: auto; border-radius: 12px; --glass-frost: 0.06; --glass-saturation: 2; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
+              >
+                <svg
+                  class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <filter
+                      color-interpolation-filters="sRGB"
+                      height="100%"
+                      id="glass-filter--r1-"
+                      width="100%"
+                      x="0%"
+                      y="0%"
+                    >
+                      <feimage
+                        height="100%"
+                        href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r1-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r1-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23red-grad--r1-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23blue-grad--r1-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2212%22%20fill%3D%22hsl(0%200%25%20100%25%20%2F%200)%22%20style%3D%22filter%3Ablur(10px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                        preserveAspectRatio="none"
+                        result="map"
+                        width="100%"
+                        x="0"
+                        y="0"
+                      />
+                      <fedisplacementmap
+                        id="redchannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispRed"
+                        scale="20"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispRed"
+                        result="red"
+                        type="matrix"
+                        values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                      />
+                      <fedisplacementmap
+                        id="greenchannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispGreen"
+                        scale="20"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispGreen"
+                        result="green"
+                        type="matrix"
+                        values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                      />
+                      <fedisplacementmap
+                        id="bluechannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispBlue"
+                        scale="20"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispBlue"
+                        result="blue"
+                        type="matrix"
+                        values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                      />
+                      <feblend
+                        in="red"
+                        in2="green"
+                        mode="screen"
+                        result="rg"
+                      />
+                      <feblend
+                        in="rg"
+                        in2="blue"
+                        mode="screen"
+                        result="output"
+                      />
+                      <fegaussianblur
+                        in="output"
+                        stdDeviation="3"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="w-full h-full rounded-[inherit] relative z-10"
+                >
+                  <div
+                    class="css-5mabx0"
+                  >
+                    Download App
+                  </div>
+                </div>
+              </div>
             </a>
             <a
-              class="chakra-button css-zk80wl"
+              class="chakra-button css-1wzsrho"
               data-discover="true"
               href="/docs"
               type="button"
@@ -133,169 +321,1399 @@ exports[`LandingPage should render correctly for guest user 1`] = `
           </div>
         </div>
         <div
-          class="css-1cr7chv"
+          class="chakra-stack css-1w2oetv"
         >
           <div
-            class="mesh-card-float css-k6m3pc"
+            class="css-4humyz"
           >
             <div
-              class="wave-ring wave-ring-1"
-            />
-            <div
-              class="wave-ring wave-ring-2"
-            />
-            <div
-              class="wave-ring wave-ring-3"
-            />
-            <svg
-              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none;"
+              class="chakra-stack css-qwofrc"
             >
-              <line
-                class="mesh-line mesh-line-1"
-                x1="50%"
-                x2="20%"
-                y1="50%"
-                y2="25%"
-              />
-              <line
-                class="mesh-line mesh-line-2"
-                x1="50%"
-                x2="80%"
-                y1="50%"
-                y2="25%"
-              />
-              <line
-                class="mesh-line mesh-line-3"
-                x1="50%"
-                x2="50%"
-                y1="50%"
-                y2="82%"
-              />
-            </svg>
+              <div
+                class="chakra-stack css-1x0y7ph"
+              >
+                <div
+                  class="css-1bjre98"
+                />
+                <p
+                  class="css-8v26tu"
+                >
+                  Mesh Routing Console
+                </p>
+              </div>
+              <div
+                class="chakra-stack css-141cw8v"
+              >
+                <div
+                  class="css-zij283"
+                />
+                <div
+                  class="css-zij283"
+                />
+                <div
+                  class="css-zij283"
+                />
+              </div>
+            </div>
             <div
-              class="css-1mk5acb"
+              class="css-xbsvnz"
+            >
+              <div
+                class="css-pwy6f5"
+              >
+                <div
+                  class="undefined undefined"
+                />
+                <div
+                  class="undefined undefined"
+                />
+                <svg
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none;"
+                >
+                  <line
+                    style="stroke: var(--chakra-colors-primary); opacity: 0.75; animation: undefined 0.6s linear infinite;"
+                    x1="50%"
+                    x2="18%"
+                    y1="50%"
+                    y2="20%"
+                  />
+                  <line
+                    style="stroke: var(--chakra-colors-primary); opacity: 0.75; animation: undefined 1s linear infinite;"
+                    x1="50%"
+                    x2="82%"
+                    y1="50%"
+                    y2="20%"
+                  />
+                  <line
+                    style="stroke: var(--chakra-colors-primary); opacity: 0.75; animation: undefined 0.625s linear infinite;"
+                    x1="50%"
+                    x2="18%"
+                    y1="50%"
+                    y2="50%"
+                  />
+                  <line
+                    style="stroke: var(--chakra-colors-primary); opacity: 0.75; animation: undefined 0.875s linear infinite;"
+                    x1="50%"
+                    x2="82%"
+                    y1="50%"
+                    y2="50%"
+                  />
+                  <line
+                    style="stroke: #eab308; opacity: 0.6; animation: undefined 3.5s linear infinite;"
+                    x1="50%"
+                    x2="50%"
+                    y1="50%"
+                    y2="88%"
+                  />
+                </svg>
+                <div
+                  class="css-1450hj1"
+                >
+                  <svg
+                    fill="none"
+                    height="24px"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                  >
+                    <path
+                      d="M9 18V5l12-2v13"
+                    />
+                    <circle
+                      cx="6"
+                      cy="18"
+                      r="3"
+                    />
+                    <circle
+                      cx="18"
+                      cy="16"
+                      r="3"
+                    />
+                  </svg>
+                  <p
+                    class="css-12nhbuw"
+                  >
+                    HOST
+                  </p>
+                </div>
+                <div
+                  class="chakra-stack css-1cb8ba3"
+                >
+                  <div
+                    class="css-o3zdbr"
+                  >
+                    <div
+                      style="display: flex; align-items: center; justify-content: center;"
+                    >
+                      <svg
+                        fill="none"
+                        height="28"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="28"
+                      >
+                        <rect
+                          height="14"
+                          rx="2"
+                          ry="2"
+                          width="20"
+                          x="2"
+                          y="4"
+                        />
+                        <line
+                          x1="2"
+                          x2="22"
+                          y1="20"
+                          y2="20"
+                        />
+                        <line
+                          x1="12"
+                          x2="12"
+                          y1="18"
+                          y2="20"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="css-9wh92z"
+                    >
+                      <div
+                        class="chakra-stack css-14ad6p5"
+                      >
+                        <div
+                          class="eq-bar css-1otz1pk"
+                          style="animation: undefined 0.8s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-we3pz2"
+                          style="animation: undefined 1.1s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-1ysf8y5"
+                          style="animation: undefined 0.9s ease-in-out infinite;"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="css-1il54vo"
+                  >
+                    MacBook Pro
+                  </p>
+                </div>
+                <div
+                  class="chakra-stack css-12d8p9h"
+                >
+                  <div
+                    class="css-o3zdbr"
+                  >
+                    <div
+                      style="display: flex; align-items: center; justify-content: center;"
+                    >
+                      <svg
+                        fill="none"
+                        height="26"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="26"
+                      >
+                        <rect
+                          height="20"
+                          rx="2"
+                          ry="2"
+                          width="16"
+                          x="4"
+                          y="2"
+                        />
+                        <line
+                          stroke-width="2.5"
+                          x1="12"
+                          x2="12"
+                          y1="18"
+                          y2="18.01"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="css-9wh92z"
+                    >
+                      <div
+                        class="chakra-stack css-14ad6p5"
+                      >
+                        <div
+                          class="eq-bar css-hoc6md"
+                          style="animation: undefined 0.8s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-pkm00a"
+                          style="animation: undefined 1.1s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-1ufqgbk"
+                          style="animation: undefined 0.9s ease-in-out infinite;"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="css-1il54vo"
+                  >
+                    iPad Pro
+                  </p>
+                </div>
+                <div
+                  class="chakra-stack css-4qxxhm"
+                >
+                  <div
+                    class="css-o3zdbr"
+                  >
+                    <div
+                      style="display: flex; align-items: center; justify-content: center;"
+                    >
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <rect
+                          height="20"
+                          rx="2"
+                          ry="2"
+                          width="14"
+                          x="5"
+                          y="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="5"
+                          fill="currentColor"
+                          r="0.75"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="css-9wh92z"
+                    >
+                      <div
+                        class="chakra-stack css-14ad6p5"
+                      >
+                        <div
+                          class="eq-bar css-tjdlpp"
+                          style="animation: undefined 0.8s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-1ufqgbk"
+                          style="animation: undefined 1.1s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-1l41r6r"
+                          style="animation: undefined 0.9s ease-in-out infinite;"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="css-1il54vo"
+                  >
+                    Galaxy S24
+                  </p>
+                </div>
+                <div
+                  class="chakra-stack css-td8d7o"
+                >
+                  <div
+                    class="css-o3zdbr"
+                  >
+                    <div
+                      style="display: flex; align-items: center; justify-content: center;"
+                    >
+                      <svg
+                        fill="none"
+                        height="26"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="26"
+                      >
+                        <ellipse
+                          cx="12"
+                          cy="5"
+                          rx="6"
+                          ry="2.5"
+                        />
+                        <path
+                          d="M6 5v14c0 1.38 2.69 2.5 6 2.5s6-1.12 6-2.5V5"
+                        />
+                        <path
+                          d="M6 10c0 1.38 2.69 2.5 6 2.5s6-1.12 6-2.5"
+                          stroke-dasharray="2 2"
+                        />
+                        <path
+                          d="M6 15c0 1.38 2.69 2.5 6 2.5s6-1.12 6-2.5"
+                          stroke-dasharray="2 2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="css-9wh92z"
+                    >
+                      <div
+                        class="chakra-stack css-14ad6p5"
+                      >
+                        <div
+                          class="eq-bar css-6y8rav"
+                          style="animation: undefined 0.8s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-ptrftn"
+                          style="animation: undefined 1.1s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-maky79"
+                          style="animation: undefined 0.9s ease-in-out infinite;"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="css-1il54vo"
+                  >
+                    Mesh Speaker
+                  </p>
+                </div>
+                <div
+                  class="chakra-stack css-5jvbgg"
+                >
+                  <div
+                    class="css-atn3m3"
+                  >
+                    <div
+                      style="display: flex; align-items: center; justify-content: center;"
+                    >
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <rect
+                          height="20"
+                          rx="2"
+                          ry="2"
+                          width="14"
+                          x="5"
+                          y="2"
+                        />
+                        <line
+                          stroke-width="2.5"
+                          x1="12"
+                          x2="12"
+                          y1="18"
+                          y2="18.01"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="css-9wh92z"
+                    >
+                      <div
+                        class="chakra-stack css-14ad6p5"
+                      >
+                        <div
+                          class="eq-bar css-1xyjyf1"
+                          style="animation: undefined 2.5s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-c7bycn"
+                          style="animation: undefined 3.0s ease-in-out infinite;"
+                        />
+                        <div
+                          class="eq-bar css-15avtiz"
+                          style="animation: undefined 2.2s ease-in-out infinite;"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="css-1il54vo"
+                  >
+                    iPhone 15
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="chakra-stack css-13ofrfu"
+            >
+              <div
+                class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 "
+                style="width: auto; height: auto; border-radius: 12px; --glass-frost: 0.15; --glass-saturation: 1.6; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
+              >
+                <svg
+                  class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <filter
+                      color-interpolation-filters="sRGB"
+                      height="100%"
+                      id="glass-filter--r2-"
+                      width="100%"
+                      x="0%"
+                      y="0%"
+                    >
+                      <feimage
+                        height="100%"
+                        href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r2-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r2-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23red-grad--r2-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23blue-grad--r2-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2212%22%20fill%3D%22hsl(0%200%25%20100%25%20%2F%200)%22%20style%3D%22filter%3Ablur(6px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                        preserveAspectRatio="none"
+                        result="map"
+                        width="100%"
+                        x="0"
+                        y="0"
+                      />
+                      <fedisplacementmap
+                        id="redchannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispRed"
+                        scale="15"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispRed"
+                        result="red"
+                        type="matrix"
+                        values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                      />
+                      <fedisplacementmap
+                        id="greenchannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispGreen"
+                        scale="15"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispGreen"
+                        result="green"
+                        type="matrix"
+                        values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                      />
+                      <fedisplacementmap
+                        id="bluechannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispBlue"
+                        scale="15"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispBlue"
+                        result="blue"
+                        type="matrix"
+                        values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                      />
+                      <feblend
+                        in="red"
+                        in2="green"
+                        mode="screen"
+                        result="rg"
+                      />
+                      <feblend
+                        in="rg"
+                        in2="blue"
+                        mode="screen"
+                        result="output"
+                      />
+                      <fegaussianblur
+                        in="output"
+                        stdDeviation="2"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="w-full h-full rounded-[inherit] relative z-10"
+                >
+                  <button
+                    class="chakra-button css-1m7u4q5"
+                    type="button"
+                  >
+                    ⚡ 
+                    Optimize Sync
+                  </button>
+                </div>
+              </div>
+              <div
+                class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 "
+                style="width: auto; height: auto; border-radius: 12px; --glass-frost: 0.06; --glass-saturation: 1.3; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
+              >
+                <svg
+                  class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <filter
+                      color-interpolation-filters="sRGB"
+                      height="100%"
+                      id="glass-filter--r3-"
+                      width="100%"
+                      x="0%"
+                      y="0%"
+                    >
+                      <feimage
+                        height="100%"
+                        href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r3-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r3-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23red-grad--r3-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23blue-grad--r3-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2212%22%20fill%3D%22hsl(0%200%25%20100%25%20%2F%200)%22%20style%3D%22filter%3Ablur(6px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                        preserveAspectRatio="none"
+                        result="map"
+                        width="100%"
+                        x="0"
+                        y="0"
+                      />
+                      <fedisplacementmap
+                        id="redchannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispRed"
+                        scale="15"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispRed"
+                        result="red"
+                        type="matrix"
+                        values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                      />
+                      <fedisplacementmap
+                        id="greenchannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispGreen"
+                        scale="15"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispGreen"
+                        result="green"
+                        type="matrix"
+                        values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                      />
+                      <fedisplacementmap
+                        id="bluechannel"
+                        in="SourceGraphic"
+                        in2="map"
+                        result="dispBlue"
+                        scale="15"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                      />
+                      <fecolormatrix
+                        in="dispBlue"
+                        result="blue"
+                        type="matrix"
+                        values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                      />
+                      <feblend
+                        in="red"
+                        in2="green"
+                        mode="screen"
+                        result="rg"
+                      />
+                      <feblend
+                        in="rg"
+                        in2="blue"
+                        mode="screen"
+                        result="output"
+                      />
+                      <fegaussianblur
+                        in="output"
+                        stdDeviation="2"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="w-full h-full rounded-[inherit] relative z-10"
+                >
+                  <button
+                    class="chakra-button css-nu9ur1"
+                    type="button"
+                  >
+                    🎵 
+                    Play Test Tone
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 "
+              style="margin-top: 16px; width: 100%; height: auto; border-radius: 12px; --glass-frost: 0.04; --glass-saturation: 1.2; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
             >
               <svg
-                class="pulse-host-icon"
-                fill="none"
-                height="24px"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24px"
+                class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M9 18V5l12-2v13"
-                />
-                <circle
-                  cx="6"
-                  cy="18"
-                  r="3"
-                />
-                <circle
-                  cx="18"
-                  cy="16"
-                  r="3"
-                />
+                <defs>
+                  <filter
+                    color-interpolation-filters="sRGB"
+                    height="100%"
+                    id="glass-filter--r4-"
+                    width="100%"
+                    x="0%"
+                    y="0%"
+                  >
+                    <feimage
+                      height="100%"
+                      href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r4-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r4-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23red-grad--r4-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22url(%23blue-grad--r4-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2212%22%20fill%3D%22hsl(0%200%25%20100%25%20%2F%200)%22%20style%3D%22filter%3Ablur(8px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                      preserveAspectRatio="none"
+                      result="map"
+                      width="100%"
+                      x="0"
+                      y="0"
+                    />
+                    <fedisplacementmap
+                      id="redchannel"
+                      in="SourceGraphic"
+                      in2="map"
+                      result="dispRed"
+                      scale="12"
+                      xChannelSelector="R"
+                      yChannelSelector="G"
+                    />
+                    <fecolormatrix
+                      in="dispRed"
+                      result="red"
+                      type="matrix"
+                      values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                    />
+                    <fedisplacementmap
+                      id="greenchannel"
+                      in="SourceGraphic"
+                      in2="map"
+                      result="dispGreen"
+                      scale="12"
+                      xChannelSelector="R"
+                      yChannelSelector="G"
+                    />
+                    <fecolormatrix
+                      in="dispGreen"
+                      result="green"
+                      type="matrix"
+                      values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                    />
+                    <fedisplacementmap
+                      id="bluechannel"
+                      in="SourceGraphic"
+                      in2="map"
+                      result="dispBlue"
+                      scale="12"
+                      xChannelSelector="R"
+                      yChannelSelector="G"
+                    />
+                    <fecolormatrix
+                      in="dispBlue"
+                      result="blue"
+                      type="matrix"
+                      values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                    />
+                    <feblend
+                      in="red"
+                      in2="green"
+                      mode="screen"
+                      result="rg"
+                    />
+                    <feblend
+                      in="rg"
+                      in2="blue"
+                      mode="screen"
+                      result="output"
+                    />
+                    <fegaussianblur
+                      in="output"
+                      stdDeviation="2"
+                    />
+                  </filter>
+                </defs>
               </svg>
-              <p
-                class="css-12nhbuw"
-              >
-                HOST
-              </p>
-            </div>
-            <div
-              class="chakra-stack css-lbrt5v"
-            >
               <div
-                class="css-dc7swy"
+                class="w-full h-full rounded-[inherit] relative z-10"
               >
                 <div
-                  class="chakra-stack css-1qvc3gs"
+                  class="css-1a7w49z"
                 >
-                  <div
-                    class="eq-bar eq-bar-1"
-                  />
-                  <div
-                    class="eq-bar eq-bar-2"
-                  />
-                  <div
-                    class="eq-bar eq-bar-3"
-                  />
+                  <p
+                    class="css-160vszz"
+                  >
+                    &gt; 
+                    [SYS] AudioMesh Routing Daemon initialised on 127.0.0.1:3000
+                  </p>
+                  <p
+                    class="css-1x3ks3q"
+                  >
+                    &gt; 
+                    [NET] Dual-protocol synchronization running: Wi-Fi + Bluetooth
+                  </p>
+                  <p
+                    class="css-160vszz"
+                  >
+                    &gt; 
+                    [SYS] Ready for connection discovery...
+                  </p>
                 </div>
               </div>
-              <p
-                class="css-1il54vo"
-              >
-                MacBook Pro
-              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-stack scroll-indicator css-1gda36f"
+      >
+        <p
+          class="css-jenqwp"
+        >
+          Scroll to explore
+        </p>
+        <svg
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewBox="0 0 24 24"
+          width="14"
+        >
+          <line
+            x1="12"
+            x2="12"
+            y1="5"
+            y2="19"
+          />
+          <polyline
+            points="19 12 12 19 5 12"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-1cd3z3z"
+    >
+      <div
+        class="css-1ub3vqw"
+      >
+        <div
+          class="chakra-stack reveal-up reveal-up-native css-myxrat"
+        >
+          <span
+            class="chakra-badge css-12mvmk3"
+          >
+            🛠️ 
+            How It Works
+          </span>
+          <h2
+            class="chakra-heading css-1l8tyi8"
+          >
+            Setting up your synchronized speaker network in seconds.
+          </h2>
+        </div>
+        <div
+          class="css-1vpmfc1"
+        >
+          <div
+            class="undefined undefined reveal-up reveal-up-native"
+            style="position: relative; overflow: visible; display: block; --electric-border-color: var(--chakra-colors-yellow-400); border-radius: 24px;"
+          >
+            <div
+              class="electric-border-canvas-wrapper"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 2;"
+            >
+              <canvas
+                style="display: block;"
+              />
             </div>
             <div
-              class="chakra-stack css-1v9ryoy"
+              class="electric-border-glow-wrapper"
+              style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;"
             >
               <div
-                class="css-dc7swy"
-              >
-                <div
-                  class="chakra-stack css-1qvc3gs"
-                >
-                  <div
-                    class="eq-bar eq-bar-2"
-                  />
-                  <div
-                    class="eq-bar eq-bar-3"
-                  />
-                  <div
-                    class="eq-bar eq-bar-1"
-                  />
-                </div>
-              </div>
-              <p
-                class="css-1il54vo"
-              >
-                iPad Pro
-              </p>
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(1px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(4px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; transform: scale(1.1); opacity: 0.3; filter: blur(32px);"
+              />
             </div>
             <div
-              class="chakra-stack css-17gfg2v"
+              class="electric-border-children-wrapper"
+              style="position: relative; border-radius: inherit; z-index: 1; height: 100%;"
             >
               <div
-                class="css-dc7swy"
+                class="chakra-stack css-1qvyigh"
               >
                 <div
-                  class="chakra-stack css-1qvc3gs"
+                  class="css-7w8keh"
                 >
-                  <div
-                    class="eq-bar eq-bar-3"
-                  />
-                  <div
-                    class="eq-bar eq-bar-1"
-                  />
-                  <div
-                    class="eq-bar eq-bar-2"
-                  />
+                  <svg
+                    fill="none"
+                    height="50"
+                    stroke="var(--chakra-colors-yellow-400)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    style="overflow: visible;"
+                    viewBox="0 0 24 24"
+                    width="50"
+                  >
+                    <rect
+                      height="14"
+                      rx="2"
+                      ry="2"
+                      width="20"
+                      x="2"
+                      y="4"
+                    />
+                    <line
+                      x1="2"
+                      x2="22"
+                      y1="20"
+                      y2="20"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="18"
+                      y2="20"
+                    />
+                    <circle
+                      cx="12"
+                      cy="11"
+                      fill="none"
+                      opacity="0.8"
+                      r="3"
+                      stroke="var(--chakra-colors-yellow-400)"
+                      stroke-width="1"
+                    >
+                      <animate
+                        attributeName="r"
+                        dur="2s"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="3; 16"
+                      />
+                      <animate
+                        attributeName="opacity"
+                        dur="2s"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="0.8; 0"
+                      />
+                    </circle>
+                    <circle
+                      cx="12"
+                      cy="11"
+                      fill="none"
+                      opacity="0.8"
+                      r="3"
+                      stroke="var(--chakra-colors-yellow-400)"
+                      stroke-width="1"
+                    >
+                      <animate
+                        attributeName="r"
+                        begin="1s"
+                        dur="2s"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="3; 16"
+                      />
+                      <animate
+                        attributeName="opacity"
+                        begin="1s"
+                        dur="2s"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="0.8; 0"
+                      />
+                    </circle>
+                  </svg>
                 </div>
+                <span
+                  class="chakra-badge css-1c3ttsh"
+                >
+                  STEP 01
+                </span>
+                <h2
+                  class="chakra-heading css-os9i2l"
+                >
+                  Initialize Host
+                </h2>
+                <p
+                  class="css-16sl19t"
+                >
+                  Designate any device as the primary transmitter. Load your audio stream and start the session.
+                </p>
               </div>
-              <p
-                class="css-1il54vo"
+            </div>
+          </div>
+          <div
+            class="undefined undefined reveal-up reveal-up-native delay-1"
+            style="position: relative; overflow: visible; display: block; --electric-border-color: var(--chakra-colors-cyan-400); border-radius: 24px;"
+          >
+            <div
+              class="electric-border-canvas-wrapper"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 2;"
+            >
+              <canvas
+                style="display: block;"
+              />
+            </div>
+            <div
+              class="electric-border-glow-wrapper"
+              style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;"
+            >
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(1px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(4px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; transform: scale(1.1); opacity: 0.3; filter: blur(32px);"
+              />
+            </div>
+            <div
+              class="electric-border-children-wrapper"
+              style="position: relative; border-radius: inherit; z-index: 1; height: 100%;"
+            >
+              <div
+                class="chakra-stack css-1qvyigh"
               >
-                iPhone 15
-              </p>
+                <div
+                  class="css-7w8keh"
+                >
+                  <svg
+                    fill="none"
+                    height="50"
+                    stroke="var(--chakra-colors-cyan-400)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    style="overflow: visible;"
+                    viewBox="0 0 24 24"
+                    width="50"
+                  >
+                    <path
+                      d="M12 2a10 10 0 0 1 10 10"
+                      stroke="var(--chakra-colors-cyan-400)"
+                    >
+                      <animate
+                        attributeName="opacity"
+                        dur="1.5s"
+                        repeatCount="indefinite"
+                        values="0.3; 1; 0.3"
+                      />
+                    </path>
+                    <path
+                      d="M12 6a6 6 0 0 1 6 6"
+                      stroke="var(--chakra-colors-cyan-400)"
+                    >
+                      <animate
+                        attributeName="opacity"
+                        dur="1.5s"
+                        repeatCount="indefinite"
+                        values="1; 0.3; 1"
+                      />
+                    </path>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      fill="currentColor"
+                      r="2"
+                    />
+                    <path
+                      d="M12 22v-3"
+                      stroke="var(--chakra-colors-cyan-400)"
+                    />
+                    <path
+                      d="M17 22H7"
+                      stroke="var(--chakra-colors-cyan-400)"
+                    />
+                    <path
+                      d="M12 12 L 20 4"
+                      opacity="0.5"
+                      stroke="var(--chakra-colors-cyan-400)"
+                      stroke-dasharray="3 3"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="1s"
+                        from="10"
+                        repeatCount="indefinite"
+                        to="0"
+                      />
+                    </path>
+                    <path
+                      d="M12 12 L 4 4"
+                      opacity="0.5"
+                      stroke="var(--chakra-colors-cyan-400)"
+                      stroke-dasharray="3 3"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="1s"
+                        from="10"
+                        repeatCount="indefinite"
+                        to="0"
+                      />
+                    </path>
+                  </svg>
+                </div>
+                <span
+                  class="chakra-badge css-mqc4zm"
+                >
+                  STEP 02
+                </span>
+                <h2
+                  class="chakra-heading css-os9i2l"
+                >
+                  Broadcast Signal
+                </h2>
+                <p
+                  class="css-16sl19t"
+                >
+                  The host broadcasts timing packets over local Wi-Fi and Bluetooth protocols.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="undefined undefined reveal-up reveal-up-native delay-2"
+            style="position: relative; overflow: visible; display: block; --electric-border-color: var(--chakra-colors-orange-400); border-radius: 24px;"
+          >
+            <div
+              class="electric-border-canvas-wrapper"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 2;"
+            >
+              <canvas
+                style="display: block;"
+              />
+            </div>
+            <div
+              class="electric-border-glow-wrapper"
+              style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;"
+            >
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(1px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(4px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; transform: scale(1.1); opacity: 0.3; filter: blur(32px);"
+              />
+            </div>
+            <div
+              class="electric-border-children-wrapper"
+              style="position: relative; border-radius: inherit; z-index: 1; height: 100%;"
+            >
+              <div
+                class="chakra-stack css-1qvyigh"
+              >
+                <div
+                  class="css-7w8keh"
+                >
+                  <svg
+                    fill="none"
+                    height="50"
+                    stroke="var(--chakra-colors-orange-400)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    style="overflow: visible;"
+                    viewBox="0 0 80 60"
+                    width="65"
+                  >
+                    <rect
+                      height="22"
+                      rx="2"
+                      stroke="var(--chakra-colors-fg)"
+                      width="14"
+                      x="10"
+                      y="22"
+                    />
+                    <circle
+                      cx="17"
+                      cy="40"
+                      fill="currentColor"
+                      r="0.8"
+                    />
+                    <rect
+                      height="18"
+                      rx="1.5"
+                      stroke="var(--chakra-colors-fg)"
+                      width="10"
+                      x="56"
+                      y="26"
+                    />
+                    <circle
+                      cx="40"
+                      cy="12"
+                      fill="var(--chakra-colors-orange-400)"
+                      r="3"
+                    >
+                      <animate
+                        attributeName="r"
+                        dur="2s"
+                        repeatCount="indefinite"
+                        values="3; 4.5; 3"
+                      />
+                    </circle>
+                    <line
+                      stroke="var(--chakra-colors-orange-400)"
+                      stroke-dasharray="3 3"
+                      x1="40"
+                      x2="24"
+                      y1="12"
+                      y2="28"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="1.2s"
+                        from="6"
+                        repeatCount="indefinite"
+                        to="0"
+                      />
+                    </line>
+                    <line
+                      stroke="var(--chakra-colors-orange-400)"
+                      stroke-dasharray="3 3"
+                      x1="40"
+                      x2="56"
+                      y1="12"
+                      y2="28"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="1.2s"
+                        from="6"
+                        repeatCount="indefinite"
+                        to="0"
+                      />
+                    </line>
+                  </svg>
+                </div>
+                <span
+                  class="chakra-badge css-zuyum2"
+                >
+                  STEP 03
+                </span>
+                <h2
+                  class="chakra-heading css-os9i2l"
+                >
+                  Link Nodes
+                </h2>
+                <p
+                  class="css-16sl19t"
+                >
+                  Nearby client devices discover the host and join the audio mesh network instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="undefined undefined reveal-up reveal-up-native delay-3"
+            style="position: relative; overflow: visible; display: block; --electric-border-color: var(--chakra-colors-teal-400); border-radius: 24px;"
+          >
+            <div
+              class="electric-border-canvas-wrapper"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 2;"
+            >
+              <canvas
+                style="display: block;"
+              />
+            </div>
+            <div
+              class="electric-border-glow-wrapper"
+              style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;"
+            >
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(1px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; filter: blur(4px);"
+              />
+              <div
+                style="position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; transform: scale(1.1); opacity: 0.3; filter: blur(32px);"
+              />
+            </div>
+            <div
+              class="electric-border-children-wrapper"
+              style="position: relative; border-radius: inherit; z-index: 1; height: 100%;"
+            >
+              <div
+                class="chakra-stack css-1qvyigh"
+              >
+                <div
+                  class="css-7w8keh"
+                >
+                  <svg
+                    fill="none"
+                    height="50"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    style="overflow: visible;"
+                    viewBox="0 0 80 40"
+                    width="65"
+                  >
+                    <path
+                      d="M 10 20 Q 22.5 5, 35 20 T 60 20 T 70 20"
+                      opacity="0.5"
+                      stroke="var(--chakra-colors-primary)"
+                      stroke-dasharray="40 5"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="2.5s"
+                        from="45"
+                        repeatCount="indefinite"
+                        to="0"
+                      />
+                    </path>
+                    <path
+                      d="M 10 20 Q 22.5 5, 35 20 T 60 20 T 70 20"
+                      opacity="0.8"
+                      stroke="var(--chakra-colors-teal-400)"
+                      stroke-dasharray="40 5"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="2s"
+                        from="45"
+                        repeatCount="indefinite"
+                        to="0"
+                      />
+                    </path>
+                    <path
+                      d="M 36 26 L 40 30 L 48 22"
+                      stroke="var(--chakra-colors-teal-400)"
+                      stroke-dasharray="20"
+                      stroke-dashoffset="20"
+                      stroke-width="2.5"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        dur="3s"
+                        keyTimes="0; 0.4; 0.8; 1"
+                        repeatCount="indefinite"
+                        values="20; 0; 0; 20"
+                      />
+                    </path>
+                  </svg>
+                </div>
+                <span
+                  class="chakra-badge css-1jkp8re"
+                >
+                  STEP 04
+                </span>
+                <h2
+                  class="chakra-heading css-os9i2l"
+                >
+                  Auto-Sync Latency
+                </h2>
+                <p
+                  class="css-16sl19t"
+                >
+                  AudioMesh automatically measures and adjusts sub-millisecond audio delays for perfect phase alignment.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="css-10fxktd"
+      class="css-va5kdx"
     >
       <div
         class="css-1ub3vqw"
       >
         <div
-          class="chakra-stack css-iwxz5j"
+          class="chakra-stack reveal-up reveal-up-native css-myxrat"
         >
           <h2
             class="chakra-heading css-1l8tyi8"
@@ -303,163 +1721,607 @@ exports[`LandingPage should render correctly for guest user 1`] = `
             Engineered for Synchronization
           </h2>
           <p
-            class="css-na3q31"
+            class="css-g631hk"
           >
             Everything you need to turn any collection of devices into an active audio node.
           </p>
         </div>
         <div
-          class="css-ibtnd6"
+          class="css-8sn2zi"
         >
           <div
-            class="chakra-stack css-17eodk8"
+            class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 reveal-scale reveal-scale-native"
+            style="display: block; min-height: 200px; width: 100%; height: 100%; border-radius: 20px; --glass-frost: 0.06; --glass-saturation: 1.4; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
           >
+            <svg
+              class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <filter
+                  color-interpolation-filters="sRGB"
+                  height="100%"
+                  id="glass-filter--r5-"
+                  width="100%"
+                  x="0%"
+                  y="0%"
+                >
+                  <feimage
+                    height="100%"
+                    href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r5-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r5-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23red-grad--r5-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23blue-grad--r5-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2220%22%20fill%3D%22hsl(0%200%25%2050%25%20%2F%200.93)%22%20style%3D%22filter%3Ablur(24px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                    preserveAspectRatio="none"
+                    result="map"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <fedisplacementmap
+                    id="redchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispRed"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispRed"
+                    result="red"
+                    type="matrix"
+                    values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="greenchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispGreen"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispGreen"
+                    result="green"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="bluechannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispBlue"
+                    scale="-160"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispBlue"
+                    result="blue"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                  />
+                  <feblend
+                    in="red"
+                    in2="green"
+                    mode="screen"
+                    result="rg"
+                  />
+                  <feblend
+                    in="rg"
+                    in2="blue"
+                    mode="screen"
+                    result="output"
+                  />
+                  <fegaussianblur
+                    in="output"
+                    stdDeviation="3"
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div
-              class="css-1nl02g7"
+              class="w-full h-full rounded-[inherit] relative z-10"
             >
-              <svg
-                fill="none"
-                height="20px"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="20px"
+              <div
+                class="chakra-stack css-1pjxso6"
               >
-                <path
-                  d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
-                />
-                <path
-                  d="M3 3v5h5"
-                />
-                <path
-                  d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
-                />
-                <path
-                  d="M16 16h5v5"
-                />
-              </svg>
+                <div
+                  class="css-1nl02g7"
+                >
+                  <svg
+                    fill="none"
+                    height="20px"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20px"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="chakra-heading css-r58vds"
+                >
+                  Dual-Protocol Sync
+                </h3>
+                <p
+                  class="css-mk11qh"
+                >
+                  Utilizes both local Wi-Fi networks and Bluetooth multi-point connections to ensure maximum range, stability, and synchronization.
+                </p>
+              </div>
             </div>
-            <h3
-              class="chakra-heading css-r58vds"
-            >
-              Dual-Protocol Sync
-            </h3>
-            <p
-              class="css-o5o4qy"
-            >
-              Utilizes both local Wi-Fi networks and Bluetooth multi-point connections to ensure maximum range, stability, and synchronization.
-            </p>
           </div>
           <div
-            class="chakra-stack css-17eodk8"
+            class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 reveal-scale reveal-scale-native delay-1"
+            style="display: block; min-height: 200px; width: 100%; height: 100%; border-radius: 20px; --glass-frost: 0.06; --glass-saturation: 1.4; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
           >
+            <svg
+              class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <filter
+                  color-interpolation-filters="sRGB"
+                  height="100%"
+                  id="glass-filter--r6-"
+                  width="100%"
+                  x="0%"
+                  y="0%"
+                >
+                  <feimage
+                    height="100%"
+                    href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r6-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r6-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23red-grad--r6-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23blue-grad--r6-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2220%22%20fill%3D%22hsl(0%200%25%2050%25%20%2F%200.93)%22%20style%3D%22filter%3Ablur(24px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                    preserveAspectRatio="none"
+                    result="map"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <fedisplacementmap
+                    id="redchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispRed"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispRed"
+                    result="red"
+                    type="matrix"
+                    values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="greenchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispGreen"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispGreen"
+                    result="green"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="bluechannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispBlue"
+                    scale="-160"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispBlue"
+                    result="blue"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                  />
+                  <feblend
+                    in="red"
+                    in2="green"
+                    mode="screen"
+                    result="rg"
+                  />
+                  <feblend
+                    in="rg"
+                    in2="blue"
+                    mode="screen"
+                    result="output"
+                  />
+                  <fegaussianblur
+                    in="output"
+                    stdDeviation="3"
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div
-              class="css-1nl02g7"
+              class="w-full h-full rounded-[inherit] relative z-10"
             >
-              <svg
-                fill="none"
-                height="20px"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="20px"
+              <div
+                class="chakra-stack css-1pjxso6"
               >
-                <polyline
-                  points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-                />
-              </svg>
+                <div
+                  class="css-1nl02g7"
+                >
+                  <svg
+                    fill="none"
+                    height="20px"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20px"
+                  >
+                    <polyline
+                      points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="chakra-heading css-r58vds"
+                >
+                  Seamless Fallback
+                </h3>
+                <p
+                  class="css-mk11qh"
+                >
+                  If the Wi-Fi connection drops or weakens, the system automatically routes the audio stream through the Bluetooth mesh to prevent playback drops.
+                </p>
+              </div>
             </div>
-            <h3
-              class="chakra-heading css-r58vds"
-            >
-              Seamless Fallback
-            </h3>
-            <p
-              class="css-o5o4qy"
-            >
-              If the Wi-Fi connection drops or weakens, the system automatically routes the audio stream through the Bluetooth mesh to prevent playback drops.
-            </p>
           </div>
           <div
-            class="chakra-stack css-17eodk8"
+            class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 reveal-scale reveal-scale-native delay-2"
+            style="display: block; min-height: 200px; width: 100%; height: 100%; border-radius: 20px; --glass-frost: 0.06; --glass-saturation: 1.4; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
           >
+            <svg
+              class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <filter
+                  color-interpolation-filters="sRGB"
+                  height="100%"
+                  id="glass-filter--r7-"
+                  width="100%"
+                  x="0%"
+                  y="0%"
+                >
+                  <feimage
+                    height="100%"
+                    href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r7-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r7-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23red-grad--r7-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23blue-grad--r7-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2220%22%20fill%3D%22hsl(0%200%25%2050%25%20%2F%200.93)%22%20style%3D%22filter%3Ablur(24px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                    preserveAspectRatio="none"
+                    result="map"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <fedisplacementmap
+                    id="redchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispRed"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispRed"
+                    result="red"
+                    type="matrix"
+                    values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="greenchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispGreen"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispGreen"
+                    result="green"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="bluechannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispBlue"
+                    scale="-160"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispBlue"
+                    result="blue"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                  />
+                  <feblend
+                    in="red"
+                    in2="green"
+                    mode="screen"
+                    result="rg"
+                  />
+                  <feblend
+                    in="rg"
+                    in2="blue"
+                    mode="screen"
+                    result="output"
+                  />
+                  <fegaussianblur
+                    in="output"
+                    stdDeviation="3"
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div
-              class="css-1nl02g7"
+              class="w-full h-full rounded-[inherit] relative z-10"
             >
-              <svg
-                fill="none"
-                height="20px"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="20px"
+              <div
+                class="chakra-stack css-1pjxso6"
               >
-                <path
-                  d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
-                />
-                <circle
-                  cx="12"
-                  cy="7"
-                  r="4"
-                />
-              </svg>
+                <div
+                  class="css-1nl02g7"
+                >
+                  <svg
+                    fill="none"
+                    height="20px"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20px"
+                  >
+                    <path
+                      d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+                    />
+                    <circle
+                      cx="12"
+                      cy="7"
+                      r="4"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="chakra-heading css-r58vds"
+                >
+                  Dynamic Node Management
+                </h3>
+                <p
+                  class="css-mk11qh"
+                >
+                  Devices can join or leave the AudioMesh session dynamically on the fly without interrupting the host's audio stream.
+                </p>
+              </div>
             </div>
-            <h3
-              class="chakra-heading css-r58vds"
-            >
-              Dynamic Node Management
-            </h3>
-            <p
-              class="css-o5o4qy"
-            >
-              Devices can join or leave the AudioMesh session dynamically on the fly without interrupting the host's audio stream.
-            </p>
           </div>
           <div
-            class="chakra-stack css-17eodk8"
+            class="relative overflow-hidden transition-opacity duration-[260ms] ease-out focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2 reveal-scale reveal-scale-native delay-3"
+            style="display: block; min-height: 200px; width: 100%; height: 100%; border-radius: 20px; --glass-frost: 0.06; --glass-saturation: 1.4; background: rgba(255, 255, 255, 0.4); box-shadow: 0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset;"
           >
+            <svg
+              class="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <filter
+                  color-interpolation-filters="sRGB"
+                  height="100%"
+                  id="glass-filter--r8-"
+                  width="100%"
+                  x="0%"
+                  y="0%"
+                >
+                  <feimage
+                    height="100%"
+                    href="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%20viewBox%3D%220%200%20400%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22red-grad--r8-%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22blue-grad--r8-%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22black%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23red-grad--r8-)%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22200%22%20rx%3D%2220%22%20fill%3D%22url(%23blue-grad--r8-)%22%20style%3D%22mix-blend-mode%3A%20screen%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%227.000000000000001%22%20y%3D%227.000000000000001%22%20width%3D%22386%22%20height%3D%22186%22%20rx%3D%2220%22%20fill%3D%22hsl(0%200%25%2050%25%20%2F%200.93)%22%20style%3D%22filter%3Ablur(24px)%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                    preserveAspectRatio="none"
+                    result="map"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <fedisplacementmap
+                    id="redchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispRed"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispRed"
+                    result="red"
+                    type="matrix"
+                    values="1 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="greenchannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispGreen"
+                    scale="-180"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispGreen"
+                    result="green"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 1 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1 0"
+                  />
+                  <fedisplacementmap
+                    id="bluechannel"
+                    in="SourceGraphic"
+                    in2="map"
+                    result="dispBlue"
+                    scale="-160"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                  <fecolormatrix
+                    in="dispBlue"
+                    result="blue"
+                    type="matrix"
+                    values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 1 0 0
+                      0 0 0 1 0"
+                  />
+                  <feblend
+                    in="red"
+                    in2="green"
+                    mode="screen"
+                    result="rg"
+                  />
+                  <feblend
+                    in="rg"
+                    in2="blue"
+                    mode="screen"
+                    result="output"
+                  />
+                  <fegaussianblur
+                    in="output"
+                    stdDeviation="3"
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div
-              class="css-1nl02g7"
+              class="w-full h-full rounded-[inherit] relative z-10"
             >
-              <svg
-                fill="none"
-                height="20px"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="20px"
+              <div
+                class="chakra-stack css-1pjxso6"
               >
-                <rect
-                  height="11"
-                  rx="2"
-                  ry="2"
-                  width="18"
-                  x="3"
-                  y="11"
-                />
-                <path
-                  d="M7 11V7a5 5 0 0 1 10 0v4"
-                />
-              </svg>
+                <div
+                  class="css-1nl02g7"
+                >
+                  <svg
+                    fill="none"
+                    height="20px"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20px"
+                  >
+                    <rect
+                      height="11"
+                      rx="2"
+                      ry="2"
+                      width="18"
+                      x="3"
+                      y="11"
+                    />
+                    <path
+                      d="M7 11V7a5 5 0 0 1 10 0v4"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="chakra-heading css-r58vds"
+                >
+                  Universal Compatibility
+                </h3>
+                <p
+                  class="css-mk11qh"
+                >
+                  Completely hardware-agnostic. Runs seamlessly across iOS, Android, macOS, Windows, and Linux operating systems.
+                </p>
+              </div>
             </div>
-            <h3
-              class="chakra-heading css-r58vds"
-            >
-              Universal Compatibility
-            </h3>
-            <p
-              class="css-o5o4qy"
-            >
-              Completely hardware-agnostic. Runs seamlessly across iOS, Android, macOS, Windows, and Linux operating systems.
-            </p>
           </div>
         </div>
       </div>

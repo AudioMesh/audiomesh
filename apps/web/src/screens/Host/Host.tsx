@@ -6,7 +6,7 @@ import { NavigationBar } from './NavigationBar';
 
 const Host = () => {
   return (
-    <Box minH={'100vh'} display="flex" flexDirection="column">
+    <Box minH={'100vh'} display="flex" flexDirection="column" overflowX="hidden">
       <NavigationBar />
       <Box flex={1} display="flex" flexDirection="column">
         <Outlet />
