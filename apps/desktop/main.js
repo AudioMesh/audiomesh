@@ -66,6 +66,20 @@ function createWindow() {
     }
   );
 
+  // Handle getDisplayMedia requests in Electron to prevent "Not supported" errors
+  session.defaultSession.setDisplayMediaRequestHandler((request, callback) => {
+    desktopCapturer.getSources({ types: ['screen', 'window'] }).then((sources) => {
+      if (sources.length > 0) {
+        callback({ video: sources[0], audio: 'loopback' });
+      } else {
+        callback({ error: 'No display sources found.' });
+      }
+    }).catch(err => {
+      console.error('Failed to get desktop sources in display media handler:', err);
+      callback({ error: err.message });
+    });
+  });
+
   const startUrl =
     process.env.ELECTRON_START_URL ||
     `file://${path.join(__dirname, 'build/index.html')}`;

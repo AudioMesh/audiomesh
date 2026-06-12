@@ -65,8 +65,6 @@ const Dashboard = () => {
   const [isStreamingFakeAudio, setIsStreamingFakeAudio] = useState(false);
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
   const [streamSource, setStreamSource] = useState<'melody' | 'loopback'>('melody');
-  const [loopbackSources, setLoopbackSources] = useState<Array<{ id: string; name: string }>>([]);
-  const [selectedLoopbackSourceId, setSelectedLoopbackSourceId] = useState<string>('');
 
   const connectionRef = useRef<MeshConnection | null>(null);
   const loopbackCtxRef = useRef<AudioContext | null>(null);
@@ -81,9 +79,12 @@ const Dashboard = () => {
   const anchorAudioTimeRef = useRef<number>(0);
   const clockOffsetUsRef = useRef<number | null>(null);
 
-  // Audio parameters
-  const SAMPLE_RATE = 11025;
-  const SAMPLES_PER_FRAME = 220; // 20ms at 11025Hz
+  // Audio parameters — 44100Hz native (no resampling), 20ms frames
+  const SAMPLE_RATE = 44100;
+  const SAMPLES_PER_FRAME = 882; // 20ms at 44100Hz
+  const JITTER_BUFFER_SECONDS = 0.30; // 300ms initial playout lookahead
+  const FIFO_MAX_SAMPLES = SAMPLE_RATE * 3; // 3 second max FIFO
+  const FIFO_TRIM_SAMPLES = SAMPLE_RATE * 1; // trim to 1 second when max exceeded
 
   // Keep a ref for generator state
   const audioPhaseRef = useRef<number>(0);
@@ -97,7 +98,7 @@ const Dashboard = () => {
 
   // Generate a synthesized melody frame (20ms) as raw float32 PCM samples
   const generateMusicFrame = (): ArrayBuffer => {
-    // 8 bytes for timestamp + 220 * 4 bytes for float32 PCM samples = 888 bytes
+    // 8 bytes for timestamp + SAMPLES_PER_FRAME * 4 bytes for float32 PCM samples
     const buffer = new ArrayBuffer(8 + SAMPLES_PER_FRAME * 4);
     const view = new DataView(buffer);
 
@@ -147,20 +148,6 @@ const Dashboard = () => {
     return buffer;
   };
 
-  const resampleBuffer = (inputBuffer: Float32Array, inputSampleRate: number, outputSampleRate: number): Float32Array => {
-    const ratio = inputSampleRate / outputSampleRate;
-    const outputLength = Math.floor(inputBuffer.length / ratio);
-    const outputBuffer = new Float32Array(outputLength);
-    for (let i = 0; i < outputLength; i++) {
-      const pos = i * ratio;
-      const idx = Math.floor(pos);
-      const nextIdx = Math.min(idx + 1, inputBuffer.length - 1);
-      const weight = pos - idx;
-      outputBuffer[i] = inputBuffer[idx] * (1 - weight) + inputBuffer[nextIdx] * weight;
-    }
-    return outputBuffer;
-  };
-
   const generateLoopbackFrame = (): ArrayBuffer => {
     const buffer = new ArrayBuffer(8 + SAMPLES_PER_FRAME * 4);
     const view = new DataView(buffer);
@@ -207,7 +194,9 @@ const Dashboard = () => {
       isAudioEnabledRef.current = true;
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
       if (AudioContextClass) {
-        const ctx = new AudioContextClass();
+        // Force the playback context to the same sample rate as the sender so that
+        // audio buffers are played back at the correct pitch without browser resampling.
+        const ctx = new AudioContextClass({ sampleRate: SAMPLE_RATE });
         audioCtxRef.current = ctx;
         if (ctx.state === 'suspended') {
           ctx.resume().catch((err) => {
@@ -218,19 +207,7 @@ const Dashboard = () => {
     }
   };
 
-  // Fetch desktop audio loopback sources when role is host
-  useEffect(() => {
-    if (sfuRole === 'host' && window.electronAPI?.getDesktopSources) {
-      window.electronAPI.getDesktopSources().then((sources) => {
-        setLoopbackSources(sources);
-        if (sources.length > 0) {
-          setSelectedLoopbackSourceId(sources[0].id);
-        }
-      }).catch(err => {
-        console.error('Failed to get desktop sources:', err);
-      });
-    }
-  }, [sfuRole]);
+
 
   // Server health checker
   useEffect(() => {
@@ -342,12 +319,11 @@ const Dashboard = () => {
           ctx.resume();
         }
 
-        // Data format: [8-byte timestamp][PCM float32 samples]
-        // Frame size is 888 bytes (8 + 220 * 4)
+        // Data format: [8-byte NTP timestamp][PCM float32 samples at SAMPLE_RATE]
         if (data.byteLength >= 8 + SAMPLES_PER_FRAME * 4) {
           const view = new DataView(data);
           const ntpTimeUs = view.getBigUint64(0, false);
-          
+
           const floatSamples = new Float32Array(data, 8, SAMPLES_PER_FRAME);
 
           const audioBuffer = ctx.createBuffer(1, SAMPLES_PER_FRAME, SAMPLE_RATE);
@@ -361,20 +337,20 @@ const Dashboard = () => {
           const offsetMs = (clockOffsetUsRef.current || 0) / 1000;
           const targetLocalTimeMs = Number(ntpTimeUs) / 1000 - offsetMs;
 
-          // Initialize NTP playout anchor
+          // Initialize NTP playout anchor with generous 300ms jitter buffer
           if (anchorLocalTimeMsRef.current === 0) {
             anchorLocalTimeMsRef.current = targetLocalTimeMs;
-            // 150ms playout lookahead delay to absorb network jitter
-            anchorAudioTimeRef.current = ctx.currentTime + 0.15;
+            anchorAudioTimeRef.current = ctx.currentTime + JITTER_BUFFER_SECONDS;
           }
 
           const elapsedLocalMs = targetLocalTimeMs - anchorLocalTimeMsRef.current;
           let playTime = anchorAudioTimeRef.current + elapsedLocalMs / 1000;
 
-          // Fallback drift/jitter reset: if packet is extremely late or laggy
-          if (playTime < ctx.currentTime + 0.01 || playTime > ctx.currentTime + 1.0) {
+          // Adaptive reset: re-anchor if packet arrives too late (>50ms behind) or
+          // too far ahead (>2s). Keeps 300ms buffer after reset.
+          if (playTime < ctx.currentTime - 0.05 || playTime > ctx.currentTime + 2.0) {
             anchorLocalTimeMsRef.current = targetLocalTimeMs;
-            anchorAudioTimeRef.current = ctx.currentTime + 0.10;
+            anchorAudioTimeRef.current = ctx.currentTime + JITTER_BUFFER_SECONDS;
             playTime = anchorAudioTimeRef.current;
           }
 
@@ -411,49 +387,30 @@ const Dashboard = () => {
     loopbackFifoRef.current = [];
 
     if (streamSource === 'loopback') {
-      if (!window.electronAPI?.getDesktopSources) {
-        alert('System loopback audio capture is only supported in the Desktop application.');
-        return;
-      }
-
-      // Initialize AudioContext synchronously to preserve user gesture context
+      // Initialize AudioContext at explicit sample rate BEFORE getDisplayMedia so that
+      // the ScriptProcessorNode captures at exactly SAMPLE_RATE. Without this, the OS
+      // default (often 48000Hz) causes a rate mismatch → severe pitch distortion.
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      const loopbackCtx = new AudioContextClass();
+      const loopbackCtx = new AudioContextClass({ sampleRate: SAMPLE_RATE });
       loopbackCtxRef.current = loopbackCtx;
 
       try {
-        const sources = await window.electronAPI.getDesktopSources();
-        const sourceId = selectedLoopbackSourceId || sources[0]?.id;
-        if (!sourceId) {
-          alert('No screen/window source selected.');
-          loopbackCtx.close();
-          loopbackCtxRef.current = null;
-          return;
-        }
+        console.log('Requesting loopback capture using getDisplayMedia');
 
-        console.log('Requesting loopback capture for source:', sourceId);
-
-        // Request screen/window audio+video stream
-        const stream = await navigator.mediaDevices.getUserMedia({
-          audio: {
-            mandatory: {
-              chromeMediaSource: 'desktop',
-              chromeMediaSourceId: sourceId
-            }
-          } as any,
-          video: {
-            mandatory: {
-              chromeMediaSource: 'desktop',
-              chromeMediaSourceId: sourceId
-            }
-          } as any
+        const stream = await navigator.mediaDevices.getDisplayMedia({
+          video: true,
+          audio: true
         });
 
-        console.log('Successfully acquired desktop stream:', stream);
+        console.log('Successfully acquired display stream:', stream);
         const audioTracks = stream.getAudioTracks();
         console.log('Audio tracks available:', audioTracks);
         if (audioTracks.length === 0) {
-          console.warn('Warning: No audio tracks found in the captured desktop stream.');
+          alert('No audio track was shared. Please select a source and make sure to check "Share tab audio" or "Share system audio".');
+          stream.getTracks().forEach(track => track.stop());
+          loopbackCtx.close();
+          loopbackCtxRef.current = null;
+          return;
         }
 
         // Stop the video track to save CPU
@@ -471,42 +428,30 @@ const Dashboard = () => {
         }
 
         const sourceNode = loopbackCtx.createMediaStreamSource(stream);
-        const processorNode = loopbackCtx.createScriptProcessor(2048, 1, 1);
+        // Buffer size 4096 gives ~93ms chunks at 44100Hz — large enough to reduce
+        // main-thread interrupts and avoid glitches from the deprecated ScriptProcessorNode.
+        const processorNode = loopbackCtx.createScriptProcessor(4096, 1, 1);
         loopbackProcessorRef.current = processorNode;
 
-        let processCount = 0;
         processorNode.onaudioprocess = (e) => {
           const inputData = e.inputBuffer.getChannelData(0);
-          const inputRate = loopbackCtx.sampleRate;
 
-          if (processCount % 200 === 0) {
-            let hasActiveAudio = false;
-            for (let i = 0; i < inputData.length; i++) {
-              if (Math.abs(inputData[i]) > 0.0001) {
-                hasActiveAudio = true;
-                break;
-              }
-            }
-            console.log(`onaudioprocess active. Samples count: ${inputData.length}, Queue depth: ${loopbackFifoRef.current.length}, Has audio signal: ${hasActiveAudio}`);
-          }
-          processCount++;
-          
-          // Downsample block to 11025 Hz
-          const downsampled = resampleBuffer(inputData, inputRate, SAMPLE_RATE);
-          
-          // Append to FIFO queue
+          // Push samples into the FIFO — no resampling needed because we now capture
+          // and playback at the same native rate (44100Hz).
           const fifo = loopbackFifoRef.current;
-          for (let i = 0; i < downsampled.length; i++) {
-            fifo.push(downsampled[i]);
+          for (let i = 0; i < inputData.length; i++) {
+            fifo.push(inputData[i]);
           }
 
-          // Latency protection: limit queue depth to 2000 samples (~180ms)
-          if (fifo.length > 2000) {
-            loopbackFifoRef.current = fifo.slice(fifo.length - 1000);
+          // Adaptive latency cap: if FIFO grows beyond 3 seconds of audio,
+          // trim it to 1 second to keep end-to-end delay low.
+          if (fifo.length > FIFO_MAX_SAMPLES) {
+            loopbackFifoRef.current = fifo.slice(fifo.length - FIFO_TRIM_SAMPLES);
           }
         };
 
         sourceNode.connect(processorNode);
+        // Connect processor to destination to keep the audio graph alive (required by spec)
         processorNode.connect(loopbackCtx.destination);
       } catch (err: any) {
         console.error('Failed to capture loopback audio:', err);
@@ -964,42 +909,22 @@ const Dashboard = () => {
                           >
                             Retro Melody
                           </Button>
-                          {window.electronAPI && (
-                            <Button
-                              size="2xs"
-                              colorScheme={streamSource === 'loopback' ? 'purple' : 'gray'}
-                              onClick={() => setStreamSource('loopback')}
-                              disabled={isStreamingFakeAudio}
-                            >
-                              System Loopback
-                            </Button>
-                          )}
+                          <Button
+                            size="2xs"
+                            colorScheme={streamSource === 'loopback' ? 'purple' : 'gray'}
+                            onClick={() => setStreamSource('loopback')}
+                            disabled={isStreamingFakeAudio}
+                          >
+                            System Loopback
+                          </Button>
                         </HStack>
                       </HStack>
 
-                      {streamSource === 'loopback' && loopbackSources.length > 0 && (
+                      {streamSource === 'loopback' && (
                         <VStack align="stretch" gap={1.5} pt={2} borderTopWidth="1px" borderColor="border">
-                          <Text fontSize="3xs" color="fg.muted">Capture Device / Screen:</Text>
-                          <select
-                            style={{
-                              padding: '4px 8px',
-                              fontSize: '11px',
-                              borderRadius: '4px',
-                              backgroundColor: 'var(--chakra-colors-bg-default)',
-                              color: 'var(--chakra-colors-fg)',
-                              border: '1px solid var(--chakra-colors-border)',
-                              outline: 'none',
-                            }}
-                            value={selectedLoopbackSourceId}
-                            onChange={(e) => setSelectedLoopbackSourceId(e.target.value)}
-                            disabled={isStreamingFakeAudio}
-                          >
-                            {loopbackSources.map((src) => (
-                              <option key={src.id} value={src.id}>
-                                {src.name}
-                              </option>
-                            ))}
-                          </select>
+                          <Text fontSize="3xs" color="orange.300" fontStyle="italic">
+                            Tip: When you click "Start Streaming Loopback", a browser source selection dialog will open. Under "Chrome Tab", select the tab playing audio and make sure the "Share tab audio" option is checked.
+                          </Text>
                         </VStack>
                       )}
                     </VStack>
