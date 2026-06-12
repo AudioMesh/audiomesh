@@ -391,14 +391,24 @@
     transition: none;
   }
   :global(.reveal-up-native) {
-    animation: scrollRevealUp auto linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
+    animation-name: scrollRevealUp;
+    animation-duration: auto;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    --timeline: view();
+    --range: entry 10% cover 30%;
+    animation-timeline: var(--timeline);
+    animation-range: var(--range);
   }
   :global(.reveal-scale-native) {
-    animation: scrollRevealScale auto linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
+    animation-name: scrollRevealScale;
+    animation-duration: auto;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    --timeline: view();
+    --range: entry 10% cover 30%;
+    animation-timeline: var(--timeline);
+    animation-range: var(--range);
   }
 }
 
