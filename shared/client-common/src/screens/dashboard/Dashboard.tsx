@@ -131,6 +131,9 @@ const Dashboard = () => {
 
     // 1. Signaling
     setSigStatus('connecting');
+    conn.onSignalingStatusChanged = (status) => {
+      setSigStatus(status);
+    };
     conn.onPeersUpdated = (peers) => {
       setJoinedPeers(peers);
     };
@@ -144,10 +147,12 @@ const Dashboard = () => {
       console.error(`Signaling error: ${msg}`);
     };
     conn.connectSignaling(myDisplayName, myDeviceType, myConnectionType);
-    setSigStatus('connected');
 
     // 2. Time Sync
-    setTimeSyncStatus('active');
+    setTimeSyncStatus('disconnected');
+    conn.onTimeSyncStatusChanged = (status) => {
+      setTimeSyncStatus(status);
+    };
     conn.onTimeSyncUpdated = (stats) => {
       setClockOffsetUs(stats.offsetUs);
       setSyncRttMs(stats.rttMs);
@@ -155,10 +160,13 @@ const Dashboard = () => {
     conn.connectTimeSync(2000);
 
     // 3. SFU (default client role)
-    setSfuStatus('connected');
+    setSfuStatus('disconnected');
     setSfuRole('client');
     setSfuReceivedCount(0);
     setSfuSentCount(0);
+    conn.onSfuStatusChanged = (status) => {
+      setSfuStatus(status);
+    };
     conn.onSfuAudioFrame = (data) => {
       setSfuReceivedCount((c) => c + 1);
     };
@@ -197,8 +205,10 @@ const Dashboard = () => {
       // Store 64-bit microsecond timestamp in network byte order
       view.setBigUint64(0, BigInt(ntpTimeUs), false);
       
-      connectionRef.current?.sendSfuAudioFrame(buffer);
-      setSfuSentCount((c) => c + 1);
+      const sent = connectionRef.current?.sendSfuAudioFrame(buffer);
+      if (sent) {
+        setSfuSentCount((c) => c + 1);
+      }
     }, 20); // 50 frames per second
   };
 

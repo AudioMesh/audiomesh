@@ -22,6 +22,10 @@ export class MeshConnection {
   public onTimeSyncUpdated?: (stats: TimeSyncStats) => void;
   public onSfuAudioFrame?: (data: ArrayBuffer) => void;
 
+  public onSignalingStatusChanged?: (status: 'disconnected' | 'connecting' | 'connected') => void;
+  public onTimeSyncStatusChanged?: (status: 'disconnected' | 'active') => void;
+  public onSfuStatusChanged?: (status: 'disconnected' | 'connected') => void;
+
   constructor(roomId: string, peerId: string) {
     this.roomId = roomId;
     this.peerId = peerId;
@@ -33,10 +37,13 @@ export class MeshConnection {
   public connectSignaling(displayName: string, deviceType: string, connectionType: string) {
     this.disconnectSignaling();
 
+    if (this.onSignalingStatusChanged) this.onSignalingStatusChanged('connecting');
+
     const url = apiClient.getSignalingWsUrl(this.roomId);
     this.signalingSocket = new WebSocket(url);
 
     this.signalingSocket.onopen = () => {
+      if (this.onSignalingStatusChanged) this.onSignalingStatusChanged('connected');
       // Send Join payload
       const joinMsg = {
         type: 'join',
@@ -72,6 +79,12 @@ export class MeshConnection {
 
     this.signalingSocket.onclose = () => {
       this.signalingSocket = null;
+      if (this.onSignalingStatusChanged) this.onSignalingStatusChanged('disconnected');
+    };
+
+    this.signalingSocket.onerror = (err) => {
+      console.error('Signaling WebSocket error:', err);
+      if (this.onSignalingStatusChanged) this.onSignalingStatusChanged('disconnected');
     };
   }
 
@@ -134,6 +147,7 @@ export class MeshConnection {
     this.syncSocket = new WebSocket(url);
 
     this.syncSocket.onopen = () => {
+      if (this.onTimeSyncStatusChanged) this.onTimeSyncStatusChanged('active');
       // Start polling clock sync
       this.syncIntervalId = setInterval(() => {
         const clientSendUs = Date.now() * 1000;
@@ -168,6 +182,11 @@ export class MeshConnection {
     this.syncSocket.onclose = () => {
       this.disconnectTimeSync();
     };
+
+    this.syncSocket.onerror = (err) => {
+      console.error('Time Sync WebSocket error:', err);
+      this.disconnectTimeSync();
+    };
   }
 
   public disconnectTimeSync() {
@@ -176,8 +195,12 @@ export class MeshConnection {
       this.syncIntervalId = null;
     }
     if (this.syncSocket) {
-      this.syncSocket.close();
+      const socket = this.syncSocket;
       this.syncSocket = null;
+      socket.close();
+    }
+    if (this.onTimeSyncStatusChanged) {
+      this.onTimeSyncStatusChanged('disconnected');
     }
   }
 
@@ -192,6 +215,7 @@ export class MeshConnection {
     this.sfuSocket.binaryType = 'arraybuffer';
 
     this.sfuSocket.onopen = () => {
+      if (this.onSfuStatusChanged) this.onSfuStatusChanged('connected');
       // Send handshake role identification
       const roleMsg = { role };
       this.sfuSocket?.send(JSON.stringify(roleMsg));
@@ -207,6 +231,12 @@ export class MeshConnection {
 
     this.sfuSocket.onclose = () => {
       this.sfuSocket = null;
+      if (this.onSfuStatusChanged) this.onSfuStatusChanged('disconnected');
+    };
+
+    this.sfuSocket.onerror = (err) => {
+      console.error('SFU WebSocket error:', err);
+      if (this.onSfuStatusChanged) this.onSfuStatusChanged('disconnected');
     };
   }
 
@@ -214,16 +244,22 @@ export class MeshConnection {
    * Send binary audio frame (Host only)
    * Frame Format: [8-byte timestamp][Raw Opus Audio Data]
    */
-  public sendSfuAudioFrame(data: ArrayBuffer) {
+  public sendSfuAudioFrame(data: ArrayBuffer): boolean {
     if (this.sfuSocket && this.sfuSocket.readyState === WebSocket.OPEN) {
       this.sfuSocket.send(data);
+      return true;
     }
+    return false;
   }
 
   public disconnectSfu() {
     if (this.sfuSocket) {
-      this.sfuSocket.close();
+      const socket = this.sfuSocket;
       this.sfuSocket = null;
+      socket.close();
+    }
+    if (this.onSfuStatusChanged) {
+      this.onSfuStatusChanged('disconnected');
     }
   }
 
