@@ -67,26 +67,31 @@ const Dashboard = () => {
   const [streamSource, setStreamSource] = useState<'melody' | 'loopback'>('melody');
 
   const connectionRef = useRef<MeshConnection | null>(null);
-  const loopbackCtxRef = useRef<AudioContext | null>(null);
-  const loopbackStreamRef = useRef<MediaStream | null>(null);
-  const loopbackProcessorRef = useRef<ScriptProcessorNode | null>(null);
+
+  // ── Loopback capture (host side) ──────────────────────────────────────────
+  // We record the FULL getDisplayMedia stream (video+audio) using video/webm.
+  // This avoids all track-extraction bugs: macOS ties audio lifetime to the
+  // video track, so the full stream must stay intact while recording.
+  const captureStreamRef = useRef<MediaStream | null>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+
+  // ── MSE playback (client side) ────────────────────────────────────────────
+  const audioElRef = useRef<HTMLAudioElement | null>(null);
+  const mediaSourceRef = useRef<MediaSource | null>(null);
+  const sourceBufferRef = useRef<SourceBuffer | null>(null);
+  const mseQueueRef = useRef<ArrayBuffer[]>([]);
+  const isAudioEnabledRef = useRef(false);
+
+  // ── Melody synthesizer (host side, 'melody' stream source) ───────────────
+  const SAMPLE_RATE = 44100;
+  const SAMPLES_PER_FRAME = 882; // 20ms at 44100Hz
   const loopbackFifoRef = useRef<number[]>([]);
   const streamIntervalRef = useRef<any>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
-  const isAudioEnabledRef = useRef(false);
   const anchorLocalTimeMsRef = useRef<number>(0);
   const anchorAudioTimeRef = useRef<number>(0);
   const clockOffsetUsRef = useRef<number | null>(null);
-
-  // Audio parameters — 44100Hz native (no resampling), 20ms frames
-  const SAMPLE_RATE = 44100;
-  const SAMPLES_PER_FRAME = 882; // 20ms at 44100Hz
-  const JITTER_BUFFER_SECONDS = 0.30; // 300ms initial playout lookahead
-  const FIFO_MAX_SAMPLES = SAMPLE_RATE * 3; // 3 second max FIFO
-  const FIFO_TRIM_SAMPLES = SAMPLE_RATE * 1; // trim to 1 second when max exceeded
-
-  // Keep a ref for generator state
   const audioPhaseRef = useRef<number>(0);
   const frameCountRef = useRef<number>(0);
 
@@ -177,33 +182,124 @@ const Dashboard = () => {
 
 
 
-  // Toggle speaker audio playback context
+  // ── MSE helpers ───────────────────────────────────────────────────────────
+
+  /** Pick the best supported MIME type for audio streaming (Opus preferred). */
+  const pickMimeType = (): string => {
+    const candidates = [
+      'audio/webm;codecs=opus',
+      'audio/webm',
+      'audio/ogg;codecs=opus',
+    ];
+    for (const mime of candidates) {
+      if (MediaRecorder.isTypeSupported(mime) && MediaSource.isTypeSupported(mime)) {
+        return mime;
+      }
+    }
+    return 'audio/webm';
+  };
+
+  /** Drain the pending chunk queue into the SourceBuffer when it is not busy. */
+  const drainMseQueue = () => {
+    const sb = sourceBufferRef.current;
+    const audio = audioElRef.current;
+    if (!sb || sb.updating || mseQueueRef.current.length === 0) return;
+
+    // Trim old buffered data (> 5s behind currentTime) to prevent QuotaExceededError.
+    if (audio && sb.buffered.length > 0) {
+      const trimTo = audio.currentTime - 5;
+      if (trimTo > sb.buffered.start(0)) {
+        try {
+          sb.remove(sb.buffered.start(0), trimTo);
+        } catch (_) {}
+        return; // updateend will re-trigger drainMseQueue
+      }
+    }
+
+    const chunk = mseQueueRef.current.shift()!;
+    try {
+      sb.appendBuffer(chunk);
+    } catch (err: any) {
+      if (err.name === 'QuotaExceededError') {
+        mseQueueRef.current.unshift(chunk);
+      } else {
+        console.warn('[AudioMesh] MSE appendBuffer error:', err.message);
+      }
+    }
+  };
+
+  /** Bootstrap the MSE pipeline on the client side. */
+  const initMsePlayback = () => {
+    teardownMsePlayback();
+
+    const mimeType = pickMimeType();
+    console.log('[AudioMesh] MSE playback MIME:', mimeType);
+
+    const ms = new MediaSource();
+    mediaSourceRef.current = ms;
+    mseQueueRef.current = [];
+
+    const audio = new Audio();
+    audio.autoplay = true;
+    audioElRef.current = audio;
+
+    ms.addEventListener('sourceopen', () => {
+      try {
+        const sb = ms.addSourceBuffer(mimeType);
+        sourceBufferRef.current = sb;
+        sb.addEventListener('updateend', drainMseQueue);
+        drainMseQueue();
+      } catch (err) {
+        console.error('[AudioMesh] Failed to add SourceBuffer:', err);
+      }
+    });
+
+    audio.src = URL.createObjectURL(ms);
+
+    audio.addEventListener('stalled', () => {
+      console.log('[AudioMesh] Playback stalled — resuming');
+      audio.play().catch(() => {});
+    });
+    audio.addEventListener('error', () => {
+      console.error('[AudioMesh] Playback error:', audio.error?.code, audio.error?.message);
+    });
+
+    audio.play().catch((e) => console.warn('[AudioMesh] play() blocked:', e));
+  };
+
+  /** Clean up MSE resources. */
+  const teardownMsePlayback = () => {
+    mseQueueRef.current = [];
+    sourceBufferRef.current = null;
+    if (mediaSourceRef.current && mediaSourceRef.current.readyState === 'open') {
+      try { mediaSourceRef.current.endOfStream(); } catch (_) {}
+    }
+    mediaSourceRef.current = null;
+    if (audioElRef.current) {
+      audioElRef.current.pause();
+      audioElRef.current.src = '';
+      audioElRef.current = null;
+    }
+  };
+
+  /** Called for every incoming binary WebSocket frame from the SFU. */
+  const handleIncomingAudioChunk = (data: ArrayBuffer) => {
+    if (!isAudioEnabledRef.current) return;
+    mseQueueRef.current.push(data);
+    drainMseQueue();
+  };
+
+  // ── Speaker toggle ────────────────────────────────────────────────────────
   const toggleAudioPlayback = () => {
     if (isAudioEnabledRef.current) {
       setIsAudioEnabled(false);
       isAudioEnabledRef.current = false;
-      if (audioCtxRef.current) {
-        audioCtxRef.current.close();
-        audioCtxRef.current = null;
-      }
-      nextPlayTimeRef.current = 0;
-      anchorLocalTimeMsRef.current = 0;
-      anchorAudioTimeRef.current = 0;
+      teardownMsePlayback();
     } else {
       setIsAudioEnabled(true);
       isAudioEnabledRef.current = true;
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      if (AudioContextClass) {
-        // Force the playback context to the same sample rate as the sender so that
-        // audio buffers are played back at the correct pitch without browser resampling.
-        const ctx = new AudioContextClass({ sampleRate: SAMPLE_RATE });
-        audioCtxRef.current = ctx;
-        if (ctx.state === 'suspended') {
-          ctx.resume().catch((err) => {
-            console.error('Failed to resume AudioContext inside user gesture click handler:', err);
-          });
-        }
-      }
+      // Init MSE eagerly inside user gesture so play() is permitted
+      initMsePlayback();
     }
   };
 
@@ -312,51 +408,8 @@ const Dashboard = () => {
     };
     conn.onSfuAudioFrame = (data) => {
       setSfuReceivedCount((c) => c + 1);
-
-      if (isAudioEnabledRef.current && audioCtxRef.current) {
-        const ctx = audioCtxRef.current;
-        if (ctx.state === 'suspended') {
-          ctx.resume();
-        }
-
-        // Data format: [8-byte NTP timestamp][PCM float32 samples at SAMPLE_RATE]
-        if (data.byteLength >= 8 + SAMPLES_PER_FRAME * 4) {
-          const view = new DataView(data);
-          const ntpTimeUs = view.getBigUint64(0, false);
-
-          const floatSamples = new Float32Array(data, 8, SAMPLES_PER_FRAME);
-
-          const audioBuffer = ctx.createBuffer(1, SAMPLES_PER_FRAME, SAMPLE_RATE);
-          audioBuffer.copyToChannel(floatSamples, 0);
-
-          const source = ctx.createBufferSource();
-          source.buffer = audioBuffer;
-          source.connect(ctx.destination);
-
-          // Convert NTP microsecond timestamp to client local clock millisecond timeline
-          const offsetMs = (clockOffsetUsRef.current || 0) / 1000;
-          const targetLocalTimeMs = Number(ntpTimeUs) / 1000 - offsetMs;
-
-          // Initialize NTP playout anchor with generous 300ms jitter buffer
-          if (anchorLocalTimeMsRef.current === 0) {
-            anchorLocalTimeMsRef.current = targetLocalTimeMs;
-            anchorAudioTimeRef.current = ctx.currentTime + JITTER_BUFFER_SECONDS;
-          }
-
-          const elapsedLocalMs = targetLocalTimeMs - anchorLocalTimeMsRef.current;
-          let playTime = anchorAudioTimeRef.current + elapsedLocalMs / 1000;
-
-          // Adaptive reset: re-anchor if packet arrives too late (>50ms behind) or
-          // too far ahead (>2s). Keeps 300ms buffer after reset.
-          if (playTime < ctx.currentTime - 0.05 || playTime > ctx.currentTime + 2.0) {
-            anchorLocalTimeMsRef.current = targetLocalTimeMs;
-            anchorAudioTimeRef.current = ctx.currentTime + JITTER_BUFFER_SECONDS;
-            playTime = anchorAudioTimeRef.current;
-          }
-
-          source.start(playTime);
-        }
-      }
+      // Route incoming Opus/WebM chunk directly into the MSE pipeline
+      handleIncomingAudioChunk(data);
     };
     conn.connectSfu('client');
   };
@@ -377,124 +430,118 @@ const Dashboard = () => {
     connectionRef.current.connectSfu(role);
   };
 
-  // Start streaming fake audio frames
+  // ── Host streaming ────────────────────────────────────────────────────────
+
+  /**
+   * Start streaming audio.
+   *
+   * Loopback source:  getDisplayMedia → MediaRecorder (Opus) → WebSocket
+   * Melody source:    synthesized PCM → setInterval → WebSocket (unchanged)
+   */
   const startStreamingFakeAudio = async () => {
     if (!connectionRef.current || sfuRole !== 'host') return;
 
-    // Reset synthesizer state refs
-    audioPhaseRef.current = 0;
-    frameCountRef.current = 0;
-    loopbackFifoRef.current = [];
-
     if (streamSource === 'loopback') {
-      // Initialize AudioContext at explicit sample rate BEFORE getDisplayMedia so that
-      // the ScriptProcessorNode captures at exactly SAMPLE_RATE. Without this, the OS
-      // default (often 48000Hz) causes a rate mismatch → severe pitch distortion.
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      const loopbackCtx = new AudioContextClass({ sampleRate: SAMPLE_RATE });
-      loopbackCtxRef.current = loopbackCtx;
-
+      // ── MediaRecorder path (audio/webm with Opus) ─────────────────
+      // We MUST keep the video track alive in `captureStreamRef` to prevent macOS
+      // from killing the capture session after 10 seconds.
+      // But we ONLY feed the audio tracks into `MediaRecorder` using an audio-only
+      // stream, so MSE playback isn't stalled waiting for video keyframes.
       try {
-        console.log('Requesting loopback capture using getDisplayMedia');
-
         const stream = await navigator.mediaDevices.getDisplayMedia({
           video: true,
-          audio: true
+          audio: true,
         });
 
-        console.log('Successfully acquired display stream:', stream);
-        const audioTracks = stream.getAudioTracks();
-        console.log('Audio tracks available:', audioTracks);
-        if (audioTracks.length === 0) {
-          alert('No audio track was shared. Please select a source and make sure to check "Share tab audio" or "Share system audio".');
-          stream.getTracks().forEach(track => track.stop());
-          loopbackCtx.close();
-          loopbackCtxRef.current = null;
+        if (stream.getAudioTracks().length === 0) {
+          alert('No audio track captured. Please check "Share tab audio" or "Share system audio" in the picker.');
+          stream.getTracks().forEach((t) => t.stop());
           return;
         }
 
-        // Stop the video track to save CPU
-        stream.getVideoTracks().forEach(track => {
-          console.log('Stopping video track to save CPU:', track.label);
-          track.stop();
+        // KEEP original stream alive (do NOT stop the video track!)
+        captureStreamRef.current = stream;
+        console.log('[AudioMesh] Capture stream tracks:', stream.getTracks().map(t => `${t.kind}:${t.label} [${t.readyState}]`));
+
+        // Create an AUDIO-ONLY stream for MediaRecorder
+        const audioTracks = stream.getAudioTracks();
+        const audioOnlyStream = new MediaStream(audioTracks);
+
+        const mimeType = pickMimeType();
+        console.log('[AudioMesh] MediaRecorder MIME:', mimeType);
+
+        // Record ONLY the audio stream.
+        const recorder = new MediaRecorder(audioOnlyStream, {
+          mimeType,
+          audioBitsPerSecond:  128_000,  // 128kbps Opus
         });
-        loopbackStreamRef.current = stream;
+        mediaRecorderRef.current = recorder;
 
-        // Ensure the context is running
-        if (loopbackCtx.state === 'suspended') {
-          console.log('Loopback AudioContext is suspended, resuming...');
-          await loopbackCtx.resume();
-          console.log('Loopback AudioContext state after resume:', loopbackCtx.state);
-        }
+        recorder.onstart = () => console.log('[AudioMesh] Recorder started');
+        recorder.onstop  = () => console.log('[AudioMesh] Recorder stopped');
+        recorder.onerror = (e: any) => console.error('[AudioMesh] Recorder error:', e.error ?? e);
 
-        const sourceNode = loopbackCtx.createMediaStreamSource(stream);
-        // Buffer size 4096 gives ~93ms chunks at 44100Hz — large enough to reduce
-        // main-thread interrupts and avoid glitches from the deprecated ScriptProcessorNode.
-        const processorNode = loopbackCtx.createScriptProcessor(4096, 1, 1);
-        loopbackProcessorRef.current = processorNode;
-
-        processorNode.onaudioprocess = (e) => {
-          const inputData = e.inputBuffer.getChannelData(0);
-
-          // Push samples into the FIFO — no resampling needed because we now capture
-          // and playback at the same native rate (44100Hz).
-          const fifo = loopbackFifoRef.current;
-          for (let i = 0; i < inputData.length; i++) {
-            fifo.push(inputData[i]);
-          }
-
-          // Adaptive latency cap: if FIFO grows beyond 3 seconds of audio,
-          // trim it to 1 second to keep end-to-end delay low.
-          if (fifo.length > FIFO_MAX_SAMPLES) {
-            loopbackFifoRef.current = fifo.slice(fifo.length - FIFO_TRIM_SAMPLES);
+        recorder.ondataavailable = async (e) => {
+          if (e.data.size > 0 && connectionRef.current) {
+            const buf = await e.data.arrayBuffer();
+            const sent = connectionRef.current.sendSfuAudioFrame(buf);
+            if (sent) setSfuSentCount((c) => c + 1);
           }
         };
 
-        sourceNode.connect(processorNode);
-        // Connect processor to destination to keep the audio graph alive (required by spec)
-        processorNode.connect(loopbackCtx.destination);
+        // Listen for track end (OS revoked permission, user stopped sharing, etc.)
+        stream.getTracks().forEach((track) => {
+          track.addEventListener('ended', () => {
+            console.warn(`[AudioMesh] Track ${track.kind} ended`);
+            if (stream.getTracks().every(t => t.readyState === 'ended')) {
+              console.warn('[AudioMesh] All tracks ended — stopping streaming');
+              stopStreamingFakeAudio();
+            }
+          });
+        });
+
+        recorder.start(250); // 250ms slices — good balance of latency vs. overhead
+        console.log('[AudioMesh] recorder.start(250), state:', recorder.state);
+        setIsStreamingFakeAudio(true);
       } catch (err: any) {
         console.error('Failed to capture loopback audio:', err);
         alert(`Failed to capture system audio: ${err.message}`);
-        loopbackCtx.close();
-        loopbackCtxRef.current = null;
-        return;
       }
+    } else {
+      // ── Melody synthesizer path (legacy PCM setInterval) ────────────────
+      audioPhaseRef.current = 0;
+      frameCountRef.current = 0;
+      loopbackFifoRef.current = [];
+      setIsStreamingFakeAudio(true);
+
+      streamIntervalRef.current = setInterval(() => {
+        const buffer = generateMusicFrame();
+        const sent = connectionRef.current?.sendSfuAudioFrame(buffer);
+        if (sent) setSfuSentCount((c) => c + 1);
+      }, 20);
     }
-
-    setIsStreamingFakeAudio(true);
-
-    streamIntervalRef.current = setInterval(() => {
-      const buffer = streamSource === 'loopback' ? generateLoopbackFrame() : generateMusicFrame();
-      
-      const sent = connectionRef.current?.sendSfuAudioFrame(buffer);
-      if (sent) {
-        setSfuSentCount((c) => c + 1);
-      }
-    }, 20); // 50 frames per second
   };
 
   const stopStreamingFakeAudio = () => {
     setIsStreamingFakeAudio(false);
+
+    // Stop MediaRecorder
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+      mediaRecorderRef.current.stop();
+    }
+    mediaRecorderRef.current = null;
+
+    // Stop melody interval
     if (streamIntervalRef.current) {
       clearInterval(streamIntervalRef.current);
       streamIntervalRef.current = null;
     }
 
-    // Stop and clean up loopback capture references
-    if (loopbackStreamRef.current) {
-      loopbackStreamRef.current.getTracks().forEach(track => track.stop());
-      loopbackStreamRef.current = null;
+    // Stop ALL tracks on the original capture stream (video + audio)
+    if (captureStreamRef.current) {
+      captureStreamRef.current.getTracks().forEach((t) => t.stop());
+      captureStreamRef.current = null;
     }
-    if (loopbackProcessorRef.current) {
-      loopbackProcessorRef.current.disconnect();
-      loopbackProcessorRef.current = null;
-    }
-    if (loopbackCtxRef.current) {
-      loopbackCtxRef.current.close();
-      loopbackCtxRef.current = null;
-    }
-    loopbackFifoRef.current = [];
   };
 
   // Disconnect
@@ -946,7 +993,7 @@ const Dashboard = () => {
 
                     <Text fontSize="3xs" color="fg.muted" fontStyle="italic">
                       * {streamSource === 'loopback'
-                         ? 'Streaming real-time desktop loopback audio resampled down to 11.025 kHz mono PCM over the low-latency SFU WebSocket.'
+                         ? 'Streaming real-time desktop audio via MediaRecorder (Opus codec) over the SFU WebSocket. Played on client via MediaSource Extensions.'
                          : 'Streaming locally synthesized triangle-wave notes of Für Elise with attack envelopes at 50 frames per second.'}
                     </Text>
                   </VStack>
