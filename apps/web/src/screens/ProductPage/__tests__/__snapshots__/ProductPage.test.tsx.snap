@@ -3,7 +3,7 @@
 exports[`ProductPage should render all platform cards and download options by default 1`] = `
 <div>
   <div
-    class="css-1tgt5i1"
+    class="css-1nve7dd"
   >
     <div>
       <title>
@@ -33,7 +33,7 @@ exports[`ProductPage should render all platform cards and download options by de
           Get AudioMesh
         </h1>
         <p
-          class="css-sljd0s"
+          class="css-12hurn2"
         >
           Run AudioMesh on all your devices. Turn any collection of nearby smartphones, tablets, and computers into a synchronized, unified speaker system.
         </p>
@@ -50,7 +50,7 @@ exports[`ProductPage should render all platform cards and download options by de
           class="css-m2djmm"
         >
           <div
-            class="css-3ptjvt"
+            class="css-11s8dxq"
             data-testid="platform-card-macos"
           >
             <div
@@ -76,7 +76,7 @@ exports[`ProductPage should render all platform cards and download options by de
                 </h3>
               </div>
               <p
-                class="css-11t69yy"
+                class="css-e6iz5n"
               >
                 Native macOS application. Supports Apple Silicon and Intel Macs.
               </p>
@@ -105,7 +105,7 @@ exports[`ProductPage should render all platform cards and download options by de
             </div>
           </div>
           <div
-            class="recommended-card css-3ptjvt"
+            class="recommended-card css-11s8dxq"
             data-testid="platform-card-windows"
           >
             <span
@@ -136,7 +136,7 @@ exports[`ProductPage should render all platform cards and download options by de
                 </h3>
               </div>
               <p
-                class="css-11t69yy"
+                class="css-e6iz5n"
               >
                 Installer or portable builds for Windows 10/11 (64-bit).
               </p>
@@ -165,7 +165,7 @@ exports[`ProductPage should render all platform cards and download options by de
             </div>
           </div>
           <div
-            class="css-3ptjvt"
+            class="css-11s8dxq"
             data-testid="platform-card-linux"
           >
             <div
@@ -191,7 +191,7 @@ exports[`ProductPage should render all platform cards and download options by de
                 </h3>
               </div>
               <p
-                class="css-11t69yy"
+                class="css-e6iz5n"
               >
                 Standard AppImage or compiled binary packages for Linux.
               </p>
@@ -231,7 +231,7 @@ exports[`ProductPage should render all platform cards and download options by de
           class="css-1u80289"
         >
           <div
-            class="css-3ptjvt"
+            class="css-11s8dxq"
             data-testid="platform-card-ios"
           >
             <div
@@ -257,7 +257,7 @@ exports[`ProductPage should render all platform cards and download options by de
                 </h3>
               </div>
               <p
-                class="css-11t69yy"
+                class="css-e6iz5n"
               >
                 Get the official app on the Apple App Store or join the TestFlight.
               </p>
@@ -282,7 +282,7 @@ exports[`ProductPage should render all platform cards and download options by de
             </div>
           </div>
           <div
-            class="css-3ptjvt"
+            class="css-11s8dxq"
             data-testid="platform-card-android"
           >
             <div
@@ -308,7 +308,7 @@ exports[`ProductPage should render all platform cards and download options by de
                 </h3>
               </div>
               <p
-                class="css-11t69yy"
+                class="css-e6iz5n"
               >
                 Download the direct installer package or get it on Google Play.
               </p>

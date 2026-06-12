@@ -110,8 +110,8 @@ jobs:
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.audiomesh.com
-          username: u392139545.githubdeploy
+          server: ftp.audiomesh.amitraikwar.in
+          username: u392139545.githubdep
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           local-dir: apps/web/build/
           server-dir: ./

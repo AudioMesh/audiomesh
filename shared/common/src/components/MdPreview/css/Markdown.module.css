@@ -2,7 +2,7 @@
   width: 100%;
   padding: 0;
   background-color: transparent !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Hanken Grotesk', sans-serif !important;
   line-height: 1.8;
   word-wrap: break-word !important;
   word-break: break-word !important;
@@ -31,7 +31,7 @@
 .markdown h3,
 .markdown h4 {
   scroll-margin-top: 120px !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Geist', sans-serif !important;
 }
 
 .markdown h1 {
@@ -213,7 +213,7 @@
 
 /* Code */
 .markdown code {
-  font-family: 'Courier New', Consolas, monospace !important;
+  font-family: 'JetBrains Mono', monospace !important;
   background-color: var(--chakra-colors-bg-subtle) !important;
   color: var(--chakra-colors-primary) !important;
   padding: 0.15rem 0.45rem !important;

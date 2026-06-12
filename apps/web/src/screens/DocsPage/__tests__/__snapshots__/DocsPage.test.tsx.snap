@@ -3,7 +3,7 @@
 exports[`DocsPage should render the documentation layout with sidebar and TOC 1`] = `
 <div>
   <div
-    class="css-1t9em1n"
+    class="css-1wx4ajy"
   >
     <div>
       <title>
@@ -21,14 +21,14 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
       class="css-1gsxbfr"
     >
       <div
-        class="css-bxsxei"
+        class="css-qlgrfd"
       >
         <div
           class="chakra-stack css-1l03m6c"
         >
           <div>
             <p
-              class="css-1503jht"
+              class="css-1ktk052"
             >
               Getting Started
             </p>
@@ -45,7 +45,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
                 </p>
               </div>
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -54,7 +54,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
                 </p>
               </div>
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -66,7 +66,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
           </div>
           <div>
             <p
-              class="css-1503jht"
+              class="css-1ktk052"
             >
               Architecture
             </p>
@@ -74,7 +74,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
               class="chakra-stack css-1gzt2am"
             >
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -83,7 +83,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
                 </p>
               </div>
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -92,7 +92,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
                 </p>
               </div>
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -104,7 +104,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
           </div>
           <div>
             <p
-              class="css-1503jht"
+              class="css-1ktk052"
             >
               Reference
             </p>
@@ -112,7 +112,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
               class="chakra-stack css-1gzt2am"
             >
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -124,7 +124,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
           </div>
           <div>
             <p
-              class="css-1503jht"
+              class="css-1ktk052"
             >
               Version History
             </p>
@@ -132,7 +132,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
               class="chakra-stack css-1gzt2am"
             >
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -141,7 +141,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
                 </p>
               </div>
               <div
-                class="css-196g1ez"
+                class="css-1jdw53n"
               >
                 <p
                   class="css-nh0ii3"
@@ -162,7 +162,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class="chakra-button chakra-menu__trigger css-ook8mb"
+            class="chakra-button chakra-menu__trigger css-y14p2"
             data-controls="menu::r0::content"
             data-part="trigger"
             data-scope="menu"
@@ -193,7 +193,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
               </p>
             </div>
             <p
-              class="css-o5o4qy"
+              class="css-13dbj4k"
             >
               Switch
             </p>
@@ -219,7 +219,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
           class="chakra-stack css-1ym5udh"
         >
           <p
-            class="css-1x8gz7y"
+            class="css-ccrlsm"
           >
             In this Page
           </p>
@@ -227,17 +227,17 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
             class="chakra-stack css-1iapwb6"
           >
             <p
-              class="css-y0c7eo"
+              class="css-2uwxd6"
             >
               Installation Guide
             </p>
             <p
-              class="css-fxn20l"
+              class="css-1gx0u5f"
             >
               API Credentials
             </p>
             <p
-              class="css-y0c7eo"
+              class="css-2uwxd6"
             >
               Storing Data
             </p>

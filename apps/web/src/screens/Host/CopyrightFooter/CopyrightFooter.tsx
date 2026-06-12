@@ -12,39 +12,22 @@ import { Link } from 'react-router-dom';
 import { Logo } from '@assets';
 import { ThemeSelector, LanguageSelector } from '@components';
 
-const LEGAL_LINKS = [
-  {
-    title: 'Privacy policy',
-    path: '/privacy',
-  },
-  {
-    title: 'Terms of service',
-    path: '/terms',
-  },
-  {
-    title: 'Disclaimer',
-    path: '/disclaimer',
-  },
-];
-
-const TEAM_LINKS = [
-  {
-    title: 'Contact us',
-    path: '/contact-us',
-  },
-  {
-    title: 'About us',
-    path: '/about-us',
-  },
-  {
-    title: 'FAQs',
-    path: '/faq',
-  },
-];
-
 const CopyrightFooter = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  const LEGAL_LINKS = [
+    { titleKey: 'Footer.privacyPolicy', path: '/privacy' },
+    { titleKey: 'Footer.termsOfService', path: '/terms' },
+    { titleKey: 'Footer.disclaimer', path: '/disclaimer' },
+  ];
+
+  const TEAM_LINKS = [
+    { titleKey: 'Footer.contactUs', path: '/contact-us' },
+    { titleKey: 'Footer.aboutUs', path: '/about-us' },
+    { titleKey: 'Footer.faqs', path: '/faq' },
+  ];
+
   return (
     <Box
       as="footer"
@@ -64,9 +47,9 @@ const CopyrightFooter = () => {
           gap={6}
         >
           {/* Brand Info */}
-          <VStack align={{ base: 'center', md: 'flex-start' }} gap={2}>
+          <VStack align={{ base: 'center', md: 'flex-start' }} gap={2} maxW="280px">
             <HStack gap={2} alignItems="center">
-              <Box w={10} h={10}>
+              <Box w={8} h={8} flexShrink={0}>
                 <Logo size="100%" />
               </Box>
               <Heading size="sm" color="primary" fontWeight="bold">
@@ -76,91 +59,90 @@ const CopyrightFooter = () => {
             <Text
               fontSize="xs"
               color="fg.muted"
-              maxW="xs"
               textAlign={{ base: 'center', md: 'left' }}
+              lineHeight="relaxed"
             >
               {t('Footer.tagline')}
             </Text>
           </VStack>
 
           {/* Links Columns */}
-          <Stack
-            direction={{ base: 'column', sm: 'row' }}
+          <HStack
             gap={{ base: 8, sm: 16 }}
-            align={{ base: 'center', sm: 'flex-start' }}
-            justify={{ base: 'center', sm: 'flex-end' }}
+            align="flex-start"
+            justify={{ base: 'space-between', sm: 'flex-end' }}
             width={{ base: '100%', md: 'auto' }}
+            maxW={{ base: '280px', sm: 'none' }}
+            mx={{ base: 'auto', sm: '0' }}
           >
             {/* Legal Column */}
-            <VStack align={{ base: 'center', sm: 'flex-start' }} gap={1.5}>
+            <VStack align="flex-start" gap={1.5}>
               <Text
                 fontSize="10px"
                 fontWeight="bold"
                 textTransform="uppercase"
                 letterSpacing="widest"
                 color="fg.muted"
-                opacity={0.8}
                 mb={1}
               >
-                Legal
+                {t('Footer.legalHeading')}
               </Text>
-              {LEGAL_LINKS.map(({ path, title }) => (
+              {LEGAL_LINKS.map(({ path, titleKey }) => (
                 <Button
-                  key={title}
+                  key={path}
                   fontSize="xs"
                   fontWeight="medium"
                   variant="ghost"
                   color="fg.muted"
                   _hover={{ color: 'primary', bg: 'bg.hover' }}
-                  px={3}
+                  px={2}
                   py={1}
                   borderRadius="md"
                   height="auto"
                   asChild
                 >
-                  <Link to={path}>{title}</Link>
+                  <Link to={path}>{t(titleKey)}</Link>
                 </Button>
               ))}
             </VStack>
 
-            {/* Team Column */}
-            <VStack align={{ base: 'center', sm: 'flex-start' }} gap={1.5}>
+            {/* Company Column */}
+            <VStack align="flex-start" gap={1.5}>
               <Text
                 fontSize="10px"
                 fontWeight="bold"
                 textTransform="uppercase"
                 letterSpacing="widest"
                 color="fg.muted"
-                opacity={0.8}
                 mb={1}
               >
-                Team
+                {t('Footer.teamHeading')}
               </Text>
-              {TEAM_LINKS.map(({ path, title }) => (
+              {TEAM_LINKS.map(({ path, titleKey }) => (
                 <Button
-                  key={title}
+                  key={path}
                   fontSize="xs"
                   fontWeight="medium"
                   variant="ghost"
                   color="fg.muted"
                   _hover={{ color: 'primary', bg: 'bg.hover' }}
-                  px={3}
+                  px={2}
                   py={1}
                   borderRadius="md"
                   height="auto"
                   asChild
                 >
-                  <Link to={path}>{title}</Link>
+                  <Link to={path}>{t(titleKey)}</Link>
                 </Button>
               ))}
             </VStack>
-          </Stack>
+          </HStack>
         </Stack>
 
         {/* Divider */}
         <Box borderTopWidth="1px" borderTopColor="border" />
 
-        {/* Bottom Section */}
+        {/* Bottom Bar */}
         <Stack
           direction={{ base: 'column', sm: 'row' }}
           justifyContent="space-between"
@@ -174,7 +156,6 @@ const CopyrightFooter = () => {
           >
             {t('Footer.copyrightText', { year: currentYear })}
           </Text>
-          {/* Language and Theme selectors — bottom right */}
           <HStack gap={3}>
             <LanguageSelector />
             <ThemeSelector />

@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Separator,
   HStack,
   Heading,
   Menu,
@@ -11,8 +10,7 @@ import {
 import { Icon, IconType } from '@assets';
 
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
-import { isEmpty } from 'lodash';
+import { Link } from 'react-router-dom';
 
 import { usePaddingForScreen } from '../../hooks';
 import { NAVIGATION_LINKS } from './constants';
@@ -32,12 +30,7 @@ const GitHubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const NavigationBar = () => {
   const { t } = useTranslation();
   const padding = usePaddingForScreen();
-  const titleKey = useLocation().pathname.split('/').pop();
-  const excludeKeys: string[] = [];
-  const title =
-    titleKey && !excludeKeys.includes(titleKey)
-      ? t(`NavigationBar.${titleKey}`)
-      : '';
+
   return (
     <HStack
       paddingX={padding}
@@ -51,6 +44,7 @@ const NavigationBar = () => {
       zIndex={50}
       bg="bg.panel"
     >
+      {/* Logo */}
       <HStack
         gap={1}
         _hover={{
@@ -77,21 +71,9 @@ const NavigationBar = () => {
             </Heading>
           </Box>
         </Link>
-        {!isEmpty(title) ? (
-          <>
-            <Separator
-              orientation={'vertical'}
-              mx={4}
-              bg={'border'}
-              width={'1px'}
-              height={6}
-            />
-            <Text fontSize="sm" color="fg.muted" data-testid="nav-page-title">
-              {title}{' '}
-            </Text>
-          </>
-        ) : null}
       </HStack>
+
+      {/* Right side: nav links + GitHub + mobile menu */}
       <HStack gap={4}>
         <HStack gap={{ base: 2, xl: 4 }} display={{ base: 'none', md: 'flex' }}>
           {NAVIGATION_LINKS.map(({ name, link }) => (
@@ -140,8 +122,8 @@ const NavigationBar = () => {
           </a>
         </IconButton>
 
-        <Box display={{ base: 'flex', md: 'none' }}>
-          <Menu.Root>
+        <Box display={{ base: 'flex', md: 'none' }} alignItems="center">
+          <Menu.Root positioning={{ placement: 'bottom-end' }}>
             <Menu.Trigger asChild>
               <Button
                 variant={'outline'}
@@ -155,30 +137,32 @@ const NavigationBar = () => {
                 <Icon type={IconType.MENU} />
               </Button>
             </Menu.Trigger>
-            <Menu.Content
-              zIndex={100}
-              borderRadius="md"
-              boxShadow={'md'}
-              bg="bg.panel"
-              borderColor="border"
-            >
-              {NAVIGATION_LINKS.map(({ name, link }) => (
-                <Menu.Item key={link} value={link} asChild>
-                  <Link
-                    to={link}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      padding: '8px 16px',
-                    }}
-                  >
-                    <Text fontSize="sm" fontWeight={'medium'}>
-                      {name}
-                    </Text>
-                  </Link>
-                </Menu.Item>
-              ))}
-            </Menu.Content>
+            <Menu.Positioner>
+              <Menu.Content
+                zIndex={100}
+                borderRadius="md"
+                boxShadow={'md'}
+                bg="bg.panel"
+                borderColor="border"
+              >
+                {NAVIGATION_LINKS.map(({ name, link }) => (
+                  <Menu.Item key={link} value={link} asChild>
+                    <Link
+                      to={link}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: '8px 16px',
+                      }}
+                    >
+                      <Text fontSize="sm" fontWeight={'medium'}>
+                        {name}
+                      </Text>
+                    </Link>
+                  </Menu.Item>
+                ))}
+              </Menu.Content>
+            </Menu.Positioner>
           </Menu.Root>
         </Box>
       </HStack>

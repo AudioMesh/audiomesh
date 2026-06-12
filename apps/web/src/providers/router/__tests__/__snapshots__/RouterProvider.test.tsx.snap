@@ -3,234 +3,438 @@
 exports[`RouterProvider should render router provider correctly 1`] = `
 <div>
   <div
-    class="css-c6xn9e"
+    class="css-3dhkam"
   >
     <div
-      class="css-9xynfp"
+      class="css-ep25vg"
     />
     <div
-      class="css-wzg920"
+      class="css-17785m3"
     />
     <div
-      class="css-s5xaig"
+      class="css-16gbd9d"
     />
     <div
-      class="css-hyln0r"
+      class="css-78hbwq"
     />
     <div
-      class="css-ocuih8"
+      class="css-18n5hzb"
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="none"
+        style="min-width: 1200px; width: 100%; height: 100%;"
+        viewBox="0 0 1440 800"
+        width="100%"
+      >
+        <defs>
+          <lineargradient
+            id="fabric-grad-1"
+            x1="0%"
+            x2="100%"
+            y1="0%"
+            y2="100%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#121416"
+              stop-opacity="0.8"
+            />
+            <stop
+              offset="50%"
+              stop-color="#34414d"
+              stop-opacity="0.3"
+            />
+            <stop
+              offset="100%"
+              stop-color="#1e2022"
+              stop-opacity="0.8"
+            />
+          </lineargradient>
+          <lineargradient
+            id="fabric-grad-2"
+            x1="100%"
+            x2="0%"
+            y1="0%"
+            y2="100%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#1e2022"
+              stop-opacity="0.9"
+            />
+            <stop
+              offset="50%"
+              stop-color="#121416"
+              stop-opacity="0.2"
+            />
+            <stop
+              offset="100%"
+              stop-color="#34414d"
+              stop-opacity="0.7"
+            />
+          </lineargradient>
+          <lineargradient
+            id="fabric-grad-3"
+            x1="0%"
+            x2="100%"
+            y1="100%"
+            y2="0%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#34414d"
+              stop-opacity="0.5"
+            />
+            <stop
+              offset="50%"
+              stop-color="#1e2022"
+              stop-opacity="0.4"
+            />
+            <stop
+              offset="100%"
+              stop-color="#121416"
+              stop-opacity="0.9"
+            />
+          </lineargradient>
+        </defs>
+        <path
+          d="M-100,-100 C300,200 600,-200 1100,300 C1300,400 1500,200 1700,500 L1700,900 L-100,900 Z"
+          fill="url(#fabric-grad-1)"
+          style="animation: _EMO_animation-1bgai8n_@keyframes animation-1bgai8n{
+  0% { transform: rotate(0deg) translate(0px, 0px) scale(1); }
+  100% { transform: rotate(6deg) translate(-5%, 5%) scale(1.1); }
+}_EMO_ 20s ease-in-out infinite alternate; transform-origin: 50% 50%;"
+        />
+        <path
+          d="M-200,100 C400,0 800,500 1200,200 C1400,100 1600,600 1800,400 L1800,1000 L-200,1000 Z"
+          fill="url(#fabric-grad-2)"
+          style="animation: _EMO_animation-180v3x1_@keyframes animation-180v3x1{
+  0% { transform: rotate(0deg) translate(0px, 0px) scale(1.05); }
+  100% { transform: rotate(-8deg) translate(5%, -3%) scale(0.95); }
+}_EMO_ 25s ease-in-out infinite alternate; transform-origin: 40% 60%;"
+        />
+        <path
+          d="M-50,300 C500,500 900,100 1300,600 L1300,1000 L-50,1000 Z"
+          fill="url(#fabric-grad-3)"
+          style="animation: _EMO_animation-1xdcxy0_@keyframes animation-1xdcxy0{
+  0% { transform: rotate(0deg) translate(0px, 0px) scale(0.95); }
+  100% { transform: rotate(4deg) translate(-3%, -5%) scale(1.08); }
+}_EMO_ 15s ease-in-out infinite alternate; transform-origin: 60% 40%;"
+        />
+      </svg>
+    </div>
+    <div
+      class="css-34ne0f"
+    />
+    <div
+      class="css-8qtdyu"
     >
       <div
-        class="css-1x4i8xv"
-      />
-      <div
-        class="css-tw4vmx"
+        class="css-1rto8f8"
       >
-        <svg
-          class="audiomesh-icon "
-          height="80"
-          viewBox="0 0 85 85"
-          width="80"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="css-1nccjsg"
+        />
+        <div
+          class="css-bsfus6"
+          style="transform: perspective(800px) rotateX(60deg); transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);"
         >
-          <defs>
-            <lineargradient
-              id="blueGrad"
-              x1="0%"
-              x2="0%"
-              y1="0%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                stop-color="#0088cc"
-              />
-              <stop
-                offset="100%"
-                stop-color="#007bb9"
-              />
-            </lineargradient>
-            <lineargradient
-              id="blueGradDark"
-              x1="0%"
-              x2="0%"
-              y1="0%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                stop-color="#007bb9"
-              />
-              <stop
-                offset="100%"
-                stop-color="#006193"
-              />
-            </lineargradient>
-          </defs>
-          <g
-            transform="translate(-1, -9) scale(1.2)"
+          <div
+            class="css-1gbg7z7"
           >
-            <rect
-              fill="rgba(0,0,0,0.15)"
-              height="18"
-              rx="4"
-              width="56"
-              x="7"
-              y="60"
+            <svg
+              height="220"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1;"
+              viewBox="0 0 220 220"
+              width="220"
+            >
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="174"
+                y1="110"
+                y2="147"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="0s"
+                  dur="0.8s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="117"
+                y1="110"
+                y2="193"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="0.4s"
+                  dur="1.1s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="52"
+                y1="110"
+                y2="150"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="0.8s"
+                  dur="0.9s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="35"
+                y1="110"
+                y2="82"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="1.2s"
+                  dur="1.3s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="105"
+                y1="110"
+                y2="38"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="1.6s"
+                  dur="0.7s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="171"
+                y1="110"
+                y2="49"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="2.0s"
+                  dur="1.0s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+              <line
+                stroke="rgba(186, 200, 215, 0.5)"
+                stroke-dasharray="15,6"
+                stroke-width="1.5"
+                x1="110"
+                x2="182"
+                y1="110"
+                y2="95"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="2.4s"
+                  dur="1.2s"
+                  from="0"
+                  repeatCount="indefinite"
+                  to="-21"
+                />
+              </line>
+            </svg>
+            <div
+              class="css-3fleot"
+              style="top: 138px; left: 165px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-g33q4k"
+              style="top: 184px; left: 108px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-kdchbc"
+              style="top: 141px; left: 43px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-14t3mz5"
+              style="top: 73px; left: 26px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-m79yuh"
+              style="top: 29px; left: 96px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-o40as9"
+              style="top: 40px; left: 162px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-1kjpwta"
+              style="top: 86px; left: 173px;"
+            >
+              <div
+                class="css-1vrsmlf"
+              />
+            </div>
+            <div
+              class="css-1rylosz"
             />
-            <rect
-              fill="rgba(0,0,0,0.15)"
-              height="18"
-              rx="4"
-              width="56"
-              x="7"
-              y="38"
+            <div
+              class="css-1sndoz5"
             />
-            <rect
-              fill="rgba(0,0,0,0.15)"
-              height="18"
-              rx="4"
-              width="56"
-              x="7"
-              y="16"
-            />
-            <rect
-              fill="url(#blueGrad)"
-              height="18"
-              rx="4"
-              width="56"
-              x="5"
-              y="56"
-            />
-            <rect
-              fill="url(#blueGradDark)"
-              height="8"
-              rx="4"
-              width="56"
-              x="5"
-              y="66"
-            />
-            <circle
-              cx="52"
-              cy="65"
-              fill="#00ffcc"
-              r="2"
-            />
-             
-            <rect
-              fill="#006193"
-              height="2"
-              rx="1"
-              width="30"
-              x="12"
-              y="64"
-            />
-             
-            <rect
-              fill="url(#blueGrad)"
-              height="18"
-              rx="4"
-              width="56"
-              x="5"
-              y="34"
-            />
-            <rect
-              fill="url(#blueGradDark)"
-              height="8"
-              rx="4"
-              width="56"
-              x="5"
-              y="44"
-            />
-            <circle
-              cx="52"
-              cy="43"
-              fill="#00ffcc"
-              r="2"
-            />
-            <rect
-              fill="#006193"
-              height="2"
-              rx="1"
-              width="30"
-              x="12"
-              y="42"
-            />
-            <rect
-              fill="url(#blueGrad)"
-              height="18"
-              rx="4"
-              width="56"
-              x="5"
-              y="12"
-            />
-            <rect
-              fill="url(#blueGradDark)"
-              height="8"
-              rx="4"
-              width="56"
-              x="5"
-              y="22"
-            />
-            <circle
-              cx="52"
-              cy="21"
-              fill="#00ffcc"
-              r="2"
-            />
-            <rect
-              fill="#006193"
-              height="2"
-              rx="1"
-              width="30"
-              x="12"
-              y="20"
-            />
-          </g>
-          <g
-            transform="translate(29.1, 16.5) scale(1.68)"
-          >
-            <path
-              d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882 L27.338,3.713 Z"
-              fill="#0088cc"
-            />
-            <path
-              d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882L27.338,3.713 M30.285,0L0.984,14.678 l8.174,5.128l3.749,11.464l4.789-5.779l5.616,3.586L30.285,0L30.285,0z"
-              fill="#ffffff"
-            />
-          </g>
-        </svg>
+            <div
+              class="css-job0s7"
+            >
+              <svg
+                class="audiomesh-icon "
+                height="70"
+                version="1"
+                viewBox="0 0 2048 2048"
+                width="70"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"
+                  fill="currentColor"
+                />
+                <path
+                  d="M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+           
+        </div>
+         
       </div>
-    </div>
-    <p
-      class="css-19z886v"
-    >
-      AudioMesh
-    </p>
-    <p
-      class="css-bmioxu"
-    >
-      CLOUD STORAGE CLIENT
-    </p>
-    <div
-      class="css-167mtov"
-    >
-      <div
-        class="css-1fylyis"
-      />
-    </div>
-    <div
-      class="css-1ttgzt0"
-    >
+       
       <p
-        class="css-v7jnhe"
+        class="css-13n7pte"
       >
-        &gt; 
-        INITIALIZING SECURE SESSION...
+        AudioMesh
       </p>
       <p
-        class="css-1bq43kb"
-      />
+        class="css-7l3o8e"
+      >
+        SYNCHRONIZED SPEAKER NETWORK
+      </p>
+      <div
+        class="css-vujoj1"
+      >
+        <div
+          class="css-8o9lcj"
+        />
+      </div>
+      <div
+        class="css-21rd9q"
+      >
+        <div
+          class="css-hql7av"
+        />
+        <div
+          class="css-i61mm5"
+        />
+        <div
+          class="css-1uycdup"
+        />
+        <div
+          class="css-1adad2d"
+        />
+        <div
+          class="css-1k6u9ju"
+        />
+        <div
+          class="css-o65zsb"
+        />
+        <div
+          class="css-g0vt0c"
+        />
+        <div
+          class="css-k3cmzv"
+        />
+      </div>
+      <div
+        class="css-1qrgt7a"
+      >
+        <div
+          class="css-cid8oq"
+        />
+        <p
+          class="css-1md6m87"
+        >
+          MESH STATUS: SYNCING
+        </p>
+      </div>
+      <div
+        class="css-1gf7kfk"
+      >
+        <p
+          class="css-v7jnhe"
+        >
+          &gt; 
+          INITIALIZING AUDIO SUBSYSTEM...
+        </p>
+        <p
+          class="css-1jh7hgn"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -239,10 +443,10 @@ exports[`RouterProvider should render router provider correctly 1`] = `
 exports[`RouterProvider should render router provider correctly 2`] = `
 <div>
   <div
-    class="css-1svsvwq"
+    class="css-1wym9nu"
   >
     <div
-      class="chakra-stack css-uoulu9"
+      class="chakra-stack css-vzqt2k"
     >
       <div
         class="chakra-stack css-1rj1i46"
@@ -258,176 +462,19 @@ exports[`RouterProvider should render router provider correctly 2`] = `
             <svg
               class="audiomesh-icon "
               height="120"
-              viewBox="0 0 85 85"
+              version="1"
+              viewBox="0 0 2048 2048"
               width="120"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <defs>
-                <lineargradient
-                  id="blueGrad"
-                  x1="0%"
-                  x2="0%"
-                  y1="0%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    stop-color="#0088cc"
-                  />
-                  <stop
-                    offset="100%"
-                    stop-color="#007bb9"
-                  />
-                </lineargradient>
-                <lineargradient
-                  id="blueGradDark"
-                  x1="0%"
-                  x2="0%"
-                  y1="0%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    stop-color="#007bb9"
-                  />
-                  <stop
-                    offset="100%"
-                    stop-color="#006193"
-                  />
-                </lineargradient>
-              </defs>
-              <g
-                transform="translate(-1, -9) scale(1.2)"
-              >
-                <rect
-                  fill="rgba(0,0,0,0.15)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="7"
-                  y="60"
-                />
-                <rect
-                  fill="rgba(0,0,0,0.15)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="7"
-                  y="38"
-                />
-                <rect
-                  fill="rgba(0,0,0,0.15)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="7"
-                  y="16"
-                />
-                <rect
-                  fill="url(#blueGrad)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="56"
-                />
-                <rect
-                  fill="url(#blueGradDark)"
-                  height="8"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="66"
-                />
-                <circle
-                  cx="52"
-                  cy="65"
-                  fill="#00ffcc"
-                  r="2"
-                />
-                 
-                <rect
-                  fill="#006193"
-                  height="2"
-                  rx="1"
-                  width="30"
-                  x="12"
-                  y="64"
-                />
-                 
-                <rect
-                  fill="url(#blueGrad)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="34"
-                />
-                <rect
-                  fill="url(#blueGradDark)"
-                  height="8"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="44"
-                />
-                <circle
-                  cx="52"
-                  cy="43"
-                  fill="#00ffcc"
-                  r="2"
-                />
-                <rect
-                  fill="#006193"
-                  height="2"
-                  rx="1"
-                  width="30"
-                  x="12"
-                  y="42"
-                />
-                <rect
-                  fill="url(#blueGrad)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="12"
-                />
-                <rect
-                  fill="url(#blueGradDark)"
-                  height="8"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="22"
-                />
-                <circle
-                  cx="52"
-                  cy="21"
-                  fill="#00ffcc"
-                  r="2"
-                />
-                <rect
-                  fill="#006193"
-                  height="2"
-                  rx="1"
-                  width="30"
-                  x="12"
-                  y="20"
-                />
-              </g>
-              <g
-                transform="translate(29.1, 16.5) scale(1.68)"
-              >
-                <path
-                  d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882 L27.338,3.713 Z"
-                  fill="#0088cc"
-                />
-                <path
-                  d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882L27.338,3.713 M30.285,0L0.984,14.678 l8.174,5.128l3.749,11.464l4.789-5.779l5.616,3.586L30.285,0L30.285,0z"
-                  fill="#ffffff"
-                />
-              </g>
+              <path
+                d="M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"
+                fill="currentColor"
+              />
+              <path
+                d="M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <div
@@ -449,7 +496,7 @@ exports[`RouterProvider should render router provider correctly 2`] = `
         >
           <a
             aria-label="/docs-nav-link"
-            class="chakra-button css-1ubh9xi"
+            class="chakra-button css-1ix2np5"
             data-discover="true"
             href="/docs"
             style="display: flex; align-items: center;"
@@ -463,7 +510,7 @@ exports[`RouterProvider should render router provider correctly 2`] = `
           </a>
           <a
             aria-label="/product-nav-link"
-            class="chakra-button css-1ubh9xi"
+            class="chakra-button css-1ix2np5"
             data-discover="true"
             href="/product"
             style="display: flex; align-items: center;"
@@ -478,7 +525,7 @@ exports[`RouterProvider should render router provider correctly 2`] = `
         </div>
         <a
           aria-label="GitHub Repository"
-          class="chakra-button css-1edt3mx"
+          class="chakra-button css-ubwlgd"
           href="https://github.com/audiomesh/audiomesh"
           rel="noopener noreferrer"
           style="display: flex; align-items: center; justify-content: center;"
@@ -497,7 +544,7 @@ exports[`RouterProvider should render router provider correctly 2`] = `
           </svg>
         </a>
         <div
-          class="css-19r7uti"
+          class="css-1gdvqeq"
         >
           <button
             aria-expanded="false"
@@ -532,239 +579,443 @@ exports[`RouterProvider should render router provider correctly 2`] = `
       class="css-k0sogd"
     >
       <div
-        class="css-c6xn9e"
+        class="css-3dhkam"
       >
         <div
-          class="css-9xynfp"
+          class="css-ep25vg"
         />
         <div
-          class="css-wzg920"
+          class="css-17785m3"
         />
         <div
-          class="css-s5xaig"
+          class="css-16gbd9d"
         />
         <div
-          class="css-hyln0r"
+          class="css-78hbwq"
         />
         <div
-          class="css-ocuih8"
+          class="css-18n5hzb"
+        >
+          <svg
+            height="100%"
+            preserveAspectRatio="none"
+            style="min-width: 1200px; width: 100%; height: 100%;"
+            viewBox="0 0 1440 800"
+            width="100%"
+          >
+            <defs>
+              <lineargradient
+                id="fabric-grad-1"
+                x1="0%"
+                x2="100%"
+                y1="0%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#121416"
+                  stop-opacity="0.8"
+                />
+                <stop
+                  offset="50%"
+                  stop-color="#34414d"
+                  stop-opacity="0.3"
+                />
+                <stop
+                  offset="100%"
+                  stop-color="#1e2022"
+                  stop-opacity="0.8"
+                />
+              </lineargradient>
+              <lineargradient
+                id="fabric-grad-2"
+                x1="100%"
+                x2="0%"
+                y1="0%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#1e2022"
+                  stop-opacity="0.9"
+                />
+                <stop
+                  offset="50%"
+                  stop-color="#121416"
+                  stop-opacity="0.2"
+                />
+                <stop
+                  offset="100%"
+                  stop-color="#34414d"
+                  stop-opacity="0.7"
+                />
+              </lineargradient>
+              <lineargradient
+                id="fabric-grad-3"
+                x1="0%"
+                x2="100%"
+                y1="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#34414d"
+                  stop-opacity="0.5"
+                />
+                <stop
+                  offset="50%"
+                  stop-color="#1e2022"
+                  stop-opacity="0.4"
+                />
+                <stop
+                  offset="100%"
+                  stop-color="#121416"
+                  stop-opacity="0.9"
+                />
+              </lineargradient>
+            </defs>
+            <path
+              d="M-100,-100 C300,200 600,-200 1100,300 C1300,400 1500,200 1700,500 L1700,900 L-100,900 Z"
+              fill="url(#fabric-grad-1)"
+              style="animation: _EMO_animation-1bgai8n_@keyframes animation-1bgai8n{
+  0% { transform: rotate(0deg) translate(0px, 0px) scale(1); }
+  100% { transform: rotate(6deg) translate(-5%, 5%) scale(1.1); }
+}_EMO_ 20s ease-in-out infinite alternate; transform-origin: 50% 50%;"
+            />
+            <path
+              d="M-200,100 C400,0 800,500 1200,200 C1400,100 1600,600 1800,400 L1800,1000 L-200,1000 Z"
+              fill="url(#fabric-grad-2)"
+              style="animation: _EMO_animation-180v3x1_@keyframes animation-180v3x1{
+  0% { transform: rotate(0deg) translate(0px, 0px) scale(1.05); }
+  100% { transform: rotate(-8deg) translate(5%, -3%) scale(0.95); }
+}_EMO_ 25s ease-in-out infinite alternate; transform-origin: 40% 60%;"
+            />
+            <path
+              d="M-50,300 C500,500 900,100 1300,600 L1300,1000 L-50,1000 Z"
+              fill="url(#fabric-grad-3)"
+              style="animation: _EMO_animation-1xdcxy0_@keyframes animation-1xdcxy0{
+  0% { transform: rotate(0deg) translate(0px, 0px) scale(0.95); }
+  100% { transform: rotate(4deg) translate(-3%, -5%) scale(1.08); }
+}_EMO_ 15s ease-in-out infinite alternate; transform-origin: 60% 40%;"
+            />
+          </svg>
+        </div>
+        <div
+          class="css-34ne0f"
+        />
+        <div
+          class="css-8qtdyu"
         >
           <div
-            class="css-1x4i8xv"
-          />
-          <div
-            class="css-tw4vmx"
+            class="css-1rto8f8"
           >
-            <svg
-              class="audiomesh-icon "
-              height="80"
-              viewBox="0 0 85 85"
-              width="80"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="css-1nccjsg"
+            />
+            <div
+              class="css-bsfus6"
+              style="transform: perspective(800px) rotateX(60deg); transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);"
             >
-              <defs>
-                <lineargradient
-                  id="blueGrad"
-                  x1="0%"
-                  x2="0%"
-                  y1="0%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    stop-color="#0088cc"
-                  />
-                  <stop
-                    offset="100%"
-                    stop-color="#007bb9"
-                  />
-                </lineargradient>
-                <lineargradient
-                  id="blueGradDark"
-                  x1="0%"
-                  x2="0%"
-                  y1="0%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    stop-color="#007bb9"
-                  />
-                  <stop
-                    offset="100%"
-                    stop-color="#006193"
-                  />
-                </lineargradient>
-              </defs>
-              <g
-                transform="translate(-1, -9) scale(1.2)"
+              <div
+                class="css-1gbg7z7"
               >
-                <rect
-                  fill="rgba(0,0,0,0.15)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="7"
-                  y="60"
+                <svg
+                  height="220"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1;"
+                  viewBox="0 0 220 220"
+                  width="220"
+                >
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="174"
+                    y1="110"
+                    y2="147"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="0s"
+                      dur="0.8s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="117"
+                    y1="110"
+                    y2="193"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="0.4s"
+                      dur="1.1s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="52"
+                    y1="110"
+                    y2="150"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="0.8s"
+                      dur="0.9s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="35"
+                    y1="110"
+                    y2="82"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="1.2s"
+                      dur="1.3s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="105"
+                    y1="110"
+                    y2="38"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="1.6s"
+                      dur="0.7s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="171"
+                    y1="110"
+                    y2="49"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="2.0s"
+                      dur="1.0s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                  <line
+                    stroke="rgba(186, 200, 215, 0.5)"
+                    stroke-dasharray="15,6"
+                    stroke-width="1.5"
+                    x1="110"
+                    x2="182"
+                    y1="110"
+                    y2="95"
+                  >
+                    <animate
+                      attributeName="stroke-dashoffset"
+                      begin="2.4s"
+                      dur="1.2s"
+                      from="0"
+                      repeatCount="indefinite"
+                      to="-21"
+                    />
+                  </line>
+                </svg>
+                <div
+                  class="css-3fleot"
+                  style="top: 138px; left: 165px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-g33q4k"
+                  style="top: 184px; left: 108px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-kdchbc"
+                  style="top: 141px; left: 43px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-14t3mz5"
+                  style="top: 73px; left: 26px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-m79yuh"
+                  style="top: 29px; left: 96px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-o40as9"
+                  style="top: 40px; left: 162px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-1kjpwta"
+                  style="top: 86px; left: 173px;"
+                >
+                  <div
+                    class="css-1vrsmlf"
+                  />
+                </div>
+                <div
+                  class="css-1rylosz"
                 />
-                <rect
-                  fill="rgba(0,0,0,0.15)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="7"
-                  y="38"
+                <div
+                  class="css-1sndoz5"
                 />
-                <rect
-                  fill="rgba(0,0,0,0.15)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="7"
-                  y="16"
-                />
-                <rect
-                  fill="url(#blueGrad)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="56"
-                />
-                <rect
-                  fill="url(#blueGradDark)"
-                  height="8"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="66"
-                />
-                <circle
-                  cx="52"
-                  cy="65"
-                  fill="#00ffcc"
-                  r="2"
-                />
-                 
-                <rect
-                  fill="#006193"
-                  height="2"
-                  rx="1"
-                  width="30"
-                  x="12"
-                  y="64"
-                />
-                 
-                <rect
-                  fill="url(#blueGrad)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="34"
-                />
-                <rect
-                  fill="url(#blueGradDark)"
-                  height="8"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="44"
-                />
-                <circle
-                  cx="52"
-                  cy="43"
-                  fill="#00ffcc"
-                  r="2"
-                />
-                <rect
-                  fill="#006193"
-                  height="2"
-                  rx="1"
-                  width="30"
-                  x="12"
-                  y="42"
-                />
-                <rect
-                  fill="url(#blueGrad)"
-                  height="18"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="12"
-                />
-                <rect
-                  fill="url(#blueGradDark)"
-                  height="8"
-                  rx="4"
-                  width="56"
-                  x="5"
-                  y="22"
-                />
-                <circle
-                  cx="52"
-                  cy="21"
-                  fill="#00ffcc"
-                  r="2"
-                />
-                <rect
-                  fill="#006193"
-                  height="2"
-                  rx="1"
-                  width="30"
-                  x="12"
-                  y="20"
-                />
-              </g>
-              <g
-                transform="translate(29.1, 16.5) scale(1.68)"
-              >
-                <path
-                  d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882 L27.338,3.713 Z"
-                  fill="#0088cc"
-                />
-                <path
-                  d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882L27.338,3.713 M30.285,0L0.984,14.678 l8.174,5.128l3.749,11.464l4.789-5.779l5.616,3.586L30.285,0L30.285,0z"
-                  fill="#ffffff"
-                />
-              </g>
-            </svg>
+                <div
+                  class="css-job0s7"
+                >
+                  <svg
+                    class="audiomesh-icon "
+                    height="70"
+                    version="1"
+                    viewBox="0 0 2048 2048"
+                    width="70"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+               
+            </div>
+             
           </div>
-        </div>
-        <p
-          class="css-19z886v"
-        >
-          AudioMesh
-        </p>
-        <p
-          class="css-bmioxu"
-        >
-          CLOUD STORAGE CLIENT
-        </p>
-        <div
-          class="css-167mtov"
-        >
-          <div
-            class="css-1fylyis"
-          />
-        </div>
-        <div
-          class="css-1ttgzt0"
-        >
+           
           <p
-            class="css-v7jnhe"
+            class="css-13n7pte"
           >
-            &gt; 
-            INITIALIZING SECURE SESSION...
+            AudioMesh
           </p>
           <p
-            class="css-1bq43kb"
-          />
+            class="css-7l3o8e"
+          >
+            SYNCHRONIZED SPEAKER NETWORK
+          </p>
+          <div
+            class="css-vujoj1"
+          >
+            <div
+              class="css-8o9lcj"
+            />
+          </div>
+          <div
+            class="css-21rd9q"
+          >
+            <div
+              class="css-hql7av"
+            />
+            <div
+              class="css-i61mm5"
+            />
+            <div
+              class="css-1uycdup"
+            />
+            <div
+              class="css-1adad2d"
+            />
+            <div
+              class="css-1k6u9ju"
+            />
+            <div
+              class="css-o65zsb"
+            />
+            <div
+              class="css-g0vt0c"
+            />
+            <div
+              class="css-k3cmzv"
+            />
+          </div>
+          <div
+            class="css-1qrgt7a"
+          >
+            <div
+              class="css-cid8oq"
+            />
+            <p
+              class="css-1md6m87"
+            >
+              MESH STATUS: SYNCING
+            </p>
+          </div>
+          <div
+            class="css-1gf7kfk"
+          >
+            <p
+              class="css-v7jnhe"
+            >
+              &gt; 
+              INITIALIZING AUDIO SUBSYSTEM...
+            </p>
+            <p
+              class="css-1jh7hgn"
+            />
+          </div>
         </div>
       </div>
     </div>
     <footer
-      class="css-zi9c18"
+      class="css-1lgat14"
     >
       <div
         class="chakra-stack css-ot7eu5"
@@ -773,187 +1024,30 @@ exports[`RouterProvider should render router provider correctly 2`] = `
           class="chakra-stack css-1ln92h3"
         >
           <div
-            class="chakra-stack css-1tlqcjd"
+            class="chakra-stack css-wvw2ee"
           >
             <div
               class="chakra-stack css-1x0y7ph"
             >
               <div
-                class="css-1d5wfwy"
+                class="css-1rtnxz5"
               >
                 <svg
                   class="audiomesh-icon "
                   height="100%"
-                  viewBox="0 0 85 85"
+                  version="1"
+                  viewBox="0 0 2048 2048"
                   width="100%"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <defs>
-                    <lineargradient
-                      id="blueGrad"
-                      x1="0%"
-                      x2="0%"
-                      y1="0%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        stop-color="#0088cc"
-                      />
-                      <stop
-                        offset="100%"
-                        stop-color="#007bb9"
-                      />
-                    </lineargradient>
-                    <lineargradient
-                      id="blueGradDark"
-                      x1="0%"
-                      x2="0%"
-                      y1="0%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        stop-color="#007bb9"
-                      />
-                      <stop
-                        offset="100%"
-                        stop-color="#006193"
-                      />
-                    </lineargradient>
-                  </defs>
-                  <g
-                    transform="translate(-1, -9) scale(1.2)"
-                  >
-                    <rect
-                      fill="rgba(0,0,0,0.15)"
-                      height="18"
-                      rx="4"
-                      width="56"
-                      x="7"
-                      y="60"
-                    />
-                    <rect
-                      fill="rgba(0,0,0,0.15)"
-                      height="18"
-                      rx="4"
-                      width="56"
-                      x="7"
-                      y="38"
-                    />
-                    <rect
-                      fill="rgba(0,0,0,0.15)"
-                      height="18"
-                      rx="4"
-                      width="56"
-                      x="7"
-                      y="16"
-                    />
-                    <rect
-                      fill="url(#blueGrad)"
-                      height="18"
-                      rx="4"
-                      width="56"
-                      x="5"
-                      y="56"
-                    />
-                    <rect
-                      fill="url(#blueGradDark)"
-                      height="8"
-                      rx="4"
-                      width="56"
-                      x="5"
-                      y="66"
-                    />
-                    <circle
-                      cx="52"
-                      cy="65"
-                      fill="#00ffcc"
-                      r="2"
-                    />
-                     
-                    <rect
-                      fill="#006193"
-                      height="2"
-                      rx="1"
-                      width="30"
-                      x="12"
-                      y="64"
-                    />
-                     
-                    <rect
-                      fill="url(#blueGrad)"
-                      height="18"
-                      rx="4"
-                      width="56"
-                      x="5"
-                      y="34"
-                    />
-                    <rect
-                      fill="url(#blueGradDark)"
-                      height="8"
-                      rx="4"
-                      width="56"
-                      x="5"
-                      y="44"
-                    />
-                    <circle
-                      cx="52"
-                      cy="43"
-                      fill="#00ffcc"
-                      r="2"
-                    />
-                    <rect
-                      fill="#006193"
-                      height="2"
-                      rx="1"
-                      width="30"
-                      x="12"
-                      y="42"
-                    />
-                    <rect
-                      fill="url(#blueGrad)"
-                      height="18"
-                      rx="4"
-                      width="56"
-                      x="5"
-                      y="12"
-                    />
-                    <rect
-                      fill="url(#blueGradDark)"
-                      height="8"
-                      rx="4"
-                      width="56"
-                      x="5"
-                      y="22"
-                    />
-                    <circle
-                      cx="52"
-                      cy="21"
-                      fill="#00ffcc"
-                      r="2"
-                    />
-                    <rect
-                      fill="#006193"
-                      height="2"
-                      rx="1"
-                      width="30"
-                      x="12"
-                      y="20"
-                    />
-                  </g>
-                  <g
-                    transform="translate(29.1, 16.5) scale(1.68)"
-                  >
-                    <path
-                      d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882 L27.338,3.713 Z"
-                      fill="#0088cc"
-                    />
-                    <path
-                      d="M27.338,3.713l-5.316,22.166l-8.651-5.492l9.699-11.854L9.456,17.781l-4.45-2.882L27.338,3.713 M30.285,0L0.984,14.678 l8.174,5.128l3.749,11.464l4.789-5.779l5.616,3.586L30.285,0L30.285,0z"
-                      fill="#ffffff"
-                    />
-                  </g>
+                  <path
+                    d="M1323 104.6c-57.4 8.7-128.3 50.4-191.2 112.6-20.2 20-32.9 34.2-52.5 58.4-17.9 22.4-31.6 40.5-45.6 60.4l-9.4 13.5-253.4.6c-191.6.4-256.2.8-264.9 1.8-60.2 6.5-111.5 25.5-157.2 58.3-16.5 11.8-26.6 20.4-42.3 36.2C268 485 241 530.3 226.1 581.3c-6.7 23-8.7 33.7-11.7 62.7-1.6 15.3-1.7 51.2-1.6 497 .1 327.6.5 484.5 1.2 493 4.4 52.4 18.8 96.7 44.9 138.8 32.5 52.4 85.5 99.2 139.6 123.5 27.8 12.4 61.1 22.2 91.5 26.8l15.5 2.4H1000c473.8 0 495.1-.1 508-1.8 52.7-7.2 96.1-23.4 138.5-51.7 46.6-31.1 84.1-73.2 108.8-121.9 17.5-34.3 26.9-66.5 32.4-110.1 1.7-13.8 1.8-37.3 1.8-499 0-391.1-.3-486.8-1.3-496.5-6.4-59.1-22.8-105.5-53.2-151-47.2-70.5-120.1-119.4-203.3-136.6-25.7-5.2-38.3-6.4-71.7-6.4-27.9.1-31.4.3-41 2.3-29.7 6.5-59 21.3-85.5 43.3-12.6 10.4-36.7 34.5-47 46.9-39.8 48-77 112-105.2 181-17 41.6-43 121.3-40.1 123.2.7.4 6.5 3.6 12.8 7 44 23.5 74.9 45.5 106.8 76.2 51.8 50 92.2 121.9 110.7 197.1 8.9 36.1 12.5 65.8 12.5 102.5 0 36.9-2.5 59.7-10 92.8-8.1 35.4-17.4 62-32.5 92.7-22.2 45.1-44.2 75.6-80.9 112-37.6 37.5-74.4 62.9-120.5 83.4-24.6 11-60.2 21.3-91.1 26.5-81 13.5-169.9-3.1-244-45.7-30.7-17.6-57.6-38.2-82.5-63.2-68.7-68.7-110.3-155.8-121.2-253.8-2-18.3-2.3-66.1-.4-83.7 5.6-54.4 17.8-98.7 39.9-145 38.7-81.4 99.3-144.2 179.2-185.8 12.2-6.4 30.9-14.6 31.6-14 .2.3-1.4 9.2-3.7 19.9-5.7 27.6-7.6 37.7-10.2 54.5l-2.3 14.7-13.5 9.5c-20.4 14.3-31 23.1-47.5 39.6-17 17-25.5 27-37.4 43.6-21 29.4-36.6 61.4-48 98.2-9.4 30.3-13.8 58.7-14.7 93.8-.6 25 .4 40.2 4.3 66 13.9 91.1 62.9 171 137.6 224.3 30.4 21.7 73.5 41 109.9 49.1 24.2 5.4 38.6 6.9 63.9 7 47.8 0 87-8.9 131.5-29.9 20.7-9.7 38.8-21.3 61.2-39.2 52.5-41.9 91.1-99.3 111.2-165.3 27.1-89.4 16.8-189.4-28-271.2-26-47.4-63.8-89.1-106.4-117.3-10.1-6.7-36.7-22.5-37.2-22.1-1 .8-10.9 60-15.7 94.1-5.9 41.1-11.5 96.3-14.2 138.5l-.5 8.5 3.4-10c6.9-19.9 22.6-54.2 32.9-71.9l4.1-6.9 4.4 4.9c40 44.8 60.9 110.4 55.4 173.4-1.6 18.6-5.2 35.6-11.5 54.6-10.3 30.9-24.3 54.7-46.2 78.5-31 33.7-68.3 54.3-111.9 62-16.2 2.9-42.4 3.1-58 .5-43.5-7.2-77.7-24.8-109-56.1-27.3-27.2-47-61.7-57.1-100.1-5.5-21.1-6.4-27.8-7.1-53.9-.8-34.7 2.2-55.5 12.7-86 4.8-14 16.4-38.2 24.5-51 12.2-19.3 30.4-38.7 49.6-53l10.4-7.8 1.3 11.9c.6 6.6 2.3 18.8 3.7 27.1 2.5 15.5 12 57.5 13.6 60.3.5.9.9-1.1.9-5.5 0-8.6 2.4-42.5 4.5-63.5 12.2-122.7 41.3-250 82.4-360.4 42.1-113 104-223.1 168-299.1 16.5-19.6 39.5-43.4 56.1-58 40.8-36 88.4-62.9 124.6-70.3 49.8-10.3 90.9.1 127.4 32 14.6 12.7 32.2 34.9 45.1 56.6 7.4 12.4 23 42.8 26.9 52.4 1.3 3.2 2.5 5.6 2.7 5.5.6-.7-4.6-25.8-8.1-39.2-15.3-57.9-38.7-103.3-69.9-135.4-26.5-27.2-56-43.4-89.4-49.1-13.9-2.4-40.7-2.6-55.3-.4m-241.6 176.9c-.9 1.4-2.1 2.5-2.7 2.5s-.8.3-.4.6c.3.3-1.7 3.4-4.5 6.8-6.6 8-6.8 8.2-6.8 6.9 0-.5 1.6-2.7 3.5-4.7 2.1-2.2 3.2-4.2 2.8-5.2-.7-1.9 1.6-6.6 2.9-5.8.5.3.2 1.6-.8 2.7-.9 1.2 0 .3 2.2-1.9 4.4-4.7 6.3-5.6 3.8-1.9m-16.4 16.6c-1.3.8-1.3 1 0 1.9 1.3.8 1.2 1.2-.4 2.7-1.3 1.2-1.6 1.3-.8.2.9-1.1.9-1.8 0-2.7-.8-.8-.8-1.5.2-2.7.7-.8 1.5-1.3 1.9-1 .3.3-.1 1-.9 1.6m-28.5 43.9c-.3.5-1.1 1-1.6 1-.6 0-.7-.5-.4-1 .3-.6 1.1-1 1.6-1 .6 0 .7.4.4 1m-2.7 3.6c-1.3 1.3-2 1.4-3.4.4-1.6-1-1.6-1.1-.2-.6 1 .3 2 .1 2.3-.4.4-.6 1.1-1 1.8-1s.5.7-.5 1.6M471 359.4c0 1.1-1.9 1.5-2.5.6-.3-.5.1-1 .9-1 .9 0 1.6.2 1.6.4m-75 28.1c0 .6-5.6 3.5-6.7 3.5-.4-.1.8-.9 2.7-2 3.9-2.2 4-2.2 4-1.5m-13.5 7.4c-9.2 5.6-18.8 11.7-24.6 15.5-6.6 4.4-6.7 4.4-6.5 1.9.1-1.9 1.7-3.6 6.6-7 3.5-2.5 7.5-4.6 8.7-4.6 1.3 0 2-.4 1.6-1-.3-.6-.1-.7.5-.3.7.4 2 .2 2.9-.4 1.6-1 1.6-1.1-.2-.5-1.6.5-1.7.4-.8-.6 1-1 1.6-.9 2.9.2 1.5 1.2 1.6 1.2 1-.7-.7-2.4 1.2-3.8 3.4-2.4.8.5 2.2.3 3.4-.6 1.1-.8 2.5-1.4 3.1-1.4.5 0-.3.9-2 1.9M347 418.1c-1.9 1.7-5.5 4.4-8 6.1l-4.5 3 4.5-4.2c4.3-3.9 10-8 11-8 .3.1-1.1 1.4-3 3.1M315.5 445c-4.9 5-9.4 9-10 8.9-.5 0-.4-.3.3-.6.6-.2 1-.9.7-1.3-.3-.5.5-1.4 1.7-2.1 2.4-1.3 5.5-4 5.1-4.6-.2-.1 1.9-2.2 4.5-4.5 2.6-2.4 4.9-4.7 5.1-5.1.1-.5.6-.6.9-.2.3.3-3.4 4.6-8.3 9.5m-13.4 13.4c-1.9 1.9-4.2 3.4-5.2 3.3-.9-.1-1.5-.5-1.3-.9.3-.5 1-.6 1.5-.2.6.3 2.2-.8 3.6-2.5s3.1-3.1 3.6-3.1c.6 0-.4 1.5-2.2 3.4m979.9-.9c-.7.9-1.5 1.3-1.9 1-.3-.3.1-1 .9-1.5 2.1-1.4 2.4-1.2 1 .5M293 469c-5.4 6.3-6.8 7.4-5 4 .6-1.1 1.5-2 2-2s.7-.9.5-1.9c-.2-1.3.1-1.8 1-1.5.7.3 1.6.1 2-.5.3-.6.1-1.1-.4-1.1-.6 0-1.1-.5-1.1-1.1 0-.8.4-.8 1.4 0 1 .9 1.5.8 2-.4.3-.8 1-1.5 1.7-1.5.6 0-1.2 2.7-4.1 6m-8 9.4c0 .3-.6 1.1-1.3 1.8s-2.8 3.4-4.6 6c-3.3 4.6-5.2 5.5-4.6 2 .2-.9.4-2.1.4-2.5.1-.5.6-.5 1.1-.2 1.6 1 3.3-.5 2.1-1.8-1.3-1.6 1.2-4.9 3.2-4.1.8.3 1.8.1 2.2-.5.6-1.1 1.5-1.5 1.5-.7M272.4 496c-1.5 2.2-2.9 3.8-3.2 3.6-.6-.7 3.8-7.6 4.9-7.6.5 0-.3 1.8-1.7 4m-5.3 3.3c-1 .9-1.1.8-.5-.6.3-1 .9-1.5 1.2-1.2s0 1.1-.7 1.8m1.9 2.1c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-2 3c0 .3-.4.8-1 1.1-.5.3-1 .1-1-.4 0-.6.5-1.1 1-1.1.6 0 1 .2 1 .4m-5 7.4c0 .5-.7 1.7-1.5 2.8-1.4 1.8-1.4 1.7-.4-.9 1.2-2.7 1.9-3.4 1.9-1.9"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M375.5 396c-.3.5.1 1 1 1s1.3-.5 1-1c-.3-.6-.8-1-1-1s-.7.4-1 1"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
               <h2
@@ -963,40 +1057,40 @@ exports[`RouterProvider should render router provider correctly 2`] = `
               </h2>
             </div>
             <p
-              class="css-1pwkyqd"
+              class="css-12ffgih"
             >
-              Unlimited cloud storage, secure, fast, and completely powered by Telegram.
+              Turn any device into a synchronized speaker node over Wi-Fi and Bluetooth.
             </p>
           </div>
           <div
-            class="chakra-stack css-15fc39x"
+            class="chakra-stack css-18vmcsd"
           >
             <div
-              class="chakra-stack css-1vm7xph"
+              class="chakra-stack css-ufvzag"
             >
               <p
-                class="css-crrjsv"
+                class="css-e6pryx"
               >
                 Legal
               </p>
               <a
-                class="chakra-button css-105eugh"
+                class="chakra-button css-cdusxp"
                 data-discover="true"
                 href="/privacy"
                 type="button"
               >
-                Privacy policy
+                Privacy Policy
               </a>
               <a
-                class="chakra-button css-105eugh"
+                class="chakra-button css-cdusxp"
                 data-discover="true"
                 href="/terms"
                 type="button"
               >
-                Terms of service
+                Terms of Service
               </a>
               <a
-                class="chakra-button css-105eugh"
+                class="chakra-button css-cdusxp"
                 data-discover="true"
                 href="/disclaimer"
                 type="button"
@@ -1005,31 +1099,31 @@ exports[`RouterProvider should render router provider correctly 2`] = `
               </a>
             </div>
             <div
-              class="chakra-stack css-1vm7xph"
+              class="chakra-stack css-ufvzag"
             >
               <p
-                class="css-crrjsv"
+                class="css-e6pryx"
               >
-                Team
+                Company
               </p>
               <a
-                class="chakra-button css-105eugh"
+                class="chakra-button css-cdusxp"
                 data-discover="true"
                 href="/contact-us"
                 type="button"
               >
-                Contact us
+                Contact Us
               </a>
               <a
-                class="chakra-button css-105eugh"
+                class="chakra-button css-cdusxp"
                 data-discover="true"
                 href="/about-us"
                 type="button"
               >
-                About us
+                About Us
               </a>
               <a
-                class="chakra-button css-105eugh"
+                class="chakra-button css-cdusxp"
                 data-discover="true"
                 href="/faq"
                 type="button"
@@ -1046,9 +1140,9 @@ exports[`RouterProvider should render router provider correctly 2`] = `
           class="chakra-stack css-gvjkdd"
         >
           <p
-            class="css-qv3kxj"
+            class="css-1bz86h7"
           >
-            © 2026 audiomesh.com | All rights reserved
+            © 2026 AudioMesh | All rights reserved
           </p>
           <div
             class="chakra-stack css-vyigcq"
