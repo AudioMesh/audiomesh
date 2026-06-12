@@ -16,13 +16,15 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
-    "react-i18next": "^14.1.1"
+    "react-i18next": "^14.1.1",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@tanstack/react-query": "^5.51.23",
     "@types/node": "^16.18.91",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.184.1",
     "react-router-dom": "^7.15.0",
     "typescript": "^6.0.3"
   }

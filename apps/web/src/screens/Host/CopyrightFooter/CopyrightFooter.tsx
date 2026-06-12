@@ -53,7 +53,7 @@ const CopyrightFooter = () => {
                 <Logo size="100%" />
               </Box>
               <Heading size="sm" color="primary" fontWeight="bold">
-                AudioMesh
+                {t('Title')}
               </Heading>
             </HStack>
             <Text

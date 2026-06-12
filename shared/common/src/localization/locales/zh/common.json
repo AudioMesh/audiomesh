@@ -1,3 +1,22 @@
 {
-  "Title": "AudioMesh"
+  "Title": "AudioMesh",
+  "DocsPage": {
+    "switch": "切换",
+    "inThisPage": "本页目录",
+    "loadingDocumentation": "正在加载文档...",
+    "gettingStarted": "开始使用",
+    "architecture": "系统架构",
+    "reference": "参考指南",
+    "selectTopic": "选择主题"
+  },
+  "NavigationBar": {
+    "githubRepository": "GitHub 仓库",
+    "menu": "菜单"
+  },
+  "MdPage": {
+    "loadingDocument": "正在加载文档..."
+  },
+  "LandingPage": {
+    "host": "主控"
+  }
 }

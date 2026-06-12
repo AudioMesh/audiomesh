@@ -1,78 +1,79 @@
 export interface DocItem {
   id: string;
-  title: string;
+  titleKey: string;
   filePath: string;
 }
 
 export interface DocTopic {
-  title: string;
+  titleKey: string;
   items: DocItem[];
 }
 
 export const DOCS_TOPICS: DocTopic[] = [
   {
-    title: 'Getting Started',
+    titleKey: 'DocsPage.gettingStarted',
     items: [
       {
         id: 'introduction',
-        title: 'Introduction',
+        titleKey: 'NavigationBar.introduction',
         filePath: 'data/product/introduction',
       },
       {
         id: 'quickstart',
-        title: 'Quick Start',
+        titleKey: 'NavigationBar.quickstart',
         filePath: 'data/product/quickstart',
       },
       {
         id: 'setup-guide',
-        title: 'Setup Guide',
+        titleKey: 'NavigationBar.setup-guide',
         filePath: 'data/product/telegram-credentials',
       },
     ],
   },
   {
-    title: 'Architecture',
+    titleKey: 'DocsPage.architecture',
     items: [
       {
         id: 'system-design',
-        title: 'System Design',
+        titleKey: 'NavigationBar.system-design',
         filePath: 'data/product/system-design',
       },
       {
         id: 'mtproto',
-        title: 'MTProto Protocol',
+        titleKey: 'NavigationBar.mtproto',
         filePath: 'data/product/mtproto',
       },
       {
         id: 'direct-storage',
-        title: 'Direct Storage',
+        titleKey: 'NavigationBar.direct-storage',
         filePath: 'data/product/direct-storage',
       },
     ],
   },
   {
-    title: 'Reference',
+    titleKey: 'DocsPage.reference',
     items: [
       {
         id: 'api-reference',
-        title: 'API Gateway Reference',
+        titleKey: 'NavigationBar.api-reference',
         filePath: 'data/product/api-reference',
       },
     ],
   },
   {
-    title: 'Version History',
+    titleKey: 'NavigationBar.version-history',
     items: [
       {
         id: 'version-history-desktop',
-        title: 'Desktop',
+        titleKey: 'NavigationBar.version-history-desktop',
         filePath: 'data/product/version-history-desktop',
       },
       {
         id: 'version-history-mobile',
-        title: 'Mobile',
+        titleKey: 'NavigationBar.version-history-mobile',
         filePath: 'data/product/version-history-mobile',
       },
     ],
   },
 ];
+

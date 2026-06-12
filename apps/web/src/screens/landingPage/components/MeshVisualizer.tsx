@@ -374,7 +374,7 @@ export const MeshVisualizer = ({
       >
         <Icon type={IconType.AUDIO} size="24px" className={styles.pulseHostIcon} />
         <Text fontSize="10px" fontWeight="bold" mt={1}>
-          HOST
+          {t('LandingPage.host')}
         </Text>
       </Flex>
 

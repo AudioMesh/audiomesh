@@ -10,9 +10,8 @@ import {
 import { Icon, IconType } from '@assets';
 
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import { usePaddingForScreen } from '../../hooks';
 import { NAVIGATION_LINKS } from './constants';
 
 const GitHubIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -29,21 +28,28 @@ const GitHubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const NavigationBar = () => {
   const { t } = useTranslation();
-  const padding = usePaddingForScreen();
+  const { pathname } = useLocation();
+  const isDocsPage = pathname.startsWith('/docs');
 
   return (
-    <HStack
-      paddingX={padding}
-      height={16}
+    <Box
       borderBottomWidth={1}
       borderBottomColor="border"
       shadow="sm"
-      justifyContent={'space-between'}
       position="sticky"
       top={0}
       zIndex={50}
       bg="bg.panel"
+      width="100%"
+      px={isDocsPage ? { base: 6, lg: 6 } : { base: 6, md: 16 }}
     >
+      <HStack
+        height={16}
+        maxW={isDocsPage ? '1400px' : '1200px'}
+        mx="auto"
+        justifyContent={'space-between'}
+        width="100%"
+      >
       {/* Logo */}
       <HStack
         gap={1}
@@ -91,7 +97,7 @@ const NavigationBar = () => {
             >
               <Link to={link} style={{ display: 'flex', alignItems: 'center' }}>
                 <Text fontSize="sm" fontWeight={'medium'}>
-                  {name}
+                  {t(`NavigationBar.${name.toLowerCase()}`)}
                 </Text>
               </Link>
             </Button>
@@ -101,7 +107,7 @@ const NavigationBar = () => {
         <IconButton
           asChild
           variant="ghost"
-          aria-label="GitHub Repository"
+          aria-label={t('NavigationBar.githubRepository')}
           borderRadius="md"
           color="fg.muted"
           _hover={{ bg: 'bg.hover', color: 'primary' }}
@@ -133,7 +139,7 @@ const NavigationBar = () => {
                 py={2}
                 size="sm"
               >
-                Menu
+                {t('NavigationBar.menu')}
                 <Icon type={IconType.MENU} />
               </Button>
             </Menu.Trigger>
@@ -156,7 +162,7 @@ const NavigationBar = () => {
                       }}
                     >
                       <Text fontSize="sm" fontWeight={'medium'}>
-                        {name}
+                        {t(`NavigationBar.${name.toLowerCase()}`)}
                       </Text>
                     </Link>
                   </Menu.Item>
@@ -167,7 +173,8 @@ const NavigationBar = () => {
         </Box>
       </HStack>
     </HStack>
-  );
+  </Box>
+);
 };
 
 export default NavigationBar;
