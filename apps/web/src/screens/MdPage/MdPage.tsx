@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { useLocation, Navigate } from 'react-router-dom';
 import { Box, Container, Spinner } from '@chakra-ui/react';
 import { MdPreview, getMdFileDataInString } from '@components/MdPreview';
+import { useTranslation } from 'react-i18next';
 import { MD_PAGE_CONFIG } from './const';
 
 const MdPage = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [mdContent, setMdContent] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
@@ -48,7 +50,7 @@ const MdPage = () => {
             minH="300px"
             width="full"
             aria-busy="true"
-            aria-label="Loading document"
+            aria-label={t('MdPage.loadingDocument')}
           >
             <Spinner size="xl" color="primary" />
           </Box>

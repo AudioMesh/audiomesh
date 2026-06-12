@@ -117,7 +117,7 @@ exports[`DocsPage should render the documentation layout with sidebar and TOC 1`
                 <p
                   class="css-nh0ii3"
                 >
-                  API Gateway Reference
+                  API Reference
                 </p>
               </div>
             </div>

@@ -1,3 +1,22 @@
 {
-  "Title": "ऑडियोमेश"
+  "Title": "ऑडियोमेश",
+  "DocsPage": {
+    "switch": "बदलें",
+    "inThisPage": "इस पृष्ठ में",
+    "loadingDocumentation": "दस्तावेज़ीकरण लोड हो रहा है...",
+    "gettingStarted": "शुरू करना",
+    "architecture": "आर्किटेक्चर",
+    "reference": "संदर्भ",
+    "selectTopic": "विषय चुनें"
+  },
+  "NavigationBar": {
+    "githubRepository": "गिटहब रिपोजिटरी",
+    "menu": "मेन्यू"
+  },
+  "MdPage": {
+    "loadingDocument": "दस्तावेज़ लोड हो रहा है..."
+  },
+  "LandingPage": {
+    "host": "होस्ट"
+  }
 }

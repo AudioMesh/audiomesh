@@ -228,6 +228,12 @@ const customConfig = defineConfig({
         'border.muted': {
           value: { _light: '#e3e3e3', _dark: '#282a2c' },
         },
+        'pillar.top': {
+          value: { _light: '#450470ff', _dark: '#7000b9ff' },
+        },
+        'pillar.bottom': {
+          value: { _light: '#036943ff', _dark: '#00d184ff' },
+        },
         // Terminal log line colors — adapt to light/dark mode
         // Dark: bright neon for readability on dark bg
         // Light: deeper saturated shades for readability on white bg

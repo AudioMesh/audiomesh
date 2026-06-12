@@ -93,8 +93,44 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   const greenChannelRef = useRef<SVGFEDisplacementMapElement>(null);
   const blueChannelRef = useRef<SVGFEDisplacementMapElement>(null);
   const gaussianBlurRef = useRef<SVGFEGaussianBlurElement>(null);
+  const globalIsDark = useDarkMode();
+  const [localIsDark, setLocalIsDark] = useState(false);
 
-  const isDarkMode = useDarkMode();
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const checkDark = () => {
+      if (!containerRef.current) return;
+      const closestDark = containerRef.current.closest('.dark');
+      setLocalIsDark(!!closestDark);
+    };
+
+    checkDark();
+
+    const observer = new MutationObserver(() => {
+      checkDark();
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    if (containerRef.current?.parentElement) {
+      observer.observe(containerRef.current.parentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    }
+
+    return () => observer.disconnect();
+  }, [globalIsDark]);
+
+  const isDarkMode = localIsDark || globalIsDark;
 
   const generateDisplacementMap = () => {
     const rect = containerRef.current?.getBoundingClientRect();

@@ -1,3 +1,22 @@
 {
-  "Title": "AudioMesh"
+  "Title": "AudioMesh",
+  "DocsPage": {
+    "switch": "Переключить",
+    "inThisPage": "На этой странице",
+    "loadingDocumentation": "Загрузка документации...",
+    "gettingStarted": "Начало работы",
+    "architecture": "Архитектура",
+    "reference": "Справочник",
+    "selectTopic": "Выбрать тему"
+  },
+  "NavigationBar": {
+    "githubRepository": "Репозиторий GitHub",
+    "menu": "Меню"
+  },
+  "MdPage": {
+    "loadingDocument": "Загрузка документа..."
+  },
+  "LandingPage": {
+    "host": "ХОСТ"
+  }
 }

@@ -1,3 +1,22 @@
 {
-  "Title": "AudioMesh"
+  "Title": "AudioMesh",
+  "DocsPage": {
+    "switch": "切り替え",
+    "inThisPage": "目次",
+    "loadingDocumentation": "ドキュメントを読み込み中...",
+    "gettingStarted": "はじめに",
+    "architecture": "アーキテクチャ",
+    "reference": "リファレンス",
+    "selectTopic": "トピックを選択"
+  },
+  "NavigationBar": {
+    "githubRepository": "GitHubリポジトリ",
+    "menu": "メニュー"
+  },
+  "MdPage": {
+    "loadingDocument": "ドキュメントを読み込み中..."
+  },
+  "LandingPage": {
+    "host": "ホスト"
+  }
 }

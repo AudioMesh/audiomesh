@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { GlassBox } from '@components';
+import { GlassBox, GridAnimation } from '@components';
 import styles from '../landingPage.module.css';
 
 interface HeroSectionProps {
@@ -26,7 +26,6 @@ export const HeroSection = ({ children }: HeroSectionProps) => {
       justifyContent="center"
       width="100%"
       minHeight="90vh"
-      className={styles.techGrid}
       py={{ base: 10, md: 14 }}
       px={{ base: 6, md: 16 }}
       position="relative"
@@ -38,6 +37,26 @@ export const HeroSection = ({ children }: HeroSectionProps) => {
           'radial(circle at 50% -20%, rgba(139, 92, 246, 0.15), bg.default 80%)',
       }}
     >
+      {/* Dynamic Grid Animation Background */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        zIndex={1}
+        opacity={1}
+        pointerEvents="auto"
+      >
+        <GridAnimation
+          direction="diagonal"
+          speed={0.3}
+          borderColor="rgba(139, 92, 246, 0.12)"
+          hoverFillColor="rgba(139, 92, 246, 0.05)"
+          hoverTrailAmount={2}
+        />
+      </Box>
+
       {/* Immersive moving glows */}
       <div className={styles.radialGlow1} />
       <div className={styles.radialGlow2} />
@@ -51,6 +70,7 @@ export const HeroSection = ({ children }: HeroSectionProps) => {
         alignItems="center"
         justifyContent="space-between"
         zIndex={2}
+        pointerEvents="none"
       >
         {/* LEFT: Copy content */}
         <VStack
@@ -59,6 +79,7 @@ export const HeroSection = ({ children }: HeroSectionProps) => {
           gap={6}
           flex={1.1}
           maxW={{ base: 'xl', lg: 'none' }}
+          pointerEvents="auto"
         >
           <GlassBox width="auto" height="auto" borderRadius={20}>
             <Box px={4} py={1.5} fontSize="xs" fontWeight="bold">
@@ -197,7 +218,9 @@ export const HeroSection = ({ children }: HeroSectionProps) => {
         </VStack>
 
         {/* RIGHT: Diagnostics Terminal */}
-        {children}
+        <Box pointerEvents="auto" flex={0.9} width="100%">
+          {children}
+        </Box>
       </Stack>
 
       {/* Scroll indicator */}

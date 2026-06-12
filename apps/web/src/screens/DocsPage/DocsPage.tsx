@@ -12,6 +12,7 @@ import {
 import { MdPreview, getMdFileDataInString } from '@components/MdPreview';
 import { TitleBoxContainer } from '@components';
 import { Icon, IconType } from '@assets';
+import { useTranslation } from 'react-i18next';
 import { DOCS_TOPICS } from './config';
 
 interface HeadingItem {
@@ -47,6 +48,7 @@ const parseHeadings = (markdown: string): HeadingItem[] => {
 };
 
 const DocsPage = () => {
+  const { t } = useTranslation();
   const { docId } = useParams<{ docId?: string }>();
   const navigate = useNavigate();
   const [mdContent, setMdContent] = React.useState<string>('');
@@ -93,7 +95,7 @@ const DocsPage = () => {
 
   return (
     <TitleBoxContainer
-      title={`Docs - ${activeDoc?.title || ''}`}
+      title={`Docs - ${activeDoc ? t(activeDoc.titleKey) : ''}`}
       icon="app"
       display="flex"
       flexDirection="column"
@@ -133,7 +135,7 @@ const DocsPage = () => {
         >
           <VStack align="stretch" gap={6}>
             {DOCS_TOPICS.map((topic) => (
-              <Box key={topic.title}>
+              <Box key={topic.titleKey}>
                 <Text
                   fontSize="10px"
                   fontWeight="bold"
@@ -143,7 +145,7 @@ const DocsPage = () => {
                   opacity={0.8}
                   mb={3}
                 >
-                  {topic.title}
+                  {t(topic.titleKey)}
                 </Text>
                 <VStack align="stretch" gap={1.5}>
                   {topic.items.map((item) => {
@@ -166,7 +168,7 @@ const DocsPage = () => {
                           fontSize="sm"
                           fontWeight={isActive ? 'semibold' : 'medium'}
                         >
-                          {item.title}
+                          {t(item.titleKey)}
                         </Text>
                       </Flex>
                     );
@@ -196,11 +198,11 @@ const DocsPage = () => {
                   <Flex align="center" gap={2}>
                     <Icon type={IconType.MENU} size="16px" />
                     <Text fontSize="sm" fontWeight="bold">
-                      {activeDoc?.title || 'Select Topic'}
+                      {activeDoc ? t(activeDoc.titleKey) : t('DocsPage.selectTopic')}
                     </Text>
                   </Flex>
                   <Text fontSize="xs" color="fg.muted">
-                    Switch
+                    {t('DocsPage.switch')}
                   </Text>
                 </Button>
               </Menu.Trigger>
@@ -212,7 +214,7 @@ const DocsPage = () => {
                 maxW="400px"
               >
                 {DOCS_TOPICS.map((topic) => (
-                  <Box key={topic.title} py={1}>
+                  <Box key={topic.titleKey} py={1}>
                     <Box px={3} py={1}>
                       <Text
                         fontSize="9px"
@@ -222,7 +224,7 @@ const DocsPage = () => {
                         color="fg.muted"
                         opacity={0.7}
                       >
-                        {topic.title}
+                        {t(topic.titleKey)}
                       </Text>
                     </Box>
                     {topic.items.map((item) => (
@@ -235,7 +237,7 @@ const DocsPage = () => {
                           activeDoc?.id === item.id ? 'bold' : 'normal'
                         }
                       >
-                        {item.title}
+                        {t(item.titleKey)}
                       </Menu.Item>
                     ))}
                   </Box>
@@ -252,7 +254,7 @@ const DocsPage = () => {
               minH="300px"
               width="full"
               aria-busy="true"
-              aria-label="Loading documentation"
+              aria-label={t('DocsPage.loadingDocumentation')}
             >
               <Spinner size="xl" color="primary" />
             </Flex>
@@ -288,7 +290,7 @@ const DocsPage = () => {
                 color="fg.muted"
                 opacity={0.8}
               >
-                In this Page
+                {t('DocsPage.inThisPage')}
               </Text>
               <VStack align="stretch" gap={2}>
                 {headings.map((heading) => (

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Box, VStack, Heading, Text, SimpleGrid, Flex } from '@chakra-ui/react';
+import { Box, VStack, Heading, Text, SimpleGrid, Flex, useToken } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { Icon, IconType } from '@assets';
-import { GlassBox } from '@components';
+import { GlassBox, LightPillar } from '@components';
 
 const featureCards = [
   {
@@ -33,16 +33,45 @@ const featureCards = [
 
 export const FeaturesSection = () => {
   const { t } = useTranslation();
+  const [topColor, bottomColor] = useToken('colors', ['pillar.top', 'pillar.bottom']);
 
   return (
     <Box
-      py={20}
+      py={40}
       px={{ base: 6, md: 16 }}
       bg="bg.panel"
       borderTopWidth="1px"
       borderColor="border"
+      position="relative"
+      overflow="hidden"
     >
-      <Box maxW="1200px" mx="auto">
+      {/* Light Pillar background decoration */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        zIndex={0}
+        pointerEvents="none"
+        opacity={0.35}
+      >
+        <LightPillar
+          topColor={topColor}
+          bottomColor={bottomColor}
+          intensity={1}
+          rotationSpeed={1.5}
+          pillarRotation={90}
+          noiseIntensity={0.5}
+          pillarHeight={1.3}
+          pillarWidth={3}
+          interactive={false}
+          glowAmount={0.006}
+          quality="high"
+        />
+      </Box>
+
+      <Box maxW="1200px" mx="auto" position="relative" zIndex={1}>
         <VStack
           gap={3}
           textAlign="center"
@@ -57,24 +86,14 @@ export const FeaturesSection = () => {
           </Text>
         </VStack>
 
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} gap={8}>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} gap={8} zIndex={100}>
           {featureCards.map(({ icon, titleKey, descKey, className }) => (
             <GlassBox
               key={titleKey}
               width="100%"
               height="100%"
               borderRadius={20}
-              borderWidth={0.07}
-              brightness={50}
-              opacity={0.93}
-              blur={24}
-              displace={3}
-              backgroundOpacity={0.06}
-              saturation={1.4}
-              distortionScale={-180}
-              blueOffset={20}
               className={className}
-              style={{ display: 'block', minHeight: '200px' }}
             >
               <VStack
                 align="start"
