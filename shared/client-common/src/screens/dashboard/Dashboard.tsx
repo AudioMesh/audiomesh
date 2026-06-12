@@ -64,12 +64,21 @@ const Dashboard = () => {
   const [sfuSentCount, setSfuSentCount] = useState(0);
   const [isStreamingFakeAudio, setIsStreamingFakeAudio] = useState(false);
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
+  const [streamSource, setStreamSource] = useState<'melody' | 'loopback'>('melody');
+  const [loopbackSources, setLoopbackSources] = useState<Array<{ id: string; name: string }>>([]);
+  const [selectedLoopbackSourceId, setSelectedLoopbackSourceId] = useState<string>('');
 
   const connectionRef = useRef<MeshConnection | null>(null);
+  const loopbackCtxRef = useRef<AudioContext | null>(null);
+  const loopbackStreamRef = useRef<MediaStream | null>(null);
+  const loopbackProcessorRef = useRef<ScriptProcessorNode | null>(null);
+  const loopbackFifoRef = useRef<number[]>([]);
   const streamIntervalRef = useRef<any>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
   const isAudioEnabledRef = useRef(false);
+  const anchorLocalTimeMsRef = useRef<number>(0);
+  const anchorAudioTimeRef = useRef<number>(0);
 
   // Audio parameters
   const SAMPLE_RATE = 11025;
@@ -115,7 +124,13 @@ const Dashboard = () => {
         floatView[i] = 0;
       } else {
         const sampleIdx = startSampleInNote + i;
-        const envelope = Math.max(0, 1 - sampleIdx / totalSamplesInNote);
+        let envelope = Math.max(0, 1 - sampleIdx / totalSamplesInNote);
+        
+        // Attack envelope: linear ramp over the first 100 samples (9ms) to eliminate pops/clicks
+        if (sampleIdx < 100) {
+          envelope *= (sampleIdx / 100);
+        }
+
         // Soft triangle wave provides a warm sound
         const t = (phase / (2 * Math.PI)) % 1.0;
         const triangle = 2.0 * Math.abs(2.0 * (t - Math.floor(t + 0.5))) - 1.0;
@@ -131,6 +146,49 @@ const Dashboard = () => {
     return buffer;
   };
 
+  const resampleBuffer = (inputBuffer: Float32Array, inputSampleRate: number, outputSampleRate: number): Float32Array => {
+    const ratio = inputSampleRate / outputSampleRate;
+    const outputLength = Math.floor(inputBuffer.length / ratio);
+    const outputBuffer = new Float32Array(outputLength);
+    for (let i = 0; i < outputLength; i++) {
+      const pos = i * ratio;
+      const idx = Math.floor(pos);
+      const nextIdx = Math.min(idx + 1, inputBuffer.length - 1);
+      const weight = pos - idx;
+      outputBuffer[i] = inputBuffer[idx] * (1 - weight) + inputBuffer[nextIdx] * weight;
+    }
+    return outputBuffer;
+  };
+
+  const generateLoopbackFrame = (): ArrayBuffer => {
+    const buffer = new ArrayBuffer(8 + SAMPLES_PER_FRAME * 4);
+    const view = new DataView(buffer);
+
+    // Calculate synchronized NTP timestamp
+    const offset = clockOffsetUs || 0;
+    const ntpTimeUs = Date.now() * 1000 + offset;
+    view.setBigUint64(0, BigInt(ntpTimeUs), false);
+
+    const floatView = new Float32Array(buffer, 8, SAMPLES_PER_FRAME);
+    const fifo = loopbackFifoRef.current;
+
+    if (fifo.length >= SAMPLES_PER_FRAME) {
+      for (let i = 0; i < SAMPLES_PER_FRAME; i++) {
+        floatView[i] = fifo[i];
+      }
+      loopbackFifoRef.current = fifo.slice(SAMPLES_PER_FRAME);
+    } else {
+      for (let i = 0; i < SAMPLES_PER_FRAME; i++) {
+        floatView[i] = i < fifo.length ? fifo[i] : 0;
+      }
+      loopbackFifoRef.current = [];
+    }
+
+    return buffer;
+  };
+
+
+
   // Toggle speaker audio playback context
   const toggleAudioPlayback = () => {
     if (isAudioEnabledRef.current) {
@@ -141,6 +199,8 @@ const Dashboard = () => {
         audioCtxRef.current = null;
       }
       nextPlayTimeRef.current = 0;
+      anchorLocalTimeMsRef.current = 0;
+      anchorAudioTimeRef.current = 0;
     } else {
       setIsAudioEnabled(true);
       isAudioEnabledRef.current = true;
@@ -150,6 +210,20 @@ const Dashboard = () => {
       }
     }
   };
+
+  // Fetch desktop audio loopback sources when role is host
+  useEffect(() => {
+    if (sfuRole === 'host' && window.electronAPI?.getDesktopSources) {
+      window.electronAPI.getDesktopSources().then((sources) => {
+        setLoopbackSources(sources);
+        if (sources.length > 0) {
+          setSelectedLoopbackSourceId(sources[0].id);
+        }
+      }).catch(err => {
+        console.error('Failed to get desktop sources:', err);
+      });
+    }
+  }, [sfuRole]);
 
   // Server health checker
   useEffect(() => {
@@ -263,6 +337,9 @@ const Dashboard = () => {
         // Data format: [8-byte timestamp][PCM float32 samples]
         // Frame size is 888 bytes (8 + 220 * 4)
         if (data.byteLength >= 8 + SAMPLES_PER_FRAME * 4) {
+          const view = new DataView(data);
+          const ntpTimeUs = view.getBigUint64(0, false);
+          
           const floatSamples = new Float32Array(data, 8, SAMPLES_PER_FRAME);
 
           const audioBuffer = ctx.createBuffer(1, SAMPLES_PER_FRAME, SAMPLE_RATE);
@@ -272,16 +349,28 @@ const Dashboard = () => {
           source.buffer = audioBuffer;
           source.connect(ctx.destination);
 
-          // Web Audio API scheduling queue
-          const now = ctx.currentTime;
-          let playTime = nextPlayTimeRef.current;
+          // Convert NTP microsecond timestamp to client local clock millisecond timeline
+          const offsetMs = (clockOffsetUs || 0) / 1000;
+          const targetLocalTimeMs = Number(ntpTimeUs) / 1000 - offsetMs;
 
-          if (playTime < now + 0.05) {
-            playTime = now + 0.05; // safe lookahead buffer
+          // Initialize NTP playout anchor
+          if (anchorLocalTimeMsRef.current === 0) {
+            anchorLocalTimeMsRef.current = targetLocalTimeMs;
+            // 150ms playout lookahead delay to absorb network jitter
+            anchorAudioTimeRef.current = ctx.currentTime + 0.15;
+          }
+
+          const elapsedLocalMs = targetLocalTimeMs - anchorLocalTimeMsRef.current;
+          let playTime = anchorAudioTimeRef.current + elapsedLocalMs / 1000;
+
+          // Fallback drift/jitter reset: if packet is extremely late or laggy
+          if (playTime < ctx.currentTime + 0.01 || playTime > ctx.currentTime + 1.0) {
+            anchorLocalTimeMsRef.current = targetLocalTimeMs;
+            anchorAudioTimeRef.current = ctx.currentTime + 0.10;
+            playTime = anchorAudioTimeRef.current;
           }
 
           source.start(playTime);
-          nextPlayTimeRef.current = playTime + audioBuffer.duration;
         }
       }
     };
@@ -305,16 +394,87 @@ const Dashboard = () => {
   };
 
   // Start streaming fake audio frames
-  const startStreamingFakeAudio = () => {
+  const startStreamingFakeAudio = async () => {
     if (!connectionRef.current || sfuRole !== 'host') return;
-    setIsStreamingFakeAudio(true);
 
     // Reset synthesizer state refs
     audioPhaseRef.current = 0;
     frameCountRef.current = 0;
+    loopbackFifoRef.current = [];
+
+    if (streamSource === 'loopback') {
+      if (!window.electronAPI?.getDesktopSources) {
+        alert('System loopback audio capture is only supported in the Desktop application.');
+        return;
+      }
+      try {
+        const sources = await window.electronAPI.getDesktopSources();
+        const sourceId = selectedLoopbackSourceId || sources[0]?.id;
+        if (!sourceId) {
+          alert('No screen/window source selected.');
+          return;
+        }
+
+        // Request screen/window audio+video stream
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: {
+            mandatory: {
+              chromeMediaSource: 'desktop',
+              chromeMediaSourceId: sourceId
+            }
+          } as any,
+          video: {
+            mandatory: {
+              chromeMediaSource: 'desktop',
+              chromeMediaSourceId: sourceId
+            }
+          } as any
+        });
+
+        // Stop the video track to save CPU
+        stream.getVideoTracks().forEach(track => track.stop());
+        loopbackStreamRef.current = stream;
+
+        const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+        const loopbackCtx = new AudioContextClass();
+        loopbackCtxRef.current = loopbackCtx;
+
+        const sourceNode = loopbackCtx.createMediaStreamSource(stream);
+        const processorNode = loopbackCtx.createScriptProcessor(2048, 1, 1);
+        loopbackProcessorRef.current = processorNode;
+
+        processorNode.onaudioprocess = (e) => {
+          const inputData = e.inputBuffer.getChannelData(0);
+          const inputRate = loopbackCtx.sampleRate;
+          
+          // Downsample block to 11025 Hz
+          const downsampled = resampleBuffer(inputData, inputRate, SAMPLE_RATE);
+          
+          // Append to FIFO queue
+          const fifo = loopbackFifoRef.current;
+          for (let i = 0; i < downsampled.length; i++) {
+            fifo.push(downsampled[i]);
+          }
+
+          // Latency protection: limit queue depth to 2000 samples (~180ms)
+          if (fifo.length > 2000) {
+            loopbackFifoRef.current = fifo.slice(fifo.length - 1000);
+          }
+        };
+
+        sourceNode.connect(processorNode);
+        processorNode.connect(loopbackCtx.destination);
+      } catch (err: any) {
+        console.error('Failed to capture loopback audio:', err);
+        alert(`Failed to capture system audio: ${err.message}`);
+        return;
+      }
+    }
+
+    setIsStreamingFakeAudio(true);
 
     streamIntervalRef.current = setInterval(() => {
-      const buffer = generateMusicFrame();
+      const buffer = streamSource === 'loopback' ? generateLoopbackFrame() : generateMusicFrame();
       
       const sent = connectionRef.current?.sendSfuAudioFrame(buffer);
       if (sent) {
@@ -329,6 +489,21 @@ const Dashboard = () => {
       clearInterval(streamIntervalRef.current);
       streamIntervalRef.current = null;
     }
+
+    // Stop and clean up loopback capture references
+    if (loopbackStreamRef.current) {
+      loopbackStreamRef.current.getTracks().forEach(track => track.stop());
+      loopbackStreamRef.current = null;
+    }
+    if (loopbackProcessorRef.current) {
+      loopbackProcessorRef.current.disconnect();
+      loopbackProcessorRef.current = null;
+    }
+    if (loopbackCtxRef.current) {
+      loopbackCtxRef.current.close();
+      loopbackCtxRef.current = null;
+    }
+    loopbackFifoRef.current = [];
   };
 
   // Disconnect
@@ -726,8 +901,62 @@ const Dashboard = () => {
                     </HStack>
                   </VStack>
                 ) : (
-                  <VStack align="stretch" gap={3}>
-                    <HStack justify="space-between">
+                  <VStack align="stretch" gap={4}>
+                    {/* Stream Source Selection */}
+                    <VStack align="stretch" gap={2} p={3} bg="bg.panel" borderRadius="lg" borderWidth="1px" borderColor="border">
+                      <HStack justify="space-between">
+                        <Text fontSize="2xs" color="fg.muted">Stream Source:</Text>
+                        <HStack gap={2}>
+                          <Button
+                            size="2xs"
+                            colorScheme={streamSource === 'melody' ? 'teal' : 'gray'}
+                            onClick={() => setStreamSource('melody')}
+                            disabled={isStreamingFakeAudio}
+                          >
+                            Retro Melody
+                          </Button>
+                          {window.electronAPI && (
+                            <Button
+                              size="2xs"
+                              colorScheme={streamSource === 'loopback' ? 'purple' : 'gray'}
+                              onClick={() => setStreamSource('loopback')}
+                              disabled={isStreamingFakeAudio}
+                            >
+                              System Loopback
+                            </Button>
+                          )}
+                        </HStack>
+                      </HStack>
+
+                      {streamSource === 'loopback' && loopbackSources.length > 0 && (
+                        <VStack align="stretch" gap={1.5} pt={2} borderTopWidth="1px" borderColor="border">
+                          <Text fontSize="3xs" color="fg.muted">Capture Device / Screen:</Text>
+                          <select
+                            style={{
+                              padding: '4px 8px',
+                              fontSize: '11px',
+                              borderRadius: '4px',
+                              backgroundColor: 'var(--chakra-colors-bg-default)',
+                              color: 'var(--chakra-colors-fg)',
+                              border: '1px solid var(--chakra-colors-border)',
+                              outline: 'none',
+                            }}
+                            value={selectedLoopbackSourceId}
+                            onChange={(e) => setSelectedLoopbackSourceId(e.target.value)}
+                            disabled={isStreamingFakeAudio}
+                          >
+                            {loopbackSources.map((src) => (
+                              <option key={src.id} value={src.id}>
+                                {src.name}
+                              </option>
+                            ))}
+                          </select>
+                        </VStack>
+                      )}
+                    </VStack>
+
+                    {/* Sent Count and Play/Stop Stream */}
+                    <HStack justify="space-between" pt={2} borderTopWidth="1px" borderColor="border">
                       <VStack align="start" gap={0}>
                         <Text fontSize="2xs" color="fg.muted">Binary Audio Frames Sent:</Text>
                         <Heading size="md" fontWeight="extrabold" color="purple">{sfuSentCount}</Heading>
@@ -737,11 +966,14 @@ const Dashboard = () => {
                         colorScheme={isStreamingFakeAudio ? 'red' : 'green'}
                         onClick={isStreamingFakeAudio ? stopStreamingFakeAudio : startStreamingFakeAudio}
                       >
-                        {isStreamingFakeAudio ? 'Stop Streaming' : 'Start Streaming Music'}
+                        {isStreamingFakeAudio ? 'Stop Streaming' : `Start Streaming ${streamSource === 'loopback' ? 'Loopback' : 'Melody'}`}
                       </Button>
                     </HStack>
+
                     <Text fontSize="3xs" color="fg.muted" fontStyle="italic">
-                      * When streaming is active, the host synthesizes a real-time retro melody as raw PCM float32 samples (11.025 kHz) and relays them over the SFU WebSocket channel to all connected client speaker channels.
+                      * {streamSource === 'loopback'
+                         ? 'Streaming real-time desktop loopback audio resampled down to 11.025 kHz mono PCM over the low-latency SFU WebSocket.'
+                         : 'Streaming locally synthesized triangle-wave notes of Für Elise with attack envelopes at 50 frames per second.'}
                     </Text>
                   </VStack>
                 )}
@@ -801,7 +1033,7 @@ const Dashboard = () => {
         </VStack>
       </Flex>
     </Box>
-  );
+);
 };
 
 export default Dashboard;

@@ -13,6 +13,7 @@ interface ElectronAPI {
     filename: string,
   ) => Promise<{ success: boolean; error?: string }>;
   openExternal?: (url: string) => void;
+  getDesktopSources?: () => Promise<Array<{ id: string; name: string }>>;
 }
 
 interface Window {

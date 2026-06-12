@@ -21,4 +21,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
   downloadFileDirectly: (url, filename) =>
     ipcRenderer.invoke('download-file-directly', { url, filename }),
   openExternal: (url) => ipcRenderer.send('open-external', url),
+  getDesktopSources: () => ipcRenderer.invoke('get-desktop-sources'),
 });

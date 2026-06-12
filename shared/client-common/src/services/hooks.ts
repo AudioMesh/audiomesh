@@ -32,7 +32,7 @@ export const useServerHealth = () => {
         };
       }
     },
-    refetchInterval: 5000,
+    refetchInterval: false,
     retry: false,
     refetchOnWindowFocus: true,
   });
